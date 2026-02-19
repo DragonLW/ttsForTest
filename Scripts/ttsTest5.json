@@ -1,1 +1,5 @@
-"fun": {"name": "jhon", "age": 32, "city": "youanal"}
+{
+  "name": "jhon", 
+  "age": 32, 
+  "city": "youanal"
+}
