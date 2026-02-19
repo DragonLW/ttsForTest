@@ -1,0 +1,59 @@
+local my_tick = 0
+
+function onLoad()
+
+zoneCheck = getObjectFromGUID("548423")
+local zoneCheckS = zoneCheck.getObjects()
+
+    testButton = {
+        click_function = "test",
+        function_owner = self,
+
+        label = "test",
+        position = {-1.2,-0.5,0},
+        rotation = {0,90,0},
+        width = 450,
+        height = 450,
+        font_size = 235,
+        color = {1,1,1},
+        font_color = {0,0,0},
+        tooltip = "test"
+    }
+
+    testFigBut = {
+        click_function = "figBut",
+
+        label = "Figtest",
+        position = {-1.2,-0.5,0},
+        rotation = {0,90,0},
+        width = 450,
+        height = 450,
+        font_size = 235,
+        color = {1,1,1},
+        font_color = {0,0,0},
+        tooltip = "test"
+    }
+
+self.createButton(testButton)
+
+end
+
+function update()
+
+    my_tick = my_tick + 1
+    if my_tick < 50 then
+        return
+    end
+    my_tick = 0
+
+end
+
+function test()
+
+    for i, object in ipairs(zoneCheckS) do
+        if object.getType() == "Figurine_Custom" then
+            object.createButton(testFigBut)
+        end
+    end
+
+end

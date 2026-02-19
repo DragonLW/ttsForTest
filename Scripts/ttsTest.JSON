@@ -1,0 +1,15 @@
+cross = {
+        click_function = "cro",
+        function_owner = self,
+        label = "<",
+        position = {-1,0.05,0},
+        rotation = {0,0,0},
+        scale = {1,1,3},
+        width = 0,
+        height = -0,
+        font_size = 500,
+        color = {1,0.7,0.2},
+        font_color = {1,0.7,0.2},
+        tooltip = "this cross"
+    }
+end

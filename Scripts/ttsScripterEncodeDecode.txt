@@ -1,0 +1,107 @@
+function onLoad()
+
+card = self.getGUID()
+cardDO = getObjectFromGUID(card)
+zone = getObjectFromGUID("917ae1")
+zoneX = zone.getPosition(0,5,0)
+cardDO.setPosition(zoneX)
+cardDO.setRotation({0,90,180})
+
+counter = 2
+
+atk = {
+
+    click_function = "atk1",
+    function_owner = self,
+    label = "a",
+    position = {0.5,0.3,0},
+    rotation = {0,0,0},
+    scale = {1,1,1},
+    width = 400,
+    height = 400,
+    font_size = 500,
+    color = {1,1,1},
+    font_color = {0,0,0},
+    tooltip = "ATK oper"
+
+}
+
+def = {
+
+    click_function = "def1",
+    function_owner = self,
+    label = "d",
+    position = {-0.5,0.3,0},
+    rotation = {0,0,0},
+    scale = {1,1,1},
+    width = 400,
+    height = 400,
+    font_size = 500,
+    color = {1,1,1},
+    font_color = {0,0,0},
+    tooltip = "DEF oper"
+
+}
+
+self.createButton(atk)
+
+end
+
+function atk1()
+
+code = {sex = "Sex Must Die"}
+coded = JSON.encode(code)
+decoded = JSON.decode(coded)
+print(decoded.sex)
+
+local Hui = Global.getVar("globalHui") --globalHui находится в Global как переменная
+print("Это какой-то пиздец " .. Hui)
+
+local dickIn = Global.getVar("core")
+decore = JSON.decode(dickIn)
+print(decore.sexPit)
+
+local scriptCrossIn = Global.getVar("scriptCross") --scriptCross находится в Global как JSON.encode(все Global находятся ниже для теста)
+deScriptCross = JSON.decode(scriptCrossIn)
+cardDO.createButton(deScriptCross.cross)
+print(deScriptCross.cross.label)
+
+end
+
+function def1()
+
+counter = Global.getTable("counter")
+print(counter.siska)
+
+end
+
+Global -- весь код что в Global
+
+globalHui = 2
+counter = {
+
+    siska = 10,
+    piska = -10
+
+}
+armpit = {sexPit = "It's WORK!"}
+core = JSON.encode(armpit)
+
+globalTest = {
+    cross = {
+        click_function = "cro",
+        function_owner = cardDO,
+        label = "<",
+        position = {-1,0.05,0},
+        rotation = {0,0,0},
+        scale = {1,1,3},
+        width = 0,
+        height = -0,
+        font_size = 500,
+        color = {1,0.7,0.2},
+        font_color = {1,0.7,0.2},
+        tooltip = "this cross"
+    }
+}
+
+scriptCross = JSON.encode(globalTest)

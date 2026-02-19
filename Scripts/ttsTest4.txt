@@ -1,0 +1,13 @@
+kull = {
+
+	ik = {
+	
+		cat = "sof",
+		dog = "vas",
+		im = "debil",
+		you = "stupid",
+		kik = 32
+	
+	}
+
+}

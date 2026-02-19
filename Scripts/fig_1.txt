@@ -1,0 +1,44 @@
+local object = spawnObject({
+    type = "Figurine_Custom",
+
+    position = {0, 3, 0},
+    scale = {1, 1, 1},
+    sound = false,
+    callback_function = function(spawned_object)
+        log(spawned_object.getBounds())
+    end
+})
+object.setPositionSmooth({1, 5, 1})
+object.setCustomObject({
+image = "https://arknights.wiki.gg/images/Ascalon_story.png",
+})
+
+ -- Add spawn token button if card has token info
+            if has_token then
+                local params = {
+                    function_owner = self,
+                    label = "✦",  -- Spawn symbol
+                    position = {0.8, 0.3, 0}, 
+                    scale = {0.5, 0.5, 0.5},
+                    width = 600,
+                    height = 600,
+                    color = {0, 0, 0, 1}, 
+                    font_color = {250, 215, 0, 1},
+                    font_size = 500,
+                    tooltip = "Spawn token",
+                    click_function = "spawnToken"
+                }
+                obj.createButton(params)
+            end
+
+1 - 1.65
+2 - 3.3
+3 - 4.95
+4 - 6.6
+5 - 8.25
+6 - 9.9
+7 - 11.55
+
+X - left right
+Y - top bottom
+Z - up down
