@@ -1,6 +1,8 @@
-"cucold": [
 {
     "name": "jhon", 
     "age": 32, 
-    "city": "youanal"
-}]
+    "city": "youanal",
+    "cucold": {
+        "suka": "piska"
+    }
+}
