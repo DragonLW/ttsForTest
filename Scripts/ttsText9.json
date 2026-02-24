@@ -1,0 +1,3 @@
+{
+	"LuaScript": "function onLoad()\nlick = \"sex\"\nbroadcastToAll(lick)\nend"
+}

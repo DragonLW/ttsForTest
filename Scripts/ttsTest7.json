@@ -1,0 +1,35 @@
+{
+"cross": {
+        "click_function": "cro",
+        "label": "<",
+		"position": {
+			"x": -1,
+			"y": 0.05,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0, 
+			"y": 0, 
+			"z": 0
+		},
+		"scale": {
+			"x": 1,
+			"y": 1,
+			"z": 3 
+		},
+        "width": 0,
+        "height": 0,
+        "font_size": 500,
+        "color": {
+			"r": 1,
+			"g": 0.7,
+			"b": 0.2
+		},
+		"font_color": {
+			"r": 1,
+			"g": 0.7,
+			"b": 0.2
+		},
+        "tooltip": "this cross"
+    }
+}

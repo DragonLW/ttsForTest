@@ -1,0 +1,182 @@
+function onLoad()
+
+card = self.getGUID()
+cardDO = getObjectFromGUID(card)
+zone = getObjectFromGUID("917ae1")
+zoneX = zone.getPosition(0,5,0)
+cardDO.setPosition(zoneX)
+cardDO.setRotation({0,90,180})
+
+counter = 2
+
+hp = {
+
+    click_function = "hp1",
+    function_owner = self,
+    label = "H",
+    position = {-0,0.3,0.5},
+    rotation = {0,0,0},
+    scale = {1,1,1},
+    width = 400,
+    height = 400,
+    font_size = 500,
+    color = {1,1,1},
+    font_color = {0,0,0},
+    tooltip = "HP oper"
+
+}
+
+atk = {
+
+    click_function = "atk1",
+    function_owner = self,
+    label = "a",
+    position = {0.5,0.3,0},
+    rotation = {0,0,0},
+    scale = {1,1,1},
+    width = 400,
+    height = 400,
+    font_size = 500,
+    color = {1,1,1},
+    font_color = {0,0,0},
+    tooltip = "ATK oper"
+
+}
+
+def = {
+
+    click_function = "def1",
+    function_owner = self,
+    label = "d",
+    position = {-0.5,0.3,0},
+    rotation = {0,0,0},
+    scale = {1,1,1},
+    width = 400,
+    height = 400,
+    font_size = 500,
+    color = {1,1,1},
+    font_color = {0,0,0},
+    tooltip = "DEF oper"
+
+}
+
+apm = {
+
+    click_function = "apm1",
+    function_owner = self,
+    label = "A",
+    position = {-0.5,0.3,0},
+    rotation = {0,0,0},
+    scale = {1,1,1},
+    width = 400,
+    height = 400,
+    font_size = 500,
+    color = {1,1,1},
+    font_color = {0,0,0},
+    tooltip = "APM oper"
+
+}
+
+block = {
+
+    click_function = "block1",
+    function_owner = self,
+    label = "B",
+    position = {-0,0.3,-0.5},
+    rotation = {0,0,0},
+    scale = {1,1,1},
+    width = 400,
+    height = 400,
+    font_size = 500,
+    color = {1,1,1},
+    font_color = {0,0,0},
+    tooltip = "Block oper"
+
+}
+
+self.createButton(atk)
+self.createButton(apm)
+self.createButton(hp)
+self.createButton(block)
+
+end
+
+function atk1()
+
+code = {sex = "Sex Must Die"}
+coded = JSON.encode(code)
+decoded = JSON.decode(coded)
+print(decoded.sex)
+
+local Hui = Global.getVar("globalHui")
+print("Это какой-то пиздец " .. Hui)
+
+local dickIn = Global.getVar("core")
+decore = JSON.decode(dickIn)
+print(decore.sexPit)
+
+--local scriptCrossIn = Global.getVar("sexGO")
+--deScriptCross = JSON.decode(scriptCrossIn)
+--cardDO.createButton(deScriptCross.BC0)
+--print(deScriptCross.BC0.label)
+
+end
+
+function el(elite)
+print("go sex")
+end
+
+function def1()
+
+counter = Global.getTable("counter")
+print(counter.siska)
+
+end
+
+function apm1()
+
+local mydata
+local myurl = "https://raw.githubusercontent.com/DragonLW/ttsForTest/refs/heads/main/Scripts/ttsTest5.json?token=GHSAT0AAAAAADV4JZVU4FBDKYNNANWY4EFC2MXGJOA"
+    WebRequest.get(myurl, function(request)
+        if request.is_error then
+            log(request.error)
+        else
+            mydata = request.text
+            pap = JSON.decode(mydata)
+            print(pap)
+        end
+    end)
+end
+
+function hp1()
+
+local mydata
+local myurl = "https://steamusercontent-a.akamaihd.net/ugc/14384287020187568588/1A1AC016085175F985E9A43C6C251FE3DE49FD55/"
+    WebRequest.get(myurl, function(request)
+        if request.is_error then
+            log(request.error)
+        else
+            mydata = request.text
+            sap = JSON.decode(mydata)
+            print(sap.name, " ", sap.age, " ", sap.city)
+        end
+    end)
+
+end
+
+function block1()
+
+local mydata
+myurl = "https://steamusercontent-a.akamaihd.net/ugc/13006543024715236977/17B89543AFBE629F828C99F3736E53E55D54AD0F/"
+vibe = WebRequest
+    vibe.get(myurl, function(request)
+    if request.is_error then
+        log(request.error)
+    else
+        mydata = request.text
+        map = JSON.decode(mydata)
+        self.createButton(map.cross)
+    end
+end)
+
+end

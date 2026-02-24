@@ -1,0 +1,171 @@
+{
+  "ObjectStates": [
+    {
+      "GUID": "107d5e",
+      "Name": "Figurine_Custom",
+      "Transform": {
+        "posX": -21.0383453,
+        "posY": 2.22207975,
+        "posZ": -26.9538879,
+        "rotX": -2.20559014E-06,
+        "rotY": 89.5316849,
+        "rotZ": -3.86424517E-07,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Ifrit",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomImage": {
+        "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/17285447883512731168/309AB65BC59EDC276D3D86D8FC4210DBD9141F89/",
+        "ImageSecondaryURL": "",
+        "ImageScalar": 1.5,
+        "WidthScale": 0.0
+      },
+      "CustomFigurine": {
+        "UseMinimalCollider": true,
+        "MirroredBack": false
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "States": {
+        "2": {
+          "GUID": "30b68b",
+          "Name": "Figurine_Custom",
+          "Transform": {
+            "posX": -21.0383415,
+            "posY": 2.22208381,
+            "posZ": -26.953886,
+            "rotX": -5.33278772E-08,
+            "rotY": 89.5317154,
+            "rotZ": -8.432913E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Ifrit",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.0,
+            "g": 0.0,
+            "b": 0.0
+          },
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/15626115552466257411/F3C498CFADA57969FD0D422206B9E2E8EAAD1AF3/",
+            "ImageSecondaryURL": "",
+            "ImageScalar": 1.5,
+            "WidthScale": 0.0
+          },
+          "CustomFigurine": {
+            "UseMinimalCollider": true,
+            "MirroredBack": false
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        "3": {
+          "GUID": "b21412",
+          "Name": "Figurine_Custom",
+          "Transform": {
+            "posX": -21.0383434,
+            "posY": 2.222065,
+            "posZ": -26.9538879,
+            "rotX": -2.96582948E-06,
+            "rotY": 89.5317,
+            "rotZ": 2.9153075E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Ifrit",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.0,
+            "g": 0.0,
+            "b": 0.0
+          },
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/16552367476661556553/070A1FE994A8193C319DF628F96A953D120D5125/",
+            "ImageSecondaryURL": "",
+            "ImageScalar": 1.5,
+            "WidthScale": 0.0
+          },
+          "CustomFigurine": {
+            "UseMinimalCollider": true,
+            "MirroredBack": false
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        }
+      }
+    }
+  ]
+}
