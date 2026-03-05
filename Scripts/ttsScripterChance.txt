@@ -1,0 +1,29 @@
+zoneChance = getObjectFromGUID("deb480")
+
+function onLoad()
+pay = {click_function = "pay1",function_owner = self,label = "Pay 6000LMD",position = {0,-0.5,-5.2},rotation = {0,180,0},scale = {2,2,2},width = 1400,height = 250,color = {1,1,1},font_size = 200,font_color = {0,0,0},tooltip = ""}
+self.createButton(pay)
+beck = nil
+bise = nil
+end
+function pay1()
+    for b = 1, 10 do
+    dropChance = math.random(1,1000)
+    print("Result\n",dropChance)
+        for i, obj in ipairs(zoneChance.getObjects()) do
+            if obj.type == "Deck" then
+                beck = obj.getGUID()
+                bise = getObjectFromGUID(beck)
+                deckPos = bise.positionToWorld({5,0,0})
+                zPos = deckPos[3] - 11.2
+                zPos = zPos + 2
+                for v, object in ipairs(bise.getObjects()) do
+                    if string.find(object.description, "1%-%Star") then
+                        bise.takeObject({guid = object.guid, position = {deckPos[1], deckPos[2], deckPos[3]}, rotation = {0,90,180}})
+                        break
+                    end
+                end
+            end
+        end
+    end
+end

@@ -1,0 +1,60 @@
+DECK_ZONE_GUID = "09f6d7"
+
+local my_tick = 0
+function update()
+
+    my_tick = my_tick + 1
+    if my_tick < 100 then
+        return
+    end
+    my_tick = 0
+
+hardZone = getObjectFromGUID(DECK_ZONE_GUID)
+
+params1 = {
+        click_function = "hire",
+
+        label = "Hire",
+        position = {0.5,0.4,0.4},
+        rotation = {0,0,0},
+        width = 450,
+        height = 450,
+        font_size = 235,
+        color = {1,1,1},
+        font_color = {0,0,0},
+        tooltip = "Hire an operator",
+        color = {r=0,g=0.5,b=0},
+    }
+
+params = {
+        click_function = "sell",
+
+        label = "Sell",
+        position = {-0.5,0.4,0.4},
+        rotation = {0,0,0},
+        width = 425,
+        height = 425,
+        font_size = 235,
+        color = {1,1,1},
+        font_color = {0,0,0},
+        tooltip = "Sell an operator",
+        color = {r=0.5,g=0,b=0},
+    }
+
+local specZone = hardZone.getObjects()
+for i, object in ipairs(specZone) do
+    if object.getName() == "".."Ifrit" then
+        object.createButton(params)
+        object.createButton(params1)
+    end
+end
+
+for i, obj in ipairs(objects) do
+    if obj.getDescription() ~= "6-Star" then
+        print("FOUND!")
+    else
+        print("Not Found")
+    end
+end
+
+end

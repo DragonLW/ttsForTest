@@ -1,0 +1,28 @@
+function updateWallets()
+  for k, v in next, playerData do
+    if v.WalletZoneObjectCount != #(v.WalletZone.getObjects()) then
+      local objectsList = v.WalletZone.getObjects()
+      local moneySum = 0
+
+      for k, v in next, objectsList do
+    		if (tonumber(v.getDescription()) == nil) then
+    			if (v.getQuantity() != -1) then
+    				local deckContents = v.getObjects()
+    				if deckContents != nil then
+    					for ke, va in next, deckContents do
+    						if (tonumber(va.description) != nil) then
+    							moneySum = moneySum + tonumber(va.description)
+    						end
+    					end
+    				end
+    			end
+    		else
+    			moneySum = moneySum + tonumber(v.getDescription())
+    		end
+    	end
+
+    	v.WalletCounter.setValue(moneySum)
+      v.WalletZoneObjectCount = #(v.WalletZone.getObjects())
+    end
+  end
+end

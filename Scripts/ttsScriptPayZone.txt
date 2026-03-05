@@ -1,0 +1,25 @@
+wLmd = getObjectFromGUID("7a270f")
+PAY_ZONE_GUID = "c23614"
+payZone = getObjectFromGUID(PAY_ZONE_GUID)
+
+function onLoad()
+pay = {click_function = "pay1",function_owner = self,label = "Pay 6000LMD",position = {0,-0.5,-1.2},rotation = {0,180,0},scale = {1,1,1},width = 1400,height = 250,color = {1,1,1},font_size = 200,font_color = {0,0,0},tooltip = ""}
+self.createButton(pay)
+end
+function pay1(obj, color, alt_click)
+wLmdR = wLmd.getVar("lmdR")
+    for i, object in ipairs(payZone.getObjects()) do
+        if object.getName() == "W_LMD" then
+            if wLmdR >= 6000 then
+                wLmd.setVar("lmdR", wLmdR - 6000)
+                wLmdS = wLmd.getVar("lmdR")
+                wLmd.editButton({index = 0, label = wLmdS})
+            else
+                print("NO LMD")
+            end
+        end
+    end
+    if #payZone.getObjects() == 0 then
+        print("Put down your LMD")
+    end
+end

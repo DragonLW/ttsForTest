@@ -1,0 +1,154 @@
+function onLoad()
+    
+    card = self.getGUID()
+    cardDO = getObjectFromGUID(card)
+    zoneBack = getObjectFromGUID("917ae1")
+    zonePosBack = zoneBack.getPosition({0,5,0})
+    zoneHire = getObjectFromGUID("adffc1")
+    zonePosHire = zoneHire.getPosition({0,5,0})
+
+function Rec()
+
+
+pos = cardDO.positionToWorld({-2, 6, 0})
+
+local fig = spawnObjectJSON({
+    json = [[{
+      "GUID": "70fa05",
+      "Name": "Figurine_Custom",
+      "Transform":{
+        "posY": 5,
+        "rotX": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Ifrit Oper",
+      "Description": "Rarity: 6-Star\nClass: Caster\nClass Branch: Blast\nFaction: Rhine Lab",
+      "CustomImage": {
+        "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/17285447883512731168/309AB65BC59EDC276D3D86D8FC4210DBD9141F89/",
+        "ImageSecondaryURL": "",
+        "ImageScalar": 1.5
+      },
+      "CustomFigurine": {
+        "UseMinimalCollider": true,
+        "MirroredBack": true
+      },
+      "States": {
+        "2": {
+          "GUID": "fe8da7",
+          "Name": "Figurine_Custom",
+          "Transform": {
+            "posY": 5,
+            "rotX": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1
+          },
+          "Nickname": "Ifrit Oper",
+          "Description": "Rarity: 6-Star\nClass: Caster\nClass Branch: Blast\nFaction: Rhine Lab",
+          "CustomImage": {
+            "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/15626115552466257411/F3C498CFADA57969FD0D422206B9E2E8EAAD1AF3/",
+            "ImageSecondaryURL": "",
+            "ImageScalar": 1.5
+          },
+          "CustomFigurine": {
+            "UseMinimalCollider": true,
+            "MirroredBack": true
+          }
+        },
+        "3": {
+          "GUID": "ff30c1",
+          "Name": "Figurine_Custom",
+          "Transform": {
+            "posY": 5,
+            "rotX": 0,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Ifrit Oper",
+          "Description": "Rarity: 6-Star\nClass: Caster\nClass Branch: Blast\nFaction: Rhine Lab",
+          "CustomImage": {
+            "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/16552367476661556553/070A1FE994A8193C319DF628F96A953D120D5125/",
+            "ImageSecondaryURL": "",
+            "ImageScalar": 1.5
+          },
+          "CustomFigurine": {
+            "UseMinimalCollider": true,
+            "MirroredBack": false
+          },
+        }
+      }
+    }]]
+
+})
+local myurl = "https://steamusercontent-a.akamaihd.net/ugc/14819563330404891410/A5D64A8D1D456A0D3183DEF1F19BC85E2C6861B0/"
+    WebRequest.get(myurl, function(request)
+        if request.is_error then
+            log(request.error)
+        else
+            for _, object in ipairs(Global.getObjects()) do
+                if object.getName() == "Ifrit Oper" then
+                    object.setLuaScript(request.text)
+                    object.setState(2)
+                    --object.reload()
+                end
+            end
+            for _, object in ipairs(Global.getObjects()) do
+                if object.getName() == "Ifrit Oper" then
+                    object.setLuaScript(request.text)
+                    object.setState(3)
+                end
+            end
+            for _, object in ipairs(Global.getObjects()) do
+                if object.getName() == "Ifrit Oper" then
+                    object.setLuaScript(request.text)
+                    object.setState(1)
+                end
+            end
+        end
+    end)
+fig.setPosition(pos)
+cardDO.setPosition(zonePosHire)
+end
+
+end
+
+function Sell()
+
+posLmd = cardDO.positionToWorld({-2,4,0})
+
+cardDO.setPosition(zonePosBack)
+cardDO.setRotation({0,90,180})
+local lmd = spawnObjectJSON({
+    json = [[{
+        "Name": "CardCustom",
+        "Transform": {
+            "posY": 5,
+            "rotX": 0,
+            "scaleX": 2,
+            "scaleY": 1,
+            "scaleZ": 2
+        },
+        "Nickname": "100LMD",
+        "Description": "For a certain amount, it can be used in the operative recruitment area.",
+        "CardID": 1400,
+        "SidewaysCard": false,
+        "CustomDeck": {
+            "14": {
+                "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/10248114794322095708/B89E9F11F8B266ED00F10145162904B7795D1C2A/",
+                "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/10248114794322095708/B89E9F11F8B266ED00F10145162904B7795D1C2A/",
+                "NumWidth": 1,
+                "NumHeight": 1,
+                "BackIsHidden": true,
+                "UniqueBack": false,
+                "Type": 0
+            }
+        },
+        "LuaScript": ""
+    }]]
+})
+lmd.setPosition(posLmd)
+
+end

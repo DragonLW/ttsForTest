@@ -1,0 +1,39 @@
+function Sell(obj, holo, alt_click)
+rLmdR = rLmd.getVar("lmdR")
+bLmdR = bLmd.getVar("lmdR")
+gLmdR = gLmd.getVar("lmdR")
+yLmdR = yLmd.getVar("lmdR")
+    for i, object in ipairs(Global.getObjects()) do
+        if holo == "Red" then
+            if object.getName() == "R_LMD" then
+                rLmd.setVar("lmdR", rLmdR + 1000)
+                rLmdS = rLmd.getVar("lmdR")
+                rLmd.editButton({index = 0, label = rLmdS})
+            end
+        else
+            if holo == "Blue" then
+                if object.getName() == "B_LMD" then
+                    bLmd.setVar("lmdR", bLmdR + 1000)
+                    bLmdS = bLmd.getVar("lmdR")
+                    bLmd.editButton({index = 0, label = bLmdS})
+                end
+            else
+                if holo == "Green" then
+                    if object.getName() == "G_LMD" then
+                        gLmd.setVar("lmdR", gLmdR + 1000)
+                        gLmdS = gLmd.getVar("lmdR")
+                        gLmd.editButton({index = 0, label = gLmdS})
+                    end
+                else
+                    if holo == "Yellow" then
+                        if object.getName() == "Y_LMD" then
+                            yLmd.setVar("lmdR", yLmdR + 1000)
+                            yLmdS = yLmd.getVar("lmdR")
+                            yLmd.editButton({index = 0, label = yLmdS})
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
