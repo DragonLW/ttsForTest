@@ -9,35 +9,35 @@ zoneHire = getObjectFromGUID("adffc1")
 zonePosHire = zoneHire.getPosition({0,5,0})
 zoneRot = {0,90,180}
 
-me = "Ifrit"
-depPoint = 31
+me = "Friston%-%3"
+depPoint = 3
 --Stats without Elite
-hps = 10
+hps = 12
 cHp = hps
-atks = 6
+atks = 2
 cAtk = atks
-defs = 1
+defs = 3
 cDef = defs
-apms = 1
+apms = 2
 cApm = apms
-blocks = 1
+blocks = 3
 cBlock = blocks
 --Stats Elite 1
-eHp = 13
-eAtk = 7
-eDef = 1
-eApm = 1
-eBlock = 1
+eHp = 12
+eAtk = 2
+eDef = 3
+eApm = 2
+eBlock = 3
 --Stats Elite 2
-eHpe = 17
-eAtke = 9
-eDefe = 1
-eApme = 1
-eBlocke = 1
+eHpe = 12
+eAtke = 2
+eDefe = 3
+eApme = 2
+eBlocke = 3
 --Cost any
-skill1 = 3000
-skill2 = 18000
-sellOp = 750
+skill1 = 0
+skill2 = 0
+sellOp = 50
 --Other
 spec11 = 2
 spec12 = 8
@@ -59,17 +59,17 @@ apm = {click_function = "apm1",function_owner = self,label = cApm,position = {0.
 --Block Button Counter
 block = {click_function = "block1", function_owner = self, label = cBlock, position = {0.87,0.3,1.28}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "Block oper\n\nLeft-Click +1\nRight-Click -1"}
 --Skill 1 Button
-spec_1 = {click_function = "spec1",function_owner = self,label = "",position = {0.12,0.3,-0.077},rotation = {0,0,0},scale = {1,1,1},width = 700,height = 230,font_size = 165,color = {1,1,1,0},font_color = {0,0.6,1},tooltip = "Use Skill\n\nLeft-Click add ATK +2 and APM +8\nRight-Click reset stats"}
+spec_1 = {click_function = "spec1",function_owner = self,label = "",position = {0.12,0.3,-0.077},rotation = {0,0,0},scale = {0,0,0},width = 700,height = 230,font_size = 165,color = {1,1,1,0},font_color = {0,0.6,1},tooltip = "Use Skill\n\nLeft-Click add ATK +2 and APM +8\nRight-Click reset stats"}
 --Skill 1 active \\ deactive Button
-spec_11 = {click_function = "spec1_1",function_owner = self,label = "",position = {-0.78,0.3,-0.077},rotation = {0,0,0},scale = {1,1,1},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
+spec_11 = {click_function = "spec1_1",function_owner = self,label = "",position = {-0.78,0.3,-0.077},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
 --Skill 2 Button
-spec_2 = {click_function = "spec2",function_owner = self,label = skill1.."LMD",position = {-0.12,0.3,0.365},rotation = {0,0,0},scale = {1,1,1},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
+spec_2 = {click_function = "spec2",function_owner = self,label = skill1.."LMD",position = {-0.12,0.3,0.365},rotation = {0,0,0},scale = {0,0,0},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
 --Skill 2 active \\ deactive Button
-spec_22 = {click_function = "spec2_2",function_owner = self,label = "",position = {-0.78,0.3,0.365},rotation = {0,0,0},scale = {1,1,1},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
+spec_22 = {click_function = "spec2_2",function_owner = self,label = "",position = {-0.78,0.3,0.365},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
 --Skill 3 Button
-spec_3 = {click_function = "spec3",function_owner = self,label = skill2.."LMD",position = {-0.12,0.3,0.819},rotation = {0,0,0},scale = {1,1,1},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
+spec_3 = {click_function = "spec3",function_owner = self,label = skill2.."LMD",position = {-0.12,0.3,0.819},rotation = {0,0,0},scale = {0,0,0},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
 --Skill 3 active \\ deactive Button
-spec_33 = {click_function = "spec3_3",function_owner = self,label = "",position = {-0.78,0.3,0.819},rotation = {0,0,0},scale = {1,1,1},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
+spec_33 = {click_function = "spec3_3",function_owner = self,label = "",position = {-0.78,0.3,0.819},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
 --Sell Button
 sell = {click_function = "sell1",function_owner = self,label = "S",position = {-1,0.3,-1.45},rotation = {0,0,0},scale = {1,1,1},width = 100,height = 100,font_size = 50,color = {0.2,0.2,0.2,0.4},font_color = {0,0.6,1,1},hover_color = {0.2,0.2,0.2,1},tooltip = "Sell operator - "..sellOp.."LMD"}
 --Settings reset Button
