@@ -59,7 +59,7 @@ apm = {click_function = "apm1",function_owner = self,label = cApm,position = {0.
 --Block Button Counter
 block = {click_function = "block1", function_owner = self, label = cBlock, position = {0.87,0.3,1.28}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "Block oper\n\nLeft-Click +1\nRight-Click -1"}
 --Skill 1 Button
-spec_1 = {click_function = "spec1",function_owner = self,label = "",position = {0.12,0.3,-0.077},rotation = {0,0,0},scale = {1,1,1},width = 700,height = 230,font_size = 165,color = {1,1,1,0},font_color = {0,0.6,1},tooltip = "Use Skill\n\nLeft-Click add ATK +2 and APM +8\nRight-Click reset stats"}
+spec_1 = {click_function = "spec1",function_owner = self,label = "",position = {0.12,0.3,-0.077},rotation = {0,0,0},scale = {0,0,0},width = 700,height = 230,font_size = 165,color = {1,1,1,0},font_color = {0,0.6,1},tooltip = "Use Skill\n\nLeft-Click add ATK +2 and APM +8\nRight-Click reset stats"}
 --Skill 1 active \\ deactive Button
 spec_11 = {click_function = "spec1_1",function_owner = self,label = "",position = {-0.78,0.3,-0.077},rotation = {0,0,0},scale = {1,1,1},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
 --Skill 2 Button
