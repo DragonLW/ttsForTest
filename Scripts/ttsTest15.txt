@@ -1,0 +1,74 @@
+yLmd = getObjectFromGUID("7a270f")
+rLmd = getObjectFromGUID("916808")
+bLmd = getObjectFromGUID("8f2fbb")
+gLmd = getObjectFromGUID("ab4ca9")
+
+function onLoad()
+sellOp = {
+            click_function = "sell", 
+            function_owner = self, 
+            label = "Sell", 
+            position = {-0.5,0.3,0.5}, 
+            rotation = {0,0,0}, 
+            scale = {1,1,1}, 
+            width = 400, 
+            height = 400, 
+            font_size = 200, 
+            color = {0.5,0,0}, 
+            font_color = {0,0,0}, 
+            tooltip = "Sell Operator"
+}
+self.createButton(sellOp)
+end
+
+function sell(obj, holo, alt_click)
+rLmdR = rLmd.getVar("lmdR")
+bLmdR = bLmd.getVar("lmdR")
+gLmdR = gLmd.getVar("lmdR")
+yLmdR = yLmd.getVar("lmdR")
+oi = holo
+oin = string.gsub(oi, "r", "")
+oinw = string.gsub(oin, "e", "")
+oine = string.gsub(oinw, "d", "")
+oinq = string.gsub(oine, "l", "")
+oina = string.gsub(oinq, "u", "")
+oins = string.gsub(oina, "o", "")
+oind = string.gsub(oins, "w", "")
+oinf = string.gsub(oind, "n", "")
+oink = string.lower(oinf)
+pom = oink..Lmd
+print(oink)
+    for i, object in ipairs(Global.getObjects()) do
+        if holo == holo then
+            if object.getName() == holo.."_LMD" then
+                pom.setVar("lmdR", oink..LmdR + 1000)
+                oink..LmdS = pom.getVar("lmdR")
+                pom.editButton({index = 0, label = oink..LmdS})
+            end
+        else
+            if holo == "Blue" then
+                if object.getName() == "B_LMD" then
+                    bLmd.setVar("lmdR", bLmdR + 1000)
+                    bLmdS = bLmd.getVar("lmdR")
+                    bLmd.editButton({index = 0, label = bLmdS})
+                end
+            else
+                if holo == "Green" then
+                    if object.getName() == "G_LMD" then
+                        gLmd.setVar("lmdR", gLmdR + 1000)
+                        gLmdS = gLmd.getVar("lmdR")
+                        gLmd.editButton({index = 0, label = gLmdS})
+                    end
+                else
+                    if holo == "Yellow" then
+                        if object.getName() == "Y_LMD" then
+                            yLmd.setVar("lmdR", yLmdR + 1000)
+                            yLmdS = yLmd.getVar("lmdR")
+                            yLmd.editButton({index = 0, label = yLmdS})
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
