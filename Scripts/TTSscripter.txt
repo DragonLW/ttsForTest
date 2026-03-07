@@ -4,7 +4,7 @@ mainB = {
 --cross pointer
     cross = {
         click_function = "cro",
-        function_owner = figDO,
+        function_owner = self,
         label = "<",
         position = {-1,0.05,0},
         rotation = {0,0,0},
@@ -20,7 +20,7 @@ mainB = {
 --elite plate
     elite = {
         click_function = "el",
-        function_owner = figDO,
+        function_owner = self,
         label = "E",
         position = {-0.65,0.05,-1},
         rotation = {0,0,0},
@@ -34,7 +34,7 @@ mainB = {
 
     elite1 = {
         click_function = "el1",
-        function_owner = figDO,
+        function_owner = self,
         label = "E1",
         position = {0,0.05,-1},
         rotation = {0,0,0},
@@ -48,7 +48,7 @@ mainB = {
 
     elite2 = {
         click_function = "el2",
-        function_owner = figDO,
+        function_owner = self,
         label = "E2",
         position = {0.65,0.05,-1},
         rotation = {0,0,0},
@@ -65,7 +65,7 @@ allB = {
 --center base button
 	BC0 = {
         click_function = "c0",
-        function_owner = figDO,
+        function_owner = self,
         label = "C_0",
         position = {0,0.05,0},
         rotation = {0,0,0},
@@ -80,7 +80,7 @@ allB = {
 --up base buttons	
     BU1 = {
         click_function = "u1",
-        function_owner = figDO,
+        function_owner = self,
         label = "",
         position = {0,0.05,-1.65},
         rotation = {0,0,0},
@@ -93,7 +93,7 @@ allB = {
     },
     BU2 = {
         click_function = "u2",
-        function_owner = figDO,
+        function_owner = self,
         label = "U_2",
         position = {0,0.05,-3.3},
         rotation = {0,0,0},
@@ -106,7 +106,7 @@ allB = {
     },
     BU3 = {
         click_function = "u3",
-        function_owner = figDO,
+        function_owner = self,
         label = "U_3",
         position = {0,0.05,-4.95},
         rotation = {0,0,0},
@@ -119,7 +119,7 @@ allB = {
     },
     BU4 = {
         click_function = "u4",
-        function_owner = figDO,
+        function_owner = self,
         label = "U_4",
         position = {0,0.05,-6.6},
         rotation = {0,0,0},
@@ -132,7 +132,7 @@ allB = {
     },
     BU5 = {
         click_function = "u5",
-        function_owner = figDO,
+        function_owner = self,
         label = "U_5",
         position = {0,0.05,-8.25},
         rotation = {0,0,0},
@@ -145,7 +145,7 @@ allB = {
     },
     BU6 = {
         click_function = "u6",
-        function_owner = figDO,
+        function_owner = self,
         label = "U_6",
         position = {0,0.05,-9.9},
         rotation = {0,0,0},
@@ -158,7 +158,7 @@ allB = {
     },
     BU7 = {
         click_function = "u7",
-        function_owner = figDO,
+        function_owner = self,
         label = "U_7",
         position = {0,0.05,-11.55},
         rotation = {0,0,0},
@@ -173,7 +173,7 @@ allB = {
 --down base buttons
     BD1 = {
         click_function = "d1",
-        function_owner = figDO,
+        function_owner = self,
         label = "",
         position = {0,0.05,1.65},
         rotation = {0,0,0},
@@ -186,7 +186,7 @@ allB = {
     },
     BD2 = {
         click_function = "d2",
-        function_owner = figDO,
+        function_owner = self,
         label = "D_2",
         position = {0,0.05,3.3},
         rotation = {0,0,0},
@@ -199,7 +199,7 @@ allB = {
     },
     BD3 = {
         click_function = "d3",
-        function_owner = figDO,
+        function_owner = self,
         label = "D_3",
         position = {0,0.05,4.95},
         rotation = {0,0,0},
@@ -212,7 +212,7 @@ allB = {
     },
     BD4 = {
         click_function = "d4",
-        function_owner = figDO,
+        function_owner = self,
         label = "D_4",
         position = {0,0.05,6.6},
         rotation = {0,0,0},
@@ -225,7 +225,7 @@ allB = {
     },
     BD5 = {
         click_function = "d5",
-        function_owner = figDO,
+        function_owner = self,
         label = "D_5",
         position = {0,0.05,8.25},
         rotation = {0,0,0},
@@ -238,7 +238,7 @@ allB = {
     },
     BD6 = {
         click_function = "d6",
-        function_owner = figDO,
+        function_owner = self,
         label = "D_6",
         position = {0,0.05,9.9},
         rotation = {0,0,0},
@@ -251,7 +251,7 @@ allB = {
     },
     BD7 = {
         click_function = "d7",
-        function_owner = figDO,
+        function_owner = self,
         label = "D_7",
         position = {0,0.05,11.55},
         rotation = {0,0,0},
@@ -266,7 +266,7 @@ allB = {
 --right base buttons
     BR1 = {
         click_function = "r1",
-        function_owner = figDO,
+        function_owner = self,
         label = "R_1",
         position = {1.65,0.05,0},
         rotation = {0,0,0},
@@ -279,7 +279,7 @@ allB = {
     },
     BR2 = {
         click_function = "r2",
-        function_owner = figDO,
+        function_owner = self,
         label = "R_2",
         position = {3.3,0.05,0},
         rotation = {0,0,0},
@@ -292,7 +292,7 @@ allB = {
     },
     BR3 = {
         click_function = "r3",
-        function_owner = figDO,
+        function_owner = self,
         label = "R_3",
         position = {4.95,0.05,0},
         rotation = {0,0,0},
@@ -305,7 +305,7 @@ allB = {
     },
     BR4 = {
         click_function = "r4",
-        function_owner = figDO,
+        function_owner = self,
         label = "R_4",
         position = {6.6,0.05,0},
         rotation = {0,0,0},
@@ -318,7 +318,7 @@ allB = {
     },
     BR5 = {
         click_function = "r5",
-        function_owner = figDO,
+        function_owner = self,
         label = "R_5",
         position = {8.25,0.05,0},
         rotation = {0,0,0},
@@ -331,7 +331,7 @@ allB = {
     },
     BR6 = {
         click_function = "r6",
-        function_owner = figDO,
+        function_owner = self,
         label = "R_6",
         position = {9.9,0.05,0},
         rotation = {0,0,0},
@@ -344,7 +344,7 @@ allB = {
     },
     BR7 = {
         click_function = "r7",
-        function_owner = figDO,
+        function_owner = self,
         label = "R_7",
         position = {11.55,0.05,0},
         rotation = {0,0,0},
@@ -359,7 +359,7 @@ allB = {
 --left base buttons
     BL1 = {
         click_function = "l1",
-        function_owner = figDO,
+        function_owner = self,
         label = "L_1",
         position = {-1.65,0.05,0},
         rotation = {0,0,0},
@@ -372,7 +372,7 @@ allB = {
     },
     BL2 = {
         click_function = "l2",
-        function_owner = figDO,
+        function_owner = self,
         label = "L_2",
         position = {-3.3,0.05,0},
         rotation = {0,0,0},
@@ -385,7 +385,7 @@ allB = {
     },
     BL3 = {
         click_function = "l3",
-        function_owner = figDO,
+        function_owner = self,
         label = "L_3",
         position = {-4.95,0.05,0},
         rotation = {0,0,0},
@@ -398,7 +398,7 @@ allB = {
     },
     BL4 = {
         click_function = "l4",
-        function_owner = figDO,
+        function_owner = self,
         label = "L_4",
         position = {-6.6,0.05,0},
         rotation = {0,0,0},
@@ -411,7 +411,7 @@ allB = {
     },
     BL5 = {
         click_function = "l5",
-        function_owner = figDO,
+        function_owner = self,
         label = "L_5",
         position = {-8.25,0.05,0},
         rotation = {0,0,0},
@@ -424,7 +424,7 @@ allB = {
     },
     BL6 = {
         click_function = "l6",
-        function_owner = figDO,
+        function_owner = self,
         label = "L_6",
         position = {-9.9,0.05,0},
         rotation = {0,0,0},
@@ -437,7 +437,7 @@ allB = {
     },
     BL7 = {
         click_function = "l7",
-        function_owner = figDO,
+        function_owner = self,
         label = "L_7",
         position = {-11.55,0.05,0},
         rotation = {0,0,0},
@@ -452,7 +452,7 @@ allB = {
 --up right buttons
     BUR11 = {
         click_function = "ur11",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_11",
         position = {1.65,0.05,-1.65},
         rotation = {0,0,0},
@@ -465,7 +465,7 @@ allB = {
     },
     BUR12 = {
         click_function = "ur12",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_12",
         position = {3.3,0.05,-1.65},
         rotation = {0,0,0},
@@ -478,7 +478,7 @@ allB = {
     },
     BUR13 = {
         click_function = "ur13",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_13",
         position = {4.95,0.05,-1.65},
         rotation = {0,0,0},
@@ -491,7 +491,7 @@ allB = {
     },
     BUR14 = {
         click_function = "ur14",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_14",
         position = {6.6,0.05,-1.65},
         rotation = {0,0,0},
@@ -504,7 +504,7 @@ allB = {
     },
     BUR15 = {
         click_function = "ur15",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_15",
         position = {8.25,0.05,-1.65},
         rotation = {0,0,0},
@@ -517,7 +517,7 @@ allB = {
     },
     BUR16 = {
         click_function = "ur16",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_16",
         position = {9.9,0.05,-1.65},
         rotation = {0,0,0},
@@ -530,7 +530,7 @@ allB = {
     },
     BUR17 = {
         click_function = "ur17",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_17",
         position = {11.55,0.05,-1.65},
         rotation = {0,0,0},
@@ -543,7 +543,7 @@ allB = {
     },
     BUR21 = {
         click_function = "ur21",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_21",
         position = {1.65,0.05,-3.3},
         rotation = {0,0,0},
@@ -556,7 +556,7 @@ allB = {
     },
     BUR22 = {
         click_function = "ur22",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_22",
         position = {3.3,0.05,-3.3},
         rotation = {0,0,0},
@@ -569,7 +569,7 @@ allB = {
     },
     BUR23 = {
         click_function = "ur23",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_23",
         position = {4.95,0.05,-3.3},
         rotation = {0,0,0},
@@ -582,7 +582,7 @@ allB = {
     },
     BUR24 = {
         click_function = "ur24",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_24",
         position = {6.6,0.05,-3.3},
         rotation = {0,0,0},
@@ -595,7 +595,7 @@ allB = {
     },
     BUR25 = {
         click_function = "ur25",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_25",
         position = {8.25,0.05,-3.3},
         rotation = {0,0,0},
@@ -608,7 +608,7 @@ allB = {
     },
     BUR26 = {
         click_function = "ur26",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_26",
         position = {9.9,0.05,-3.3},
         rotation = {0,0,0},
@@ -621,7 +621,7 @@ allB = {
     },
     BUR27 = {
         click_function = "ur27",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_27",
         position = {11.55,0.05,-3.3},
         rotation = {0,0,0},
@@ -634,7 +634,7 @@ allB = {
     },
     BUR31 = {
         click_function = "ur31",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_31",
         position = {1.65,0.05,-4.95},
         rotation = {0,0,0},
@@ -647,7 +647,7 @@ allB = {
     },
     BUR32 = {
         click_function = "ur32",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_32",
         position = {3.3,0.05,-4.95},
         rotation = {0,0,0},
@@ -660,7 +660,7 @@ allB = {
     },
     BUR33 = {
         click_function = "ur33",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_33",
         position = {4.95,0.05,-4.95},
         rotation = {0,0,0},
@@ -673,7 +673,7 @@ allB = {
     },
     BUR34 = {
         click_function = "ur34",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_34",
         position = {6.6,0.05,-4.95},
         rotation = {0,0,0},
@@ -686,7 +686,7 @@ allB = {
     },
     BUR35 = {
         click_function = "ur35",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_35",
         position = {8.25,0.05,-4.95},
         rotation = {0,0,0},
@@ -699,7 +699,7 @@ allB = {
     },
     BUR36 = {
         click_function = "ur36",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_36",
         position = {9.9,0.05,-4.95},
         rotation = {0,0,0},
@@ -712,7 +712,7 @@ allB = {
     },
     BUR37 = {
         click_function = "ur37",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_37",
         position = {11.55,0.05,-4.95},
         rotation = {0,0,0},
@@ -725,7 +725,7 @@ allB = {
     },
     BUR41 = {
         click_function = "ur41",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_41",
         position = {1.65,0.05,-6.6},
         rotation = {0,0,0},
@@ -738,7 +738,7 @@ allB = {
     },
     BUR42 = {
         click_function = "ur42",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_42",
         position = {3.3,0.05,-6.6},
         rotation = {0,0,0},
@@ -751,7 +751,7 @@ allB = {
     },
     BUR43 = {
         click_function = "ur43",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_43",
         position = {4.95,0.05,-6.6},
         rotation = {0,0,0},
@@ -764,7 +764,7 @@ allB = {
     },
     BUR44 = {
         click_function = "ur44",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_44",
         position = {6.6,0.05,-6.6},
         rotation = {0,0,0},
@@ -777,7 +777,7 @@ allB = {
     },
     BUR45 = {
         click_function = "ur45",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_45",
         position = {8.25,0.05,-6.6},
         rotation = {0,0,0},
@@ -790,7 +790,7 @@ allB = {
     },
     BUR46 = {
         click_function = "ur46",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_46",
         position = {9.9,0.05,-6.6},
         rotation = {0,0,0},
@@ -803,7 +803,7 @@ allB = {
     },
     BUR47 = {
         click_function = "ur47",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_47",
         position = {11.55,0.05,-6.6},
         rotation = {0,0,0},
@@ -816,7 +816,7 @@ allB = {
     },
     BUR51 = {
         click_function = "ur51",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_51",
         position = {1.65,0.05,-8.25},
         rotation = {0,0,0},
@@ -829,7 +829,7 @@ allB = {
     },
     BUR52 = {
         click_function = "ur52",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_52",
         position = {3.3,0.05,-8.25},
         rotation = {0,0,0},
@@ -842,7 +842,7 @@ allB = {
     },
     BUR53 = {
         click_function = "ur53",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_53",
         position = {4.95,0.05,-8.25},
         rotation = {0,0,0},
@@ -855,7 +855,7 @@ allB = {
     },
     BUR54 = {
         click_function = "ur54",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_54",
         position = {6.6,0.05,-8.25},
         rotation = {0,0,0},
@@ -868,7 +868,7 @@ allB = {
     },
     BUR55 = {
         click_function = "ur55",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_55",
         position = {8.25,0.05,-8.25},
         rotation = {0,0,0},
@@ -881,7 +881,7 @@ allB = {
     },
     BUR56 = {
         click_function = "ur56",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_56",
         position = {9.9,0.05,-8.25},
         rotation = {0,0,0},
@@ -894,7 +894,7 @@ allB = {
     },
     BUR57 = {
         click_function = "ur57",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_57",
         position = {11.55,0.05,-8.25},
         rotation = {0,0,0},
@@ -907,7 +907,7 @@ allB = {
     },
     BUR61 = {
         click_function = "ur61",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_61",
         position = {1.65,0.05,-9.9},
         rotation = {0,0,0},
@@ -920,7 +920,7 @@ allB = {
     },
     BUR62 = {
         click_function = "ur62",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_62",
         position = {3.3,0.05,-9.9},
         rotation = {0,0,0},
@@ -933,7 +933,7 @@ allB = {
     },
     BUR63 = {
         click_function = "ur63",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_63",
         position = {4.95,0.05,-9.9},
         rotation = {0,0,0},
@@ -946,7 +946,7 @@ allB = {
     },
     BUR64 = {
         click_function = "ur64",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_64",
         position = {6.6,0.05,-9.9},
         rotation = {0,0,0},
@@ -959,7 +959,7 @@ allB = {
     },
     BUR65 = {
         click_function = "ur65",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_65",
         position = {8.25,0.05,-9.9},
         rotation = {0,0,0},
@@ -972,7 +972,7 @@ allB = {
     },
     BUR66 = {
         click_function = "ur66",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_66",
         position = {9.9,0.05,-9.9},
         rotation = {0,0,0},
@@ -985,7 +985,7 @@ allB = {
     },
     BUR67 = {
         click_function = "ur67",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_67",
         position = {11.55,0.05,-9.9},
         rotation = {0,0,0},
@@ -998,7 +998,7 @@ allB = {
     },
     BUR71 = {
         click_function = "ur71",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_71",
         position = {1.65,0.05,-11.55},
         rotation = {0,0,0},
@@ -1011,7 +1011,7 @@ allB = {
     },
     BUR72 = {
         click_function = "ur72",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_72",
         position = {3.3,0.05,-11.55},
         rotation = {0,0,0},
@@ -1024,7 +1024,7 @@ allB = {
     },
     BUR73 = {
         click_function = "ur73",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_73",
         position = {4.95,0.05,-11.55},
         rotation = {0,0,0},
@@ -1037,7 +1037,7 @@ allB = {
     },
     BUR74 = {
         click_function = "ur74",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_74",
         position = {6.6,0.05,-11.55},
         rotation = {0,0,0},
@@ -1050,7 +1050,7 @@ allB = {
     },
     BUR75 = {
         click_function = "ur75",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_75",
         position = {8.25,0.05,-11.55},
         rotation = {0,0,0},
@@ -1063,7 +1063,7 @@ allB = {
     },
     BUR76 = {
         click_function = "ur76",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_76",
         position = {9.9,0.05,-11.55},
         rotation = {0,0,0},
@@ -1076,7 +1076,7 @@ allB = {
     },
     BUR77 = {
         click_function = "ur77",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_77",
         position = {11.55,0.05,-11.55},
         rotation = {0,0,0},
@@ -1091,7 +1091,7 @@ allB = {
 --up left buttons
     BUL11 = {
         click_function = "ul11",
-        function_owner = figDO,
+        function_owner = self,
         label = "",
         position = {-1.65,0.05,-1.65},
         rotation = {0,0,0},
@@ -1104,7 +1104,7 @@ allB = {
     },
     BUL12 = {
         click_function = "ul12",
-        function_owner = figDO,
+        function_owner = self,
         label = "",
         position = {-3.3,0.05,-1.65},
         rotation = {0,0,0},
@@ -1117,7 +1117,7 @@ allB = {
     },
     BUL13 = {
         click_function = "ul13",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_13",
         position = {-4.95,0.05,-1.65},
         rotation = {0,0,0},
@@ -1130,7 +1130,7 @@ allB = {
     },
     BUL14 = {
         click_function = "ul14",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_14",
         position = {-6.6,0.05,-1.65},
         rotation = {0,0,0},
@@ -1143,7 +1143,7 @@ allB = {
     },
     BUL15 = {
         click_function = "ul15",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_15",
         position = {-8.25,0.05,-1.65},
         rotation = {0,0,0},
@@ -1156,7 +1156,7 @@ allB = {
     },
     BUL16 = {
         click_function = "ul16",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_16",
         position = {-9.9,0.05,-1.65},
         rotation = {0,0,0},
@@ -1169,7 +1169,7 @@ allB = {
     },
     BUL17 = {
         click_function = "ul17",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_17",
         position = {-11.55,0.05,-1.65},
         rotation = {0,0,0},
@@ -1182,7 +1182,7 @@ allB = {
     },
     BUL21 = {
         click_function = "ul21",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_21",
         position = {-1.65,0.05,-3.3},
         rotation = {0,0,0},
@@ -1195,7 +1195,7 @@ allB = {
     },
     BUL22 = {
         click_function = "ul22",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_22",
         position = {-3.3,0.05,-3.3},
         rotation = {0,0,0},
@@ -1208,7 +1208,7 @@ allB = {
     },
     BUL23 = {
         click_function = "ul23",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_23",
         position = {-4.95,0.05,-3.3},
         rotation = {0,0,0},
@@ -1221,7 +1221,7 @@ allB = {
     },
     BUL24 = {
         click_function = "ul24",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_24",
         position = {-6.6,0.05,-3.3},
         rotation = {0,0,0},
@@ -1234,7 +1234,7 @@ allB = {
     },
     BUL25 = {
         click_function = "ul25",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_25",
         position = {-8.25,0.05,-3.3},
         rotation = {0,0,0},
@@ -1247,7 +1247,7 @@ allB = {
     },
     BUL26 = {
         click_function = "ul26",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_26",
         position = {-9.9,0.05,-3.3},
         rotation = {0,0,0},
@@ -1260,7 +1260,7 @@ allB = {
     },
     BUL27 = {
         click_function = "ul27",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_27",
         position = {-11.55,0.05,-3.3},
         rotation = {0,0,0},
@@ -1273,7 +1273,7 @@ allB = {
     },
     BUL31 = {
         click_function = "ul31",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_31",
         position = {-1.65,0.05,-4.95},
         rotation = {0,0,0},
@@ -1286,7 +1286,7 @@ allB = {
     },
     BUL32 = {
         click_function = "ul32",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_32",
         position = {-3.3,0.05,-4.95},
         rotation = {0,0,0},
@@ -1299,8 +1299,8 @@ allB = {
     },
     BUL33 = {
         click_function = "ul33",
-        function_owner = figDO,
-        label = "UL_33",
+        function_owner = self,
+        label = "",
         position = {-4.95,0.05,-4.95},
         rotation = {0,0,0},
         width = 800,
@@ -1308,11 +1308,11 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "UL_33",
-    },
+        tooltip = "",
+    }
     BUL34 = {
         click_function = "ul34",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_34",
         position = {-6.6,0.05,-4.95},
         rotation = {0,0,0},
@@ -1325,7 +1325,7 @@ allB = {
     },
     BUL35 = {
         click_function = "ul35",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_35",
         position = {-8.25,0.05,-4.95},
         rotation = {0,0,0},
@@ -1338,7 +1338,7 @@ allB = {
     },
     BUL36 = {
         click_function = "ul36",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_36",
         position = {-9.9,0.05,-4.95},
         rotation = {0,0,0},
@@ -1351,7 +1351,7 @@ allB = {
     },
     BUL37 = {
         click_function = "ul37",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_37",
         position = {-11.55,0.05,-4.95},
         rotation = {0,0,0},
@@ -1364,7 +1364,7 @@ allB = {
     },
     BUL41 = {
         click_function = "ul41",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_41",
         position = {-1.65,0.05,-6.6},
         rotation = {0,0,0},
@@ -1377,7 +1377,7 @@ allB = {
     },
     BUL42 = {
         click_function = "ul42",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_42",
         position = {-3.3,0.05,-6.6},
         rotation = {0,0,0},
@@ -1390,7 +1390,7 @@ allB = {
     },
     BUL43 = {
         click_function = "ul43",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_43",
         position = {-4.95,0.05,-6.6},
         rotation = {0,0,0},
@@ -1403,7 +1403,7 @@ allB = {
     },
     BUL44 = {
         click_function = "ul44",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_44",
         position = {-6.6,0.05,-6.6},
         rotation = {0,0,0},
@@ -1416,7 +1416,7 @@ allB = {
     },
     BUL45 = {
         click_function = "ul45",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_45",
         position = {-8.25,0.05,-6.6},
         rotation = {0,0,0},
@@ -1429,7 +1429,7 @@ allB = {
     }
     BUL46 = {
         click_function = "ul46",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_46",
         position = {-9.9,0.05,-6.6},
         rotation = {0,0,0},
@@ -1442,7 +1442,7 @@ allB = {
     }
     BUL47 = {
         click_function = "ul47",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_47",
         position = {-11.55,0.05,-6.6},
         rotation = {0,0,0},
@@ -1455,7 +1455,7 @@ allB = {
     }
     BUL51 = {
         click_function = "ul51",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_51",
         position = {-1.65,0.05,-8.25},
         rotation = {0,0,0},
@@ -1468,7 +1468,7 @@ allB = {
     }
     BUL52 = {
         click_function = "ul52",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_52",
         position = {-3.3,0.05,-8.25},
         rotation = {0,0,0},
@@ -1481,7 +1481,7 @@ allB = {
     }
     BUL53 = {
         click_function = "ul53",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_53",
         position = {-4.95,0.05,-8.25},
         rotation = {0,0,0},
@@ -1494,7 +1494,7 @@ allB = {
     }
     BUL54 = {
         click_function = "ul54",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_54",
         position = {-6.6,0.05,-8.25},
         rotation = {0,0,0},
@@ -1507,7 +1507,7 @@ allB = {
     }
     BUL55 = {
         click_function = "ul55",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_55",
         position = {-8.25,0.05,-8.25},
         rotation = {0,0,0},
@@ -1520,7 +1520,7 @@ allB = {
     }
     BUL56 = {
         click_function = "ul56",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_56",
         position = {-9.9,0.05,-8.25},
         rotation = {0,0,0},
@@ -1533,7 +1533,7 @@ allB = {
     }
     BUL57 = {
         click_function = "ul57",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_57",
         position = {-11.55,0.05,-8.25},
         rotation = {0,0,0},
@@ -1546,7 +1546,7 @@ allB = {
     }
     BUL61 = {
         click_function = "ul61",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_61",
         position = {-1.65,0.05,-9.9},
         rotation = {0,0,0},
@@ -1559,7 +1559,7 @@ allB = {
     }
     BUL62 = {
         click_function = "ul62",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_62",
         position = {-3.3,0.05,-9.9},
         rotation = {0,0,0},
@@ -1572,7 +1572,7 @@ allB = {
     }
     BUL63 = {
         click_function = "ul63",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_63",
         position = {-4.95,0.05,-9.9},
         rotation = {0,0,0},
@@ -1585,7 +1585,7 @@ allB = {
     }
     BUL64 = {
         click_function = "ul64",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_64",
         position = {-6.6,0.05,-9.9},
         rotation = {0,0,0},
@@ -1598,7 +1598,7 @@ allB = {
     }
     BUL65 = {
         click_function = "ul65",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_65",
         position = {-8.25,0.05,-9.9},
         rotation = {0,0,0},
@@ -1611,7 +1611,7 @@ allB = {
     }
     BUL66 = {
         click_function = "ul66",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_66",
         position = {-9.9,0.05,-9.9},
         rotation = {0,0,0},
@@ -1624,7 +1624,7 @@ allB = {
     }
     BUL67 = {
         click_function = "ul67",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_67",
         position = {-11.55,0.05,-9.9},
         rotation = {0,0,0},
@@ -1637,7 +1637,7 @@ allB = {
     }
     BUL71 = {
         click_function = "ul71",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_71",
         position = {-1.65,0.05,-11.55},
         rotation = {0,0,0},
@@ -1650,7 +1650,7 @@ allB = {
     }
     BUL72 = {
         click_function = "ul72",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_72",
         position = {-3.3,0.05,-11.55},
         rotation = {0,0,0},
@@ -1663,7 +1663,7 @@ allB = {
     }
     BUL73 = {
         click_function = "ul73",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_73",
         position = {-4.95,0.05,-11.55},
         rotation = {0,0,0},
@@ -1676,7 +1676,7 @@ allB = {
     }
     BUL74 = {
         click_function = "ul74",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_74",
         position = {-6.6,0.05,-11.55},
         rotation = {0,0,0},
@@ -1689,7 +1689,7 @@ allB = {
     }
     BUL75 = {
         click_function = "ul75",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_75",
         position = {-8.25,0.05,-11.55},
         rotation = {0,0,0},
@@ -1702,7 +1702,7 @@ allB = {
     }
     BUL76 = {
         click_function = "ul76",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_76",
         position = {-9.9,0.05,-11.55},
         rotation = {0,0,0},
@@ -1715,7 +1715,7 @@ allB = {
     }
     BUL77 = {
         click_function = "ul77",
-        function_owner = figDO,
+        function_owner = self,
         label = "UL_77",
         position = {-11.55,0.05,-11.55},
         rotation = {0,0,0},
@@ -1730,7 +1730,7 @@ allB = {
 --down right buttons
     BDR11 = {
         click_function = "dr11",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_11",
         position = {1.65,0.05,1.65},
         rotation = {0,0,0},
@@ -1743,7 +1743,7 @@ allB = {
     }
     BDR12 = {
         click_function = "dr12",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_12",
         position = {3.3,0.05,1.65},
         rotation = {0,0,0},
@@ -1756,7 +1756,7 @@ allB = {
     }
     BDR13 = {
         click_function = "dr13",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_13",
         position = {4.95,0.05,1.65},
         rotation = {0,0,0},
@@ -1769,7 +1769,7 @@ allB = {
     }
     BDR14 = {
         click_function = "dr14",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_14",
         position = {6.6,0.05,1.65},
         rotation = {0,0,0},
@@ -1782,7 +1782,7 @@ allB = {
     }
     BDR15 = {
         click_function = "dr15",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_15",
         position = {8.25,0.05,1.65},
         rotation = {0,0,0},
@@ -1795,7 +1795,7 @@ allB = {
     }
     BDR16 = {
         click_function = "dr16",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_16",
         position = {9.9,0.05,1.65},
         rotation = {0,0,0},
@@ -1808,7 +1808,7 @@ allB = {
     }
     BDR17 = {
         click_function = "dr17",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_17",
         position = {11.55,0.05,1.65},
         rotation = {0,0,0},
@@ -1821,7 +1821,7 @@ allB = {
     }
     BDR21 = {
         click_function = "dr21",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_21",
         position = {1.65,0.05,3.3},
         rotation = {0,0,0},
@@ -1834,7 +1834,7 @@ allB = {
     }
     BDR22 = {
         click_function = "dr22",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_22",
         position = {3.3,0.05,3.3},
         rotation = {0,0,0},
@@ -1847,7 +1847,7 @@ allB = {
     }
     BDR23 = {
         click_function = "dr23",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_23",
         position = {4.95,0.05,3.3},
         rotation = {0,0,0},
@@ -1860,7 +1860,7 @@ allB = {
     }
     BDR24 = {
         click_function = "dr24",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_24",
         position = {6.6,0.05,3.3},
         rotation = {0,0,0},
@@ -1873,7 +1873,7 @@ allB = {
     }
     BDR25 = {
         click_function = "dr25",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_25",
         position = {8.25,0.05,3.3},
         rotation = {0,0,0},
@@ -1886,7 +1886,7 @@ allB = {
     }
     BDR26 = {
         click_function = "dr26",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_26",
         position = {9.9,0.05,3.3},
         rotation = {0,0,0},
@@ -1899,7 +1899,7 @@ allB = {
     }
     BDR27 = {
         click_function = "dr27",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_27",
         position = {11.55,0.05,3.3},
         rotation = {0,0,0},
@@ -1912,7 +1912,7 @@ allB = {
     }
     BDR31 = {
         click_function = "dr31",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_31",
         position = {1.65,0.05,4.95},
         rotation = {0,0,0},
@@ -1925,7 +1925,7 @@ allB = {
     }
     BDR32 = {
         click_function = "dr32",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_32",
         position = {3.3,0.05,4.95},
         rotation = {0,0,0},
@@ -1938,7 +1938,7 @@ allB = {
     }
     BDR33 = {
         click_function = "dr33",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_33",
         position = {4.95,0.05,4.95},
         rotation = {0,0,0},
@@ -1951,7 +1951,7 @@ allB = {
     }
     BDR34 = {
         click_function = "dr34",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_34",
         position = {6.6,0.05,4.95},
         rotation = {0,0,0},
@@ -1964,7 +1964,7 @@ allB = {
     }
     BDR35 = {
         click_function = "dr35",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_35",
         position = {8.25,0.05,4.95},
         rotation = {0,0,0},
@@ -1977,7 +1977,7 @@ allB = {
     }
     BDR36 = {
         click_function = "dr36",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_36",
         position = {9.9,0.05,4.95},
         rotation = {0,0,0},
@@ -1990,7 +1990,7 @@ allB = {
     }
     BDR37 = {
         click_function = "dr37",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_37",
         position = {11.55,0.05,4.95},
         rotation = {0,0,0},
@@ -2003,7 +2003,7 @@ allB = {
     }
     BDR41 = {
         click_function = "dr41",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_41",
         position = {1.65,0.05,6.6},
         rotation = {0,0,0},
@@ -2016,7 +2016,7 @@ allB = {
     }
     BDR42 = {
         click_function = "dr42",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_42",
         position = {3.3,0.05,6.6},
         rotation = {0,0,0},
@@ -2029,7 +2029,7 @@ allB = {
     }
     BDR43 = {
         click_function = "dr43",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_43",
         position = {4.95,0.05,6.6},
         rotation = {0,0,0},
@@ -2042,7 +2042,7 @@ allB = {
     }
     BDR44 = {
         click_function = "dr44",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_44",
         position = {6.6,0.05,6.6},
         rotation = {0,0,0},
@@ -2055,7 +2055,7 @@ allB = {
     }
     BDR45 = {
         click_function = "dr45",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_45",
         position = {8.25,0.05,6.6},
         rotation = {0,0,0},
@@ -2068,7 +2068,7 @@ allB = {
     }
     BDR46 = {
         click_function = "dr46",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_46",
         position = {9.9,0.05,6.6},
         rotation = {0,0,0},
@@ -2081,7 +2081,7 @@ allB = {
     }
     BDR47 = {
         click_function = "dr47",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_47",
         position = {11.55,0.05,6.6},
         rotation = {0,0,0},
@@ -2094,7 +2094,7 @@ allB = {
     }
     BDR51 = {
         click_function = "dr51",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_51",
         position = {1.65,0.05,8.25},
         rotation = {0,0,0},
@@ -2107,7 +2107,7 @@ allB = {
     }
     BDR52 = {
         click_function = "dr52",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_52",
         position = {3.3,0.05,8.25},
         rotation = {0,0,0},
@@ -2120,7 +2120,7 @@ allB = {
     }
     BDR53 = {
         click_function = "dr53",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_53",
         position = {4.95,0.05,8.25},
         rotation = {0,0,0},
@@ -2133,7 +2133,7 @@ allB = {
     }
     BDR54 = {
         click_function = "dr54",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_54",
         position = {6.6,0.05,8.25},
         rotation = {0,0,0},
@@ -2146,7 +2146,7 @@ allB = {
     }
     BDR55 = {
         click_function = "dr55",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_55",
         position = {8.25,0.05,8.25},
         rotation = {0,0,0},
@@ -2159,7 +2159,7 @@ allB = {
     }
     BDR56 = {
         click_function = "dr56",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_56",
         position = {9.9,0.05,8.25},
         rotation = {0,0,0},
@@ -2172,7 +2172,7 @@ allB = {
     }
     BDR57 = {
         click_function = "dr57",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_57",
         position = {11.55,0.05,8.25},
         rotation = {0,0,0},
@@ -2185,7 +2185,7 @@ allB = {
     }
     BDR61 = {
         click_function = "dr61",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_61",
         position = {1.65,0.05,9.9},
         rotation = {0,0,0},
@@ -2198,7 +2198,7 @@ allB = {
     }
     BDR62 = {
         click_function = "dr62",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_62",
         position = {3.3,0.05,9.9},
         rotation = {0,0,0},
@@ -2211,7 +2211,7 @@ allB = {
     }
     BDR63 = {
         click_function = "dr63",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_63",
         position = {4.95,0.05,9.9},
         rotation = {0,0,0},
@@ -2224,7 +2224,7 @@ allB = {
     }
     BDR64 = {
         click_function = "dr64",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_64",
         position = {6.6,0.05,9.9},
         rotation = {0,0,0},
@@ -2237,7 +2237,7 @@ allB = {
     }
     BDR65 = {
         click_function = "dr65",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_65",
         position = {8.25,0.05,9.9},
         rotation = {0,0,0},
@@ -2250,7 +2250,7 @@ allB = {
     }
     BDR66 = {
         click_function = "dr66",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_66",
         position = {9.9,0.05,9.9},
         rotation = {0,0,0},
@@ -2263,7 +2263,7 @@ allB = {
     }
     BDR67 = {
         click_function = "dr67",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_67",
         position = {11.55,0.05,9.9},
         rotation = {0,0,0},
@@ -2276,7 +2276,7 @@ allB = {
     }
     BDR71 = {
         click_function = "dr71",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_71",
         position = {1.65,0.05,11.55},
         rotation = {0,0,0},
@@ -2289,7 +2289,7 @@ allB = {
     }
     BDR72 = {
         click_function = "dr72",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_72",
         position = {3.3,0.05,11.55},
         rotation = {0,0,0},
@@ -2302,7 +2302,7 @@ allB = {
     }
     BDR73 = {
         click_function = "dr73",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_73",
         position = {4.95,0.05,11.55},
         rotation = {0,0,0},
@@ -2315,7 +2315,7 @@ allB = {
     }
     BDR74 = {
         click_function = "dr74",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_74",
         position = {6.6,0.05,11.55},
         rotation = {0,0,0},
@@ -2328,7 +2328,7 @@ allB = {
     }
     BDR75 = {
         click_function = "dr75",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_75",
         position = {8.25,0.05,11.55},
         rotation = {0,0,0},
@@ -2341,7 +2341,7 @@ allB = {
     }
     BDR76 = {
         click_function = "dr76",
-        function_owner = figDO,
+        function_owner = self,
         label = "UR_76",
         position = {9.9,0.05,11.55},
         rotation = {0,0,0},
@@ -2354,7 +2354,7 @@ allB = {
     }
     BDR77 = {
         click_function = "dr77",
-        function_owner = figDO,
+        function_owner = self,
         label = "DR_77",
         position = {11.55,0.05,11.55},
         rotation = {0,0,0},
@@ -2369,7 +2369,7 @@ allB = {
 --down left buttons
     BDL11 = {
         click_function = "dl11",
-        function_owner = figDO,
+        function_owner = self,
         label = "",
         position = {-1.65,0.05,1.65},
         rotation = {0,0,0},
@@ -2382,7 +2382,7 @@ allB = {
     },
     BDL12 = {
         click_function = "dl12",
-        function_owner = figDO,
+        function_owner = self,
         label = "",
         position = {-3.3,0.05,1.65},
         rotation = {0,0,0},
@@ -2395,7 +2395,7 @@ allB = {
     },
     BDL13 = {
         click_function = "dl13",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_13",
         position = {-4.95,0.05,1.65},
         rotation = {0,0,0},
@@ -2408,7 +2408,7 @@ allB = {
     }
     BDL14 = {
         click_function = "dl14",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_14",
         position = {-6.6,0.05,1.65},
         rotation = {0,0,0},
@@ -2421,7 +2421,7 @@ allB = {
     }
     BDL15 = {
         click_function = "dl15",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_15",
         position = {-8.25,0.05,1.65},
         rotation = {0,0,0},
@@ -2434,7 +2434,7 @@ allB = {
     }
     BDL16 = {
         click_function = "dl16",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_16",
         position = {-9.9,0.05,1.65},
         rotation = {0,0,0},
@@ -2447,7 +2447,7 @@ allB = {
     }
     BDL17 = {
         click_function = "dl17",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_17",
         position = {-11.55,0.05,1.65},
         rotation = {0,0,0},
@@ -2460,7 +2460,7 @@ allB = {
     }
     BDL21 = {
         click_function = "dl21",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_21",
         position = {-1.65,0.05,3.3},
         rotation = {0,0,0},
@@ -2473,7 +2473,7 @@ allB = {
     }
     BDL22 = {
         click_function = "dl22",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_22",
         position = {-3.3,0.05,3.3},
         rotation = {0,0,0},
@@ -2486,7 +2486,7 @@ allB = {
     }
     BDL23 = {
         click_function = "dl23",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_23",
         position = {-4.95,0.05,3.3},
         rotation = {0,0,0},
@@ -2499,7 +2499,7 @@ allB = {
     }
     BDL24 = {
         click_function = "dl24",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_24",
         position = {-6.6,0.05,3.3},
         rotation = {0,0,0},
@@ -2512,7 +2512,7 @@ allB = {
     }
     BDL25 = {
         click_function = "dl25",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_25",
         position = {-8.25,0.05,3.3},
         rotation = {0,0,0},
@@ -2525,7 +2525,7 @@ allB = {
     }
     BDL26 = {
         click_function = "dl26",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_26",
         position = {-9.9,0.05,3.3},
         rotation = {0,0,0},
@@ -2538,7 +2538,7 @@ allB = {
     }
     BDL27 = {
         click_function = "dl27",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_27",
         position = {-11.55,0.05,3.3},
         rotation = {0,0,0},
@@ -2551,7 +2551,7 @@ allB = {
     }
     BDL31 = {
         click_function = "dl31",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_31",
         position = {-1.65,0.05,4.95},
         rotation = {0,0,0},
@@ -2564,7 +2564,7 @@ allB = {
     }
     BDL32 = {
         click_function = "dl32",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_32",
         position = {-3.3,0.05,4.95},
         rotation = {0,0,0},
@@ -2577,8 +2577,8 @@ allB = {
     }
     BDL33 = {
         click_function = "dl33",
-        function_owner = figDO,
-        label = "DL_33",
+        function_owner = self,
+        label = "",
         position = {-4.95,0.05,4.95},
         rotation = {0,0,0},
         width = 800,
@@ -2586,11 +2586,11 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "DL_33",
+        tooltip = "",
     }
     BDL34 = {
         click_function = "dl34",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_34",
         position = {-6.6,0.05,4.95},
         rotation = {0,0,0},
@@ -2603,7 +2603,7 @@ allB = {
     }
     BDL35 = {
         click_function = "dl35",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_35",
         position = {-8.25,0.05,4.95},
         rotation = {0,0,0},
@@ -2616,7 +2616,7 @@ allB = {
     }
     BDL36 = {
         click_function = "dl36",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_36",
         position = {-9.9,0.05,4.95},
         rotation = {0,0,0},
@@ -2629,7 +2629,7 @@ allB = {
     }
     BDL37 = {
         click_function = "dl37",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_37",
         position = {-11.55,0.05,4.95},
         rotation = {0,0,0},
@@ -2642,7 +2642,7 @@ allB = {
     }
     BDL41 = {
         click_function = "dl41",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_41",
         position = {-1.65,0.05,6.6},
         rotation = {0,0,0},
@@ -2655,7 +2655,7 @@ allB = {
     }
     BDL42 = {
         click_function = "dl42",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_42",
         position = {-3.3,0.05,6.6},
         rotation = {0,0,0},
@@ -2668,7 +2668,7 @@ allB = {
     }
     BDL43 = {
         click_function = "dl43",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_43",
         position = {-4.95,0.05,6.6},
         rotation = {0,0,0},
@@ -2681,7 +2681,7 @@ allB = {
     }
     BDL44 = {
         click_function = "dl44",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_44",
         position = {-6.6,0.05,6.6},
         rotation = {0,0,0},
@@ -2694,7 +2694,7 @@ allB = {
     }
     BDL45 = {
         click_function = "dl45",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_45",
         position = {-8.25,0.05,6.6},
         rotation = {0,0,0},
@@ -2707,7 +2707,7 @@ allB = {
     }
     BDL46 = {
         click_function = "dl46",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_46",
         position = {-9.9,0.05,6.6},
         rotation = {0,0,0},
@@ -2720,7 +2720,7 @@ allB = {
     }
     BDL47 = {
         click_function = "dl47",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_47",
         position = {-11.55,0.05,6.6},
         rotation = {0,0,0},
@@ -2733,7 +2733,7 @@ allB = {
     }
     BDL51 = {
         click_function = "dl51",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_51",
         position = {-1.65,0.05,8.25},
         rotation = {0,0,0},
@@ -2746,7 +2746,7 @@ allB = {
     }
     BDL52 = {
         click_function = "dl52",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_52",
         position = {-3.3,0.05,8.25},
         rotation = {0,0,0},
@@ -2759,7 +2759,7 @@ allB = {
     }
     BDL53 = {
         click_function = "dl53",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_53",
         position = {-4.95,0.05,8.25},
         rotation = {0,0,0},
@@ -2772,7 +2772,7 @@ allB = {
     }
     BDL54 = {
         click_function = "dl54",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_54",
         position = {-6.6,0.05,8.25},
         rotation = {0,0,0},
@@ -2785,7 +2785,7 @@ allB = {
     }
     BDL55 = {
         click_function = "dl55",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_55",
         position = {-8.25,0.05,8.25},
         rotation = {0,0,0},
@@ -2798,7 +2798,7 @@ allB = {
     }
     BDL56 = {
         click_function = "dl56",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_56",
         position = {-9.9,0.05,8.25},
         rotation = {0,0,0},
@@ -2811,7 +2811,7 @@ allB = {
     }
     BDL57 = {
         click_function = "dl57",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_57",
         position = {-11.55,0.05,8.25},
         rotation = {0,0,0},
@@ -2824,7 +2824,7 @@ allB = {
     }
     BDL61 = {
         click_function = "dl61",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_61",
         position = {-1.65,0.05,9.9},
         rotation = {0,0,0},
@@ -2837,7 +2837,7 @@ allB = {
     }
     BDL62 = {
         click_function = "dl62",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_62",
         position = {-3.3,0.05,9.9},
         rotation = {0,0,0},
@@ -2850,7 +2850,7 @@ allB = {
     }
     BDL63 = {
         click_function = "dl63",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_63",
         position = {-4.95,0.05,9.9},
         rotation = {0,0,0},
@@ -2863,7 +2863,7 @@ allB = {
     }
     BDL64 = {
         click_function = "dl64",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_64",
         position = {-6.6,0.05,9.9},
         rotation = {0,0,0},
@@ -2876,7 +2876,7 @@ allB = {
     }
     BDL65 = {
         click_function = "dl65",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_65",
         position = {-8.25,0.05,9.9},
         rotation = {0,0,0},
@@ -2889,7 +2889,7 @@ allB = {
     }
     BDL66 = {
         click_function = "dl66",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_66",
         position = {-9.9,0.05,9.9},
         rotation = {0,0,0},
@@ -2902,7 +2902,7 @@ allB = {
     }
     BDL67 = {
         click_function = "dl67",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_67",
         position = {-11.55,0.05,9.9},
         rotation = {0,0,0},
@@ -2915,7 +2915,7 @@ allB = {
     }
     BDL71 = {
         click_function = "dl71",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_71",
         position = {-1.65,0.05,11.55},
         rotation = {0,0,0},
@@ -2928,7 +2928,7 @@ allB = {
     }
     BDL72 = {
         click_function = "dl72",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_72",
         position = {-3.3,0.05,11.55},
         rotation = {0,0,0},
@@ -2941,7 +2941,7 @@ allB = {
     }
     BDL73 = {
         click_function = "dl73",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_73",
         position = {-4.95,0.05,11.55},
         rotation = {0,0,0},
@@ -2954,7 +2954,7 @@ allB = {
     }
     BDL74 = {
         click_function = "dl74",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_74",
         position = {-6.6,0.05,11.55},
         rotation = {0,0,0},
@@ -2967,7 +2967,7 @@ allB = {
     }
     BDL75 = {
         click_function = "dl75",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_75",
         position = {-8.25,0.05,11.55},
         rotation = {0,0,0},
@@ -2980,7 +2980,7 @@ allB = {
     }
     BDL76 = {
         click_function = "dl76",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_76",
         position = {-9.9,0.05,11.55},
         rotation = {0,0,0},
@@ -2993,7 +2993,7 @@ allB = {
     }
     BDL77 = {
         click_function = "dl77",
-        function_owner = figDO,
+        function_owner = self,
         label = "DL_77",
         position = {-11.55,0.05,11.55},
         rotation = {0,0,0},
@@ -3006,242 +3006,242 @@ allB = {
     }
 }
 --elite buttons made
-figDO.createButton(elite)
-figDO.createButton(elite1)
-figDO.createButton(elite2)
+self.createButton(elite)
+self.createButton(elite1)
+self.createButton(elite2)
 --cross button made
-figDO.createButton(cross)
+self.createButton(cross)
 --center button made
-    figDO.createButton(BC0)
+    self.createButton(BC0)
 --up buttons made
-    figDO.createButton(BU1)
-    figDO.createButton(BU2)
-    figDO.createButton(BU3)
-    figDO.createButton(BU4)
-    figDO.createButton(BU5)
-    figDO.createButton(BU6)
-    figDO.createButton(BU7)
+    self.createButton(BU1)
+    self.createButton(BU2)
+    self.createButton(BU3)
+    self.createButton(BU4)
+    self.createButton(BU5)
+    self.createButton(BU6)
+    self.createButton(BU7)
 --down buttons made
-    figDO.createButton(BD1)
-    figDO.createButton(BD2)
-    figDO.createButton(BD3)
-    figDO.createButton(BD4)
-    figDO.createButton(BD5)
-    figDO.createButton(BD6)
-    figDO.createButton(BD7)
+    self.createButton(BD1)
+    self.createButton(BD2)
+    self.createButton(BD3)
+    self.createButton(BD4)
+    self.createButton(BD5)
+    self.createButton(BD6)
+    self.createButton(BD7)
 --right buttons made
-    figDO.createButton(BR1)
-    figDO.createButton(BR2)
-    figDO.createButton(BR3)
-    figDO.createButton(BR4)
-    figDO.createButton(BR5)
-    figDO.createButton(BR6)
-    figDO.createButton(BR7)
+    self.createButton(BR1)
+    self.createButton(BR2)
+    self.createButton(BR3)
+    self.createButton(BR4)
+    self.createButton(BR5)
+    self.createButton(BR6)
+    self.createButton(BR7)
 --left buttons made
-    figDO.createButton(BL1)
-    figDO.createButton(BL2)
-    figDO.createButton(BL3)
-    figDO.createButton(BL4)
-    figDO.createButton(BL5)
-    figDO.createButton(BL6)
-    figDO.createButton(BL7)
+    self.createButton(BL1)
+    self.createButton(BL2)
+    self.createButton(BL3)
+    self.createButton(BL4)
+    self.createButton(BL5)
+    self.createButton(BL6)
+    self.createButton(BL7)
 --up right buttons made
-    figDO.createButton(BUR11)
-    figDO.createButton(BUR12)
-    figDO.createButton(BUR13)
-    figDO.createButton(BUR14)
-    figDO.createButton(BUR15)
-    figDO.createButton(BUR16)
-    figDO.createButton(BUR17)
-    figDO.createButton(BUR21)
-    figDO.createButton(BUR22)
-    figDO.createButton(BUR23)
-    figDO.createButton(BUR24)
-    figDO.createButton(BUR25)
-    figDO.createButton(BUR26)
-    figDO.createButton(BUR27)
-    figDO.createButton(BUR31)
-    figDO.createButton(BUR32)
-    figDO.createButton(BUR33)
-    figDO.createButton(BUR34)
-    figDO.createButton(BUR35)
-    figDO.createButton(BUR36)
-    figDO.createButton(BUR37)
-    figDO.createButton(BUR41)
-    figDO.createButton(BUR42)
-    figDO.createButton(BUR43)
-    figDO.createButton(BUR44)
-    figDO.createButton(BUR45)
-    figDO.createButton(BUR46)
-    figDO.createButton(BUR47)
-    figDO.createButton(BUR51)
-    figDO.createButton(BUR52)
-    figDO.createButton(BUR53)
-    figDO.createButton(BUR54)
-    figDO.createButton(BUR55)
-    figDO.createButton(BUR56)
-    figDO.createButton(BUR57)
-    figDO.createButton(BUR61)
-    figDO.createButton(BUR62)
-    figDO.createButton(BUR63)
-    figDO.createButton(BUR64)
-    figDO.createButton(BUR65)
-    figDO.createButton(BUR66)
-    figDO.createButton(BUR67)
-    figDO.createButton(BUR71)
-    figDO.createButton(BUR72)
-    figDO.createButton(BUR73)
-    figDO.createButton(BUR74)
-    figDO.createButton(BUR75)
-    figDO.createButton(BUR76)
-    figDO.createButton(BUR77)
+    self.createButton(BUR11)
+    self.createButton(BUR12)
+    self.createButton(BUR13)
+    self.createButton(BUR14)
+    self.createButton(BUR15)
+    self.createButton(BUR16)
+    self.createButton(BUR17)
+    self.createButton(BUR21)
+    self.createButton(BUR22)
+    self.createButton(BUR23)
+    self.createButton(BUR24)
+    self.createButton(BUR25)
+    self.createButton(BUR26)
+    self.createButton(BUR27)
+    self.createButton(BUR31)
+    self.createButton(BUR32)
+    self.createButton(BUR33)
+    self.createButton(BUR34)
+    self.createButton(BUR35)
+    self.createButton(BUR36)
+    self.createButton(BUR37)
+    self.createButton(BUR41)
+    self.createButton(BUR42)
+    self.createButton(BUR43)
+    self.createButton(BUR44)
+    self.createButton(BUR45)
+    self.createButton(BUR46)
+    self.createButton(BUR47)
+    self.createButton(BUR51)
+    self.createButton(BUR52)
+    self.createButton(BUR53)
+    self.createButton(BUR54)
+    self.createButton(BUR55)
+    self.createButton(BUR56)
+    self.createButton(BUR57)
+    self.createButton(BUR61)
+    self.createButton(BUR62)
+    self.createButton(BUR63)
+    self.createButton(BUR64)
+    self.createButton(BUR65)
+    self.createButton(BUR66)
+    self.createButton(BUR67)
+    self.createButton(BUR71)
+    self.createButton(BUR72)
+    self.createButton(BUR73)
+    self.createButton(BUR74)
+    self.createButton(BUR75)
+    self.createButton(BUR76)
+    self.createButton(BUR77)
 --up left buttons made
-    figDO.createButton(BUL11)
-    figDO.createButton(BUL12)
-    figDO.createButton(BUL13)
-    figDO.createButton(BUL14)
-    figDO.createButton(BUL15)
-    figDO.createButton(BUL16)
-    figDO.createButton(BUL17)
-    figDO.createButton(BUL21)
-    figDO.createButton(BUL22)
-    figDO.createButton(BUL23)
-    figDO.createButton(BUL24)
-    figDO.createButton(BUL25)
-    figDO.createButton(BUL26)
-    figDO.createButton(BUL27)
-    figDO.createButton(BUL31)
-    figDO.createButton(BUL32)
-    figDO.createButton(BUL33)
-    figDO.createButton(BUL34)
-    figDO.createButton(BUL35)
-    figDO.createButton(BUL36)
-    figDO.createButton(BUL37)
-    figDO.createButton(BUL41)
-    figDO.createButton(BUL42)
-    figDO.createButton(BUL43)
-    figDO.createButton(BUL44)
-    figDO.createButton(BUL45)
-    figDO.createButton(BUL46)
-    figDO.createButton(BUL47)
-    figDO.createButton(BUL51)
-    figDO.createButton(BUL52)
-    figDO.createButton(BUL53)
-    figDO.createButton(BUL54)
-    figDO.createButton(BUL55)
-    figDO.createButton(BUL56)
-    figDO.createButton(BUL57)
-    figDO.createButton(BUL61)
-    figDO.createButton(BUL62)
-    figDO.createButton(BUL63)
-    figDO.createButton(BUL64)
-    figDO.createButton(BUL65)
-    figDO.createButton(BUL66)
-    figDO.createButton(BUL67)
-    figDO.createButton(BUL71)
-    figDO.createButton(BUL72)
-    figDO.createButton(BUL73)
-    figDO.createButton(BUL74)
-    figDO.createButton(BUL75)
-    figDO.createButton(BUL76)
-    figDO.createButton(BUL77)
+    self.createButton(BUL11)
+    self.createButton(BUL12)
+    self.createButton(BUL13)
+    self.createButton(BUL14)
+    self.createButton(BUL15)
+    self.createButton(BUL16)
+    self.createButton(BUL17)
+    self.createButton(BUL21)
+    self.createButton(BUL22)
+    self.createButton(BUL23)
+    self.createButton(BUL24)
+    self.createButton(BUL25)
+    self.createButton(BUL26)
+    self.createButton(BUL27)
+    self.createButton(BUL31)
+    self.createButton(BUL32)
+    self.createButton(BUL33)
+    self.createButton(BUL34)
+    self.createButton(BUL35)
+    self.createButton(BUL36)
+    self.createButton(BUL37)
+    self.createButton(BUL41)
+    self.createButton(BUL42)
+    self.createButton(BUL43)
+    self.createButton(BUL44)
+    self.createButton(BUL45)
+    self.createButton(BUL46)
+    self.createButton(BUL47)
+    self.createButton(BUL51)
+    self.createButton(BUL52)
+    self.createButton(BUL53)
+    self.createButton(BUL54)
+    self.createButton(BUL55)
+    self.createButton(BUL56)
+    self.createButton(BUL57)
+    self.createButton(BUL61)
+    self.createButton(BUL62)
+    self.createButton(BUL63)
+    self.createButton(BUL64)
+    self.createButton(BUL65)
+    self.createButton(BUL66)
+    self.createButton(BUL67)
+    self.createButton(BUL71)
+    self.createButton(BUL72)
+    self.createButton(BUL73)
+    self.createButton(BUL74)
+    self.createButton(BUL75)
+    self.createButton(BUL76)
+    self.createButton(BUL77)
 --down right buttons made
-    figDO.createButton(BDR11)
-    figDO.createButton(BDR12)
-    figDO.createButton(BDR13)
-    figDO.createButton(BDR14)
-    figDO.createButton(BDR15)
-    figDO.createButton(BDR16)
-    figDO.createButton(BDR17)
-    figDO.createButton(BDR21)
-    figDO.createButton(BDR22)
-    figDO.createButton(BDR23)
-    figDO.createButton(BDR24)
-    figDO.createButton(BDR25)
-    figDO.createButton(BDR26)
-    figDO.createButton(BDR27)
-    figDO.createButton(BDR31)
-    figDO.createButton(BDR32)
-    figDO.createButton(BDR33)
-    figDO.createButton(BDR34)
-    figDO.createButton(BDR35)
-    figDO.createButton(BDR36)
-    figDO.createButton(BDR37)
-    figDO.createButton(BDR41)
-    figDO.createButton(BDR42)
-    figDO.createButton(BDR43)
-    figDO.createButton(BDR44)
-    figDO.createButton(BDR45)
-    figDO.createButton(BDR46)
-    figDO.createButton(BDR47)
-    figDO.createButton(BDR51)
-    figDO.createButton(BDR52)
-    figDO.createButton(BDR53)
-    figDO.createButton(BDR54)
-    figDO.createButton(BDR55)
-    figDO.createButton(BDR56)
-    figDO.createButton(BDR57)
-    figDO.createButton(BDR61)
-    figDO.createButton(BDR62)
-    figDO.createButton(BDR63)
-    figDO.createButton(BDR64)
-    figDO.createButton(BDR65)
-    figDO.createButton(BDR66)
-    figDO.createButton(BDR67)
-    figDO.createButton(BDR71)
-    figDO.createButton(BDR72)
-    figDO.createButton(BDR73)
-    figDO.createButton(BDR74)
-    figDO.createButton(BDR75)
-    figDO.createButton(BDR76)
-    figDO.createButton(BDR77)
+    self.createButton(BDR11)
+    self.createButton(BDR12)
+    self.createButton(BDR13)
+    self.createButton(BDR14)
+    self.createButton(BDR15)
+    self.createButton(BDR16)
+    self.createButton(BDR17)
+    self.createButton(BDR21)
+    self.createButton(BDR22)
+    self.createButton(BDR23)
+    self.createButton(BDR24)
+    self.createButton(BDR25)
+    self.createButton(BDR26)
+    self.createButton(BDR27)
+    self.createButton(BDR31)
+    self.createButton(BDR32)
+    self.createButton(BDR33)
+    self.createButton(BDR34)
+    self.createButton(BDR35)
+    self.createButton(BDR36)
+    self.createButton(BDR37)
+    self.createButton(BDR41)
+    self.createButton(BDR42)
+    self.createButton(BDR43)
+    self.createButton(BDR44)
+    self.createButton(BDR45)
+    self.createButton(BDR46)
+    self.createButton(BDR47)
+    self.createButton(BDR51)
+    self.createButton(BDR52)
+    self.createButton(BDR53)
+    self.createButton(BDR54)
+    self.createButton(BDR55)
+    self.createButton(BDR56)
+    self.createButton(BDR57)
+    self.createButton(BDR61)
+    self.createButton(BDR62)
+    self.createButton(BDR63)
+    self.createButton(BDR64)
+    self.createButton(BDR65)
+    self.createButton(BDR66)
+    self.createButton(BDR67)
+    self.createButton(BDR71)
+    self.createButton(BDR72)
+    self.createButton(BDR73)
+    self.createButton(BDR74)
+    self.createButton(BDR75)
+    self.createButton(BDR76)
+    self.createButton(BDR77)
 --down left button made
-    figDO.createButton(BDL11)
-    figDO.createButton(BDL12)
-    figDO.createButton(BDL13)
-    figDO.createButton(BDL14)
-    figDO.createButton(BDL15)
-    figDO.createButton(BDL16)
-    figDO.createButton(BDL17)
-    figDO.createButton(BDL21)
-    figDO.createButton(BDL22)
-    figDO.createButton(BDL23)
-    figDO.createButton(BDL24)
-    figDO.createButton(BDL25)
-    figDO.createButton(BDL26)
-    figDO.createButton(BDL27)
-    figDO.createButton(BDL31)
-    figDO.createButton(BDL32)
-    figDO.createButton(BDL33)
-    figDO.createButton(BDL34)
-    figDO.createButton(BDL35)
-    figDO.createButton(BDL36)
-    figDO.createButton(BDL37)
-    figDO.createButton(BDL41)
-    figDO.createButton(BDL42)
-    figDO.createButton(BDL43)
-    figDO.createButton(BDL44)
-    figDO.createButton(BDL45)
-    figDO.createButton(BDL46)
-    figDO.createButton(BDL47)
-    figDO.createButton(BDL51)
-    figDO.createButton(BDL52)
-    figDO.createButton(BDL53)
-    figDO.createButton(BDL54)
-    figDO.createButton(BDL55)
-    figDO.createButton(BDL56)
-    figDO.createButton(BDL57)
-    figDO.createButton(BDL61)
-    figDO.createButton(BDL62)
-    figDO.createButton(BDL63)
-    figDO.createButton(BDL64)
-    figDO.createButton(BDL65)
-    figDO.createButton(BDL66)
-    figDO.createButton(BDL67)
-    figDO.createButton(BDL71)
-    figDO.createButton(BDL72)
-    figDO.createButton(BDL73)
-    figDO.createButton(BDL74)
-    figDO.createButton(BDL75)
-    figDO.createButton(BDL76)
-    figDO.createButton(BDL77)
+    self.createButton(BDL11)
+    self.createButton(BDL12)
+    self.createButton(BDL13)
+    self.createButton(BDL14)
+    self.createButton(BDL15)
+    self.createButton(BDL16)
+    self.createButton(BDL17)
+    self.createButton(BDL21)
+    self.createButton(BDL22)
+    self.createButton(BDL23)
+    self.createButton(BDL24)
+    self.createButton(BDL25)
+    self.createButton(BDL26)
+    self.createButton(BDL27)
+    self.createButton(BDL31)
+    self.createButton(BDL32)
+    self.createButton(BDL33)
+    self.createButton(BDL34)
+    self.createButton(BDL35)
+    self.createButton(BDL36)
+    self.createButton(BDL37)
+    self.createButton(BDL41)
+    self.createButton(BDL42)
+    self.createButton(BDL43)
+    self.createButton(BDL44)
+    self.createButton(BDL45)
+    self.createButton(BDL46)
+    self.createButton(BDL47)
+    self.createButton(BDL51)
+    self.createButton(BDL52)
+    self.createButton(BDL53)
+    self.createButton(BDL54)
+    self.createButton(BDL55)
+    self.createButton(BDL56)
+    self.createButton(BDL57)
+    self.createButton(BDL61)
+    self.createButton(BDL62)
+    self.createButton(BDL63)
+    self.createButton(BDL64)
+    self.createButton(BDL65)
+    self.createButton(BDL66)
+    self.createButton(BDL67)
+    self.createButton(BDL71)
+    self.createButton(BDL72)
+    self.createButton(BDL73)
+    self.createButton(BDL74)
+    self.createButton(BDL75)
+    self.createButton(BDL76)
+    self.createButton(BDL77)
