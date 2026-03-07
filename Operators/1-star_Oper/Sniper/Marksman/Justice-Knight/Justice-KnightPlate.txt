@@ -195,20 +195,7 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "",
     }
-	BD1 = {
-        click_function = "d1",
-        function_owner = self,
-        label = "",
-        position = {0,0.05,1.65},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
-	BUL11 = {
+    BUL11 = {
         click_function = "ul11",
         function_owner = self,
         label = "",
@@ -234,11 +221,11 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "",
     }
-    BUL13 = {
-        click_function = "ul13",
+    BD1 = {
+        click_function = "d1",
         function_owner = self,
         label = "",
-        position = {-4.95,0.05,-1.65},
+        position = {0,0.05,1.65},
         rotation = {0,0,0},
         width = 800,
         height = 800,
@@ -247,7 +234,7 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "",
     }
-	BDL11 = {
+    BDL11 = {
         click_function = "dl11",
         function_owner = self,
         label = "",
@@ -273,19 +260,6 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "",
     }
-	BDL13 = {
-        click_function = "dl13",
-        function_owner = self,
-        label = "",
-        position = {-4.95,0.05,1.65},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
 
 self.createButton(BC0e)
 self.createButton(elite1)
@@ -302,13 +276,11 @@ self.createButton(BL1)
 self.createButton(BL2)
 self.createButton(BL3)
 self.createButton(BU1)
-self.createButton(BD1)
 self.createButton(BUL11)
 self.createButton(BUL12)
-self.createButton(BUL13)
+self.createButton(BD1)
 self.createButton(BDL11)
 self.createButton(BDL12)
-self.createButton(BDL13)
 end
 
 function c0alte()
@@ -328,13 +300,11 @@ self.createButton(BL1)
 self.createButton(BL2)
 self.createButton(BL3)
 self.createButton(BU1)
-self.createButton(BD1)
 self.createButton(BUL11)
 self.createButton(BUL12)
-self.createButton(BUL13)
+self.createButton(BD1)
 self.createButton(BDL11)
 self.createButton(BDL12)
-self.createButton(BDL13)
 end
 
 function c0alte1()
@@ -354,13 +324,11 @@ self.createButton(BL1)
 self.createButton(BL2)
 self.createButton(BL3)
 self.createButton(BU1)
-self.createButton(BD1)
 self.createButton(BUL11)
 self.createButton(BUL12)
-self.createButton(BUL13)
+self.createButton(BD1)
 self.createButton(BDL11)
 self.createButton(BDL12)
-self.createButton(BDL13)
 end
 
 function c0alte2()
@@ -403,19 +371,15 @@ function l2()
 end
 function l3()
 end
-function u1()
-end
-function d1()
+function ul1()
 end
 function ul11()
 end
 function ul12()
 end
-function ul13()
+function dl1()
 end
 function dl11()
 end
 function dl12()
-end
-function dl13()
 end
