@@ -62,7 +62,7 @@ apm = {click_function = "apm1",function_owner = self,label = cApm,position = {0.
 --Block Button Counter
 block = {click_function = "block1", function_owner = self, label = cBlock, position = {0.87,0.3,1.28}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "Block oper\n\nLeft-Click +1\nRight-Click -1"}
 --Skill 1 Button
-spec_1 = {click_function = "spec1",function_owner = self,label = "",position = {0.12,0.3,-0.077},rotation = {0,0,0},scale = {0,0,0},width = 700,height = 230,font_size = 165,color = {1,1,1,0},font_color = {0,0.6,1},tooltip = "Use Skill\n\nLeft-Click add ATK +2 and APM +8\nRight-Click reset stats"}
+spec_1 = {click_function = "spec1",function_owner = self,label = "",position = {0.12,0.3,-0.077},rotation = {0,0,0},scale = {1,1,1},width = 700,height = 230,font_size = 165,color = {1,1,1,0},font_color = {0,0.6,1},tooltip = "deal Felyne Lottery Bomb"}
 --Skill 1 active \\ deactive Button
 spec_11 = {click_function = "spec1_1",function_owner = self,label = "",position = {-0.78,0.3,-0.077},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
 --Skill 2 Button
@@ -232,42 +232,36 @@ function block1(onClick, onClick, onClick)
     end
 end
 
-function spec1(onClick, onClick, onClick)
-    if onClick == false then
-        cAtk = cAtk + spec11
-        cApm = cApm + spec12
-        self.editButton({index = 1, label = cAtk})
-        self.editButton({index = 3, label = cApm})
-    else
-        if onClick == true then
-            cAtk = atks
-            cApm = apms
-            self.editButton({index = 1, label = cAtk})
-            self.editButton({index = 3, label = cApm})
-        end
-    end
-    if cApm > apms then
-        self.editButton({index = 3, font_color = {0,1,0}})
-    else
-        if cApm < apms then
-            self.editButton({index = 3, font_color = {1,0,0}})
-        else
-            if cApm == apms then
-                self.editButton({index = 3, font_color = {0,0.6,1}})
-            end
-        end
-    end
-    if cAtk > atks then
-        self.editButton({index = 1, font_color = {0,1,0}})
-    else
-        if cAtk < atks then
-            self.editButton({index = 1, font_color = {1,0,0}})
-        else
-            if cAtk == atks then
-                self.editButton({index = 1, font_color = {0,0.6,1}})
-            end
-        end
-    end
+function spec1(obj, holo, alt_click)
+    local skill = spawnObjectJSON({
+    json = [[{
+        "GUID": "1fc95c",
+        "Name": "CardCustom",
+        "Transform":{
+            "PosY": 5,
+            "RotX": 0,
+            "ScaleX": 2,
+            "ScaleY": 1,
+            "ScaleZ": 2
+        },
+        "Nickname": "Felyne Lottry Bomb skill",
+        "Description": "",
+        "CardID": 2900,
+        "SidewaysCard": false,
+        "CustomDeck":{
+            "29":{
+                "FaceURL": "https://github.com/DragonLW/ttsForTest/blob/main/Operators/1-star_Oper/Sniper/Flinger/Terra-Research-Commission/Felyne%20Lottery%20Bomb.png?raw=true",
+                "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/17609314392887683943/D0BC9A313E5A927F031D4FB65848D53F3D57EF72/",
+                "NumWidth": 1,
+                "NumHeight": 1,
+                "BackIsHidden": true,
+                "UniqueBack": false,
+                "Type": 0
+            }
+        }
+    }]]
+})
+skill.deal(1,holo)
 end
 
 function spec1_1(a, a, a)

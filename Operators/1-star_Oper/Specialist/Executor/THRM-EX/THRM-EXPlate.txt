@@ -156,11 +156,11 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "",
     }
-    BL2 = {
-        click_function = "l2",
+    BR1 = {
+        click_function = "r1",
         function_owner = self,
         label = "",
-        position = {-3.3,0.05,0},
+        position = {1.65,0.05,0},
         rotation = {0,0,0},
         width = 800,
         height = 800,
@@ -169,20 +169,7 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "",
     }
-    BL3 = {
-        click_function = "l3",
-        function_owner = self,
-        label = "",
-        position = {-4.95,0.05,0},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
-	BU1 = {
+    BU1 = {
         click_function = "u1",
         function_owner = self,
         label = "",
@@ -208,11 +195,11 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "",
     }
-    BUL12 = {
-        click_function = "ul12",
+    BUR11 = {
+        click_function = "ur11",
         function_owner = self,
         label = "",
-        position = {-3.3,0.05,-1.65},
+        position = {1.65,0.05,-1.65},
         rotation = {0,0,0},
         width = 800,
         height = 800,
@@ -247,11 +234,11 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "",
     }
-    BDL12 = {
-        click_function = "dl12",
+    BDR11 = {
+        click_function = "dr11",
         function_owner = self,
         label = "",
-        position = {-3.3,0.05,1.65},
+        position = {1.65,0.05,1.65},
         rotation = {0,0,0},
         width = 800,
         height = 800,
@@ -273,14 +260,13 @@ self.clearButtons()
 self.createButton(BC0altE)
 self.createButton(BC0)
 self.createButton(BL1)
-self.createButton(BL2)
-self.createButton(BL3)
+self.createButton(BR1)
 self.createButton(BU1)
 self.createButton(BUL11)
-self.createButton(BUL12)
+self.createButton(BUR11)
 self.createButton(BD1)
 self.createButton(BDL11)
-self.createButton(BDL12)
+self.createButton(BDR11)
 end
 
 function c0alte()
@@ -367,19 +353,17 @@ end
 --func button plate range
 function l1()
 end
-function l2()
-end
-function l3()
+function r1()
 end
 function u1()
 end
 function ul11()
 end
-function ul12()
+function ur11()
 end
 function d1()
 end
 function dl11()
 end
-function dl12()
+function dr11()
 end
