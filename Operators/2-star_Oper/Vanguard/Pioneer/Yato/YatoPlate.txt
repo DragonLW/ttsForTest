@@ -156,110 +156,6 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "",
     }
-    BL2 = {
-        click_function = "l2",
-        function_owner = self,
-        label = "",
-        position = {-3.3,0.05,0},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
-    BL3 = {
-        click_function = "l3",
-        function_owner = self,
-        label = "",
-        position = {-4.95,0.05,0},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
-	BU1 = {
-        click_function = "u1",
-        function_owner = self,
-        label = "",
-        position = {0,0.05,-1.65},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
-	BD1 = {
-        click_function = "d1",
-        function_owner = self,
-        label = "",
-        position = {0,0.05,1.65},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
-	BUL11 = {
-        click_function = "ul11",
-        function_owner = self,
-        label = "",
-        position = {-1.65,0.05,-1.65},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
-    BUL12 = {
-        click_function = "ul12",
-        function_owner = self,
-        label = "",
-        position = {-3.3,0.05,-1.65},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
-	BDL11 = {
-        click_function = "dl11",
-        function_owner = self,
-        label = "",
-        position = {-1.65,0.05,1.65},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
-    BDL12 = {
-        click_function = "dl12",
-        function_owner = self,
-        label = "",
-        position = {-3.3,0.05,1.65},
-        rotation = {0,0,0},
-        width = 800,
-        height = 800,
-        font_size = 120,
-        color = {1,0.7,0.2},
-        font_color = {0,0,0},
-        tooltip = "",
-    }
 
 self.createButton(BC0e)
 self.createButton(elite1)
@@ -273,14 +169,6 @@ self.clearButtons()
 self.createButton(BC0altE)
 self.createButton(BC0)
 self.createButton(BL1)
-self.createButton(BL2)
-self.createButton(BL3)
-self.createButton(BU1)
-self.createButton(BD1)
-self.createButton(BUL11)
-self.createButton(BUL12)
-self.createButton(BDL11)
-self.createButton(BDL12)
 end
 
 function c0alte()
@@ -297,14 +185,6 @@ self.clearButtons()
 self.createButton(BC0altE1)
 self.createButton(BC0)
 self.createButton(BL1)
-self.createButton(BL2)
-self.createButton(BL3)
-self.createButton(BU1)
-self.createButton(BD1)
-self.createButton(BUL11)
-self.createButton(BUL12)
-self.createButton(BDL11)
-self.createButton(BDL12)
 end
 
 function c0alte1()
@@ -321,14 +201,6 @@ self.clearButtons()
 self.createButton(BC0altE2)
 self.createButton(BC0)
 self.createButton(BL1)
-self.createButton(BL2)
-self.createButton(BL3)
-self.createButton(BU1)
-self.createButton(BD1)
-self.createButton(BUL11)
-self.createButton(BUL12)
-self.createButton(BDL11)
-self.createButton(BDL12)
 end
 
 function c0alte2()
@@ -366,20 +238,4 @@ end
 
 --func button plate range
 function l1()
-end
-function l2()
-end
-function l3()
-end
-function u1()
-end
-function d1()
-end
-function ul11()
-end
-function ul12()
-end
-function dl11()
-end
-function dl12()
 end
