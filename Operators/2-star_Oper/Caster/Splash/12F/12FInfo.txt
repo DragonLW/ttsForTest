@@ -9,33 +9,33 @@ zoneHire = getObjectFromGUID("adffc1")
 zonePosHire = zoneHire.getPosition({0,5,0})
 zoneRot = {0,90,180}
 
-me = "Durin"
-depPoint = 12
+me = "12F"
+depPoint = 24
 depRecovery = 8
 depRecS = 0
 depRec = depRecovery
 --Stats without Elite
-hps = 10
+hps = 16
 cHp = hps
-atks = 3
+atks = 4
 cAtk = atks
 defs = 1
 cDef = defs
-apms = 2
+apms = 1
 cApm = apms
 blocks = 1
 cBlock = blocks
 --Stats Elite 1
-eHp = 10
-eAtk = 3
+eHp = 16
+eAtk = 4
 eDef = 1
-eApm = 2
+eApm = 1
 eBlock = 1
 --Stats Elite 2
-eHpe = 10
-eAtke = 3
+eHpe = 16
+eAtke = 4
 eDefe = 1
-eApme = 2
+eApme = 1
 eBlocke = 1
 --Cost any
 skill1 = 0
@@ -88,9 +88,9 @@ roleO = {click_function = "role1",function_owner = self,label = "Starter",positi
 --Position place
 plac = {click_function = "place1",function_owner = self,label = "Ranged",position = {0.74,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 165,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "This operator placed on position Ranged"}
 --faction
-fact = {click_function = "fact1",function_owner = self,label = "",position = {-0.67,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Faction - Op A4"}
+fact = {click_function = "fact1",function_owner = self,label = "",position = {-0.67,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Faction - Rhodes Island"}
 --Branch
-bran = {click_function = "bran1",function_owner = self,label = "",position = {0.75,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Class - Caster\nBranch - Core"}
+bran = {click_function = "bran1",function_owner = self,label = "",position = {0.75,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Class - Caster\nBranch - Splash"}
 self.createButton(hp)
 self.createButton(atk)
 self.createButton(def)
