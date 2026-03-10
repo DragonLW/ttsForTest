@@ -1,0 +1,650 @@
+yLmd = getObjectFromGUID("7a270f")
+rLmd = getObjectFromGUID("51f201")
+bLmd = getObjectFromGUID("8f2fbb")
+gLmd = getObjectFromGUID("ab4ca9")
+
+zoneBack = getObjectFromGUID("917ae1")
+zonePosBack = zoneBack.getPosition({0,5,0})
+zoneHire = getObjectFromGUID("adffc1")
+zonePosHire = zoneHire.getPosition({0,5,0})
+zoneRot = {0,90,180}
+
+me = "CONFESS-47"
+depPoint = 3
+depRecovery = 21
+depRecS = 0
+depRec = depRecovery
+--Stats without Elite
+hps = 8
+cHp = hps
+atks = 2
+cAtk = atks
+defs = 2
+cDef = defs
+apms = 3
+cApm = apms
+blocks = 2
+cBlock = blocks
+--Stats Elite 1
+eHp = 8
+eAtk = 2
+eDef = 2
+eApm = 3
+eBlock = 2
+--Stats Elite 2
+eHpe = 8
+eAtke = 2
+eDefe = 2
+eApme = 3
+eBlocke = 2
+--Cost any
+skill1 = 0
+skill2 = 0
+sellOp = 50
+--Other
+spec11 = 2
+spec12 = 8
+spec2 = false
+toggle1 = false
+toggle2 = false
+toggle3 = false
+buy1 = 0
+
+function onLoad()
+--HP Button Counter
+hp = {click_function = "hp1", function_owner = self, label = cHp, position = {-0.85,0.3,1.28}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "HP oper\n\nLeft-Click +1\nRight-Click -1"}
+--ATK Button Counter
+atk = {click_function = "atk1",function_owner = self,label = cAtk,position = {-0.42,0.3,1.28},rotation = {0,0,0},scale = {1,1,1},width = 230,height = 230,font_size = 165,color = {0.2,0.2,0.2},font_color = {0,0.6,1},tooltip = "ATK oper\n\nLeft-Click +1\nRight-Click -1"}
+--DEF Button Counter
+def = {click_function = "def1",function_owner = self,label = cDef,position = {0.01,0.3,1.28},rotation = {0,0,0},scale = {1,1,1},width = 230,height = 230,font_size = 165,color = {0.2,0.2,0.2},font_color = {0,0.6,1},tooltip = "DEF oper\n\nLeft-Click +1\nRight-Click -1"}
+--APM Button Counter
+apm = {click_function = "apm1",function_owner = self,label = cApm,position = {0.44,0.3,1.28},rotation = {0,0,0},scale = {1,1,1},width = 230,height = 230,font_size = 165,color = {0.2,0.2,0.2},font_color = {0,0.6,1},tooltip = "APM oper\n\nLeft-Click +1\nRight-Click -1"}
+--Block Button Counter
+block = {click_function = "block1", function_owner = self, label = cBlock, position = {0.87,0.3,1.28}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "Block oper\n\nLeft-Click +1\nRight-Click -1"}
+--Skill 1 Button
+spec_1 = {click_function = "spec1",function_owner = self,label = "",position = {0.12,0.3,-0.077},rotation = {0,0,0},scale = {0,0,0},width = 700,height = 230,font_size = 165,color = {1,1,1,0},font_color = {0,0.6,1},tooltip = "Use Skill\n\nLeft-Click add ATK +2 and APM +8\nRight-Click reset stats"}
+--Skill 1 active \\ deactive Button
+spec_11 = {click_function = "spec1_1",function_owner = self,label = "",position = {-0.78,0.3,-0.077},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
+--Skill 2 Button
+spec_2 = {click_function = "spec2",function_owner = self,label = skill1.."LMD",position = {-0.12,0.3,0.365},rotation = {0,0,0},scale = {0,0,0},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
+--Skill 2 active \\ deactive Button
+spec_22 = {click_function = "spec2_2",function_owner = self,label = "",position = {-0.78,0.3,0.365},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
+--Skill 3 Button
+spec_3 = {click_function = "spec3",function_owner = self,label = skill2.."LMD",position = {-0.12,0.3,0.819},rotation = {0,0,0},scale = {0,0,0},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
+--Skill 3 active \\ deactive Button
+spec_33 = {click_function = "spec3_3",function_owner = self,label = "",position = {-0.78,0.3,0.819},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
+--Sell Button
+sell = {click_function = "sell1",function_owner = self,label = "S",position = {-1,0.3,-1.45},rotation = {0,0,0},scale = {1,1,1},width = 100,height = 100,font_size = 50,color = {0.2,0.2,0.2,0.4},font_color = {0,0.6,1,1},hover_color = {0.2,0.2,0.2,1},tooltip = "Sell operator - "..sellOp.."LMD"}
+--Settings reset Button
+settRest = {click_function = "settRest1",function_owner = self,label = "R",position = {-1,0.3,-1.25},rotation = {0,0,0},scale = {1,1,1},width = 100,height = 100,font_size = 50,color = {0.2,0.2,0.2,0.4},font_color = {0,0.6,1},hover_color = {0.2,0.2,0.2,1}, tooltip = "Full reset Card"}
+--Text Name
+name = {click_function = "name1",function_owner = self,label = me,position = {0,0.3,-1.33},rotation = {0,0,0},scale = {1,1,1},width = 0,height = 0,font_size = 175,color = {0,0,0},font_color = {1,1,1},tooltip = "Name"}
+--Deploy Point
+dP = {click_function = "dP1",function_owner = self,label = "DP: "..depPoint,position = {-0.9,0.5,-0.4},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 75,font_size = 45,color = {0.3,0.3,0.3,1},font_color = {1,1,1},tooltip = "Deploy Point"}
+--Deploy Recovery
+dR = {click_function = "dR1",function_owner = self,label = "Rec: "..depRecS,position = {0.9,0.5,-0.4},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 75,font_size = 45,color = {0.3,0.3,0.3,1},font_color = {1,1,1},tooltip = "Deploy Recovery"}
+--Role #1
+roleO = {click_function = "role1",function_owner = self,label = "Crowd-Control",position = {-0.68,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 170,height = 60,font_size = 25,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "Limits the enemy's actions(negative statues)"}
+--Position place
+plac = {click_function = "place1",function_owner = self,label = "Melee",position = {0.74,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 165,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "This operator placed on position Melee"}
+--faction
+fact = {click_function = "fact1",function_owner = self,label = "",position = {-0.67,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Faction - Laterano"}
+--Branch
+bran = {click_function = "bran1",function_owner = self,label = "",position = {0.75,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Class - Vanguard\nBranch - Pioneer"}
+self.createButton(hp)
+self.createButton(atk)
+self.createButton(def)
+self.createButton(apm)
+self.createButton(block)
+self.createButton(spec_1)
+self.createButton(spec_11)
+self.createButton(spec_2)
+self.createButton(spec_3)
+self.createButton(sell)
+self.createButton(name)
+self.createButton(dP)
+self.createButton(roleO)
+self.createButton(plac)
+self.createButton(fact)
+self.createButton(bran)
+self.createButton(settRest)
+self.createButton(dR)
+
+end
+
+function hp1(onClick, onClick, onClick)
+    if onClick == false then
+        cHp = cHp + 1
+        self.editButton({index = 0, label = cHp})
+    else
+        if onClick == true then
+            cHp = cHp - 1
+            self.editButton({index = 0, label = cHp})
+        end
+    end
+
+    if cHp > hps then
+        self.editButton({index = 0, font_color = {0,1,0}})
+    else
+        if cHp < hps then
+            self.editButton({index = 0, font_color = {1,0,0}})
+        else
+            if cHp == hps then
+                self.editButton({index = 0, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+
+function atk1(onClick, onClick, onClick)
+    if onClick == false then
+        cAtk = cAtk + 1
+        self.editButton({index = 1, label = cAtk})
+    else
+        if onClick == true then
+            cAtk = cAtk - 1
+            self.editButton({index = 1, label = cAtk})
+        end
+    end
+
+    if cAtk > atks then
+        self.editButton({index = 1, font_color = {0,1,0}})
+    else
+        if cAtk < atks then
+            self.editButton({index = 1, font_color = {1,0,0}})
+        else
+            if cAtk == atks then
+                self.editButton({index = 1, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+
+function def1(onClick, onClick, onClick)
+    if onClick == false then
+        cDef = cDef + 1
+        self.editButton({index = 2, label = cDef})
+    else
+        if onClick == true then
+            cDef = cDef - 1
+            self.editButton({index = 2, label = cDef})
+        end
+    end
+
+    if cDef > defs then
+        self.editButton({index = 2, font_color = {0,1,0}})
+    else
+        if cDef < defs then
+            self.editButton({index = 2, font_color = {1,0,0}})
+        else
+            if cDef == defs then
+                self.editButton({index = 2, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+
+function apm1(onClick, onClick, onClick)
+    if onClick == false then
+        cApm = cApm + 1
+        self.editButton({index = 3, label = cApm})
+    else
+        if onClick == true then
+            cApm = cApm - 1
+            self.editButton({index = 3, label = cApm})
+        end
+    end
+
+    if cApm > apms then
+        self.editButton({index = 3, font_color = {0,1,0}})
+    else
+        if cApm < apms then
+            self.editButton({index = 3, font_color = {1,0,0}})
+        else
+            if cApm == apms then
+                self.editButton({index = 3, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+
+function block1(onClick, onClick, onClick)
+    if onClick == false then
+        cBlock = cBlock + 1
+        self.editButton({index = 4, label = cBlock})
+    else
+        if onClick == true then
+            cBlock = cBlock - 1
+            self.editButton({index = 4, label = cBlock})
+        end
+    end
+
+    if cBlock > blocks then
+        self.editButton({index = 4, font_color = {0,1,0}})
+    else
+        if cBlock < blocks then
+            self.editButton({index = 4, font_color = {1,0,0}})
+        else
+            if cBlock == blocks then
+                self.editButton({index = 4, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+
+function spec1(onClick, onClick, onClick)
+    if onClick == false then
+        cAtk = cAtk + spec11
+        cApm = cApm + spec12
+        self.editButton({index = 1, label = cAtk})
+        self.editButton({index = 3, label = cApm})
+    else
+        if onClick == true then
+            cAtk = atks
+            cApm = apms
+            self.editButton({index = 1, label = cAtk})
+            self.editButton({index = 3, label = cApm})
+        end
+    end
+    if cApm > apms then
+        self.editButton({index = 3, font_color = {0,1,0}})
+    else
+        if cApm < apms then
+            self.editButton({index = 3, font_color = {1,0,0}})
+        else
+            if cApm == apms then
+                self.editButton({index = 3, font_color = {0,0.6,1}})
+            end
+        end
+    end
+    if cAtk > atks then
+        self.editButton({index = 1, font_color = {0,1,0}})
+    else
+        if cAtk < atks then
+            self.editButton({index = 1, font_color = {1,0,0}})
+        else
+            if cAtk == atks then
+                self.editButton({index = 1, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+
+function spec1_1(a, a, a)
+    toggle1 = not toggle1
+    if toggle1 then
+        self.editButton({index = 6, tooltip = "Active Skill", color = {1,0,0,0.7}})
+    else
+        self.editButton({index = 6, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
+    end
+end
+function sell1(obj,holo,alt_click)
+rLmdR = rLmd.getVar("lmdR")
+bLmdR = bLmd.getVar("lmdR")
+gLmdR = gLmd.getVar("lmdR")
+yLmdR = yLmd.getVar("lmdR")
+buck = nil
+bise = nil
+    for a, object in ipairs(zoneHire.getObjects()) do
+        if object.type == "Card" then
+            if object.getName() == me.." Card Hire" then
+                object.setPosition(zonePosBack)
+                object.setRotation(zoneRot)
+                for b, pai in ipairs(Global.getObjects()) do
+                    if holo == "Red" then
+                        if pai.getName() == "R_LMD" then
+                            rLmd.setVar("lmdR", rLmdR + sellOp)
+                            rLmdS = rLmd.getVar("lmdR")
+                            rLmd.editButton({index = 0, label = rLmdS})
+                            for c, fi in ipairs(Global.getObjects()) do
+                                if fi.getName() == me.." Oper" then
+                                    destroyObject(fi)
+                                    destroyObject(self)
+                                end
+                            end
+                        end
+                    else
+                        if holo == "Blue" then
+                            if pai.getName() == "B_LMD" then
+                                bLmd.setVar("lmdR",bLmdR + sellOp)
+                                bLmdS = bLmd.getVar("lmdR")
+                                bLmd.editButton({index = 0, label = bLmdS})
+                                for c, fi in ipairs(Global.getObjects()) do
+                                    if fi.getName() == me.." Oper" then
+                                        destroyObject(fi)
+                                        destroyObject(self)
+                                    end
+                                end
+                            end
+                        else
+                            if holo == "Green" then
+                                if pai.getName() == "G_LMD" then
+                                    gLmd.setVar("lmdR",gLmdR + sellOp)
+                                    gLmdS = gLmd.getVar("lmdR")
+                                    gLmd.editButton({index = 0, label = gLmdS})
+                                    for c, fi in ipairs(Global.getObjects()) do
+                                        if fi.getName() == me.." Oper" then
+                                            destroyObject(fi)
+                                            destroyObject(self)
+                                        end
+                                    end
+                                end
+                            else
+                                if holo == "Yellow" then
+                                    if pai.getName() == "Y_LMD" then
+                                        yLmd.setVar("lmdR",yLmdR + sellOp)
+                                        yLmdS = yLmd.getVar("lmdR")
+                                        yLmd.editButton({index = 0, label = yLmdS})
+                                        for c, fi in ipairs(Global.getObjects()) do
+                                            if fi.getName() == me.." Oper" then
+                                                destroyObject(fi)
+                                                destroyObject(self)
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        else
+            if object.type == "Deck" then
+                buck = object.getGUID()
+                bise = getObjectFromGUID(buck)
+                for b, obje in ipairs(bise.getObjects()) do
+                    if obje.name == me.." Card Hire" then
+                        bise.takeObject({guid = obje.guid, position = zonePosBack, rotation = zoneRot})
+                        for c, pai in ipairs(Global.getObjects()) do
+                            if holo == "Red" then
+                                if pai.getName() == "R_LMD" then
+                                    rLmd.setVar("lmdR", rLmdR + sellOp)
+                                    rLmdS = rLmd.getVar("lmdR")
+                                    rLmd.editButton({index = 0, label = rLmdS})
+                                    for c, fi in ipairs(Global.getObjects()) do
+                                        if fi.getName() == me.." Oper" then
+                                            destroyObject(fi)
+                                            destroyObject(self)
+                                        end
+                                    end
+                                end
+                            else
+                                if holo == "Blue" then
+                                    if pai.getName() == "B_LMD" then
+                                        bLmd.setVar("lmdR",bLmdR + sellOp)
+                                        bLmdS = bLmd.getVar("lmdR")
+                                        bLmd.editButton({index = 0, label = bLmdS})
+                                        for c, fi in ipairs(Global.getObjects()) do
+                                            if fi.getName() == me.." Oper" then
+                                                destroyObject(fi)
+                                                destroyObject(self)
+                                            end
+                                        end
+                                    end
+                                else
+                                    if holo == "Green" then
+                                        if pai.getName() == "G_LMD" then
+                                            gLmd.setVar("lmdR",gLmdR + sellOp)
+                                            gLmdS = gLmd.getVar("lmdR")
+                                            gLmd.editButton({index = 0, label = gLmdS})
+                                            for c, fi in ipairs(Global.getObjects()) do
+                                                if fi.getName() == me.." Oper" then
+                                                    destroyObject(fi)
+                                                    destroyObject(self)
+                                                end
+                                            end
+                                        end
+                                    else
+                                        if holo == "Yellow" then
+                                            if pai.getName() == "Y_LMD" then
+                                                yLmd.setVar("lmdR",yLmdR + sellOp)
+                                                yLmdS = yLmd.getVar("lmdR")
+                                                yLmd.editButton({index = 0, label = yLmdS})
+                                                for c, fi in ipairs(Global.getObjects()) do
+                                                    if fi.getName() == me.." Oper" then
+                                                        destroyObject(fi)
+                                                        destroyObject(self)
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+function settRest1()
+    self.reload()
+end
+function spec2(obj,holo,alt_click)
+rLmdR = rLmd.getVar("lmdR")
+bLmdR = bLmd.getVar("lmdR")
+gLmdR = gLmd.getVar("lmdR")
+yLmdR = yLmd.getVar("lmdR")
+    for i, object in ipairs(Global.getObjects()) do
+        if holo == "Red" then
+            if object.getName() == "R_LMD" then
+                if rLmdR >= skill1 then
+                    rLmd.setVar("lmdR", rLmdR - skill1)
+                    rLmdS = rLmd.getVar("lmdR")
+                    rLmd.editButton({index = 0, label = rLmdS})
+                    self.editButton({index = 7, scale = {0,0,0}})
+                    self.createButton(spec_22)
+                    hps = eHp
+                    atks = eAtk
+                    cHp = hps
+                    cAtk = atks
+                    self.editButton({index = 0, label = cHp})
+                    self.editButton({index = 1, label = cAtk})
+                    buy1 = buy1 + 1
+                else
+                    Player.red.print("NO LMD", {1,0,0})
+                end
+            end
+        else
+            if holo == "Blue" then
+                if object.getName() == "B_LMD" then
+                    if bLmdR >= skill1 then
+                        bLmd.setVar("lmdR", bLmdR - skill1)
+                        bLmdS = bLmd.getVar("lmdR")
+                        bLmd.editButton({index = 0, label = bLmdS})
+                        self.editButton({index = 7, scale = {0,0,0}})
+                        self.createButton(spec_22)
+                        hps = eHp
+                        atks = eAtk
+                        cHp = hps
+                        cAtk = atks
+                        self.editButton({index = 0, label = cHp})
+                        self.editButton({index = 1, label = cAtk})
+                        buy1 = buy1 + 1
+                    else
+                        Player.blue.print("NO LMD", {0,0,1})
+                    end
+                end
+            else
+                if holo == "Green" then
+                    if object.getName() == "G_LMD" then
+                        if gLmdR >= skill1 then
+                            gLmd.setVar("lmdR", gLmdR - skill1)
+                            gLmdS = gLmd.getVar("lmdR")
+                            gLmd.editButton({index = 0, label = gLmdS})
+                            self.editButton({index = 7, scale = {0,0,0}})
+                            self.createButton(spec_22)
+                            hps = eHp
+                            atks = eAtk
+                            cHp = hps
+                            cAtk = atks
+                            self.editButton({index = 0, label = cHp})
+                            self.editButton({index = 1, label = cAtk})
+                            buy1 = buy1 + 1
+                        else
+                            Player.green.print("NO LMD", {0,1,0})
+                        end
+                    end
+                else
+                    if holo == "Yellow" then
+                        if object.getName() == "Y_LMD" then
+                            if yLmdR >= skill1 then
+                                yLmd.setVar("lmdR", yLmdR - skill1)
+                                yLmdS = yLmd.getVar("lmdR")
+                                yLmd.editButton({index = 0, label = yLmdS})
+                                self.editButton({index = 7, scale = {0,0,0}})
+                                self.createButton(spec_22)
+                                hps = eHp
+                                atks = eAtk
+                                cHp = hps
+                                cAtk = atks
+                                self.editButton({index = 0, label = cHp})
+                                self.editButton({index = 1, label = cAtk})
+                                buy1 = buy1 + 1
+                            else
+                                Player.yellow.print("NO LMD", {1,1,0})
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+function spec2_2(a, a, a)
+    toggle2 = not toggle2
+    if toggle2 then
+        self.editButton({index = 18, tooltip = "Active Skill", color = {1,0,0,0.7}})
+    else
+        self.editButton({index = 18, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
+    end
+end
+function spec3(obj,holo,alt_click)
+rLmdR = rLmd.getVar("lmdR")
+bLmdR = bLmd.getVar("lmdR")
+gLmdR = gLmd.getVar("lmdR")
+yLmdR = yLmd.getVar("lmdR")
+    if buy1 == 1 then
+        for i, object in ipairs(Global.getObjects()) do
+            if holo == "Red" then
+                if object.getName() == "R_LMD" then
+                    if rLmdR >= skill2 then
+                        rLmd.setVar("lmdR", rLmdR - skill2)
+                        rLmdS = rLmd.getVar("lmdR")
+                        rLmd.editButton({index = 0, label = rLmdS})
+                        self.editButton({index = 8, scale = {0,0,0}})
+                        self.createButton(spec_33)
+                        hps = eHpe
+                        atks = eAtke
+                        cHp = hps
+                        cAtk = atks
+                        self.editButton({index = 0, label = cHp})
+                        self.editButton({index = 1, label = cAtk})
+                        buy1 = buy1 + 1
+                    else
+                        Player.red.print("NO LMD", {1,0,0})
+                    end
+                end
+            else
+                if holo == "Blue" then
+                    if object.getName() == "B_LMD" then
+                        if bLmdR >= skill2 then
+                            bLmd.setVar("lmdR", bLmdR - skill2)
+                            bLmdS = bLmd.getVar("lmdR")
+                            bLmd.editButton({index = 0, label = bLmdS})
+                            self.editButton({index = 8, scale = {0,0,0}})
+                            self.createButton(spec_33)
+                            hps = eHpe
+                            atks = eAtke
+                            cHp = hps
+                            cAtk = atks
+                            self.editButton({index = 0, label = cHp})
+                            self.editButton({index = 1, label = cAtk})
+                            buy1 = buy1 + 1
+                        else
+                            Player.blue.print("NO LMD", {0,0,1})
+                        end
+                    end
+                else
+                    if holo == "Green" then
+                        if object.getName() == "G_LMD" then
+                            if gLmdR >= skill2 then
+                                gLmd.setVar("lmdR", gLmdR - skill2)
+                                gLmdS = gLmd.getVar("lmdR")
+                                gLmd.editButton({index = 0, label = gLmdS})
+                                self.editButton({index = 8, scale = {0,0,0}})
+                                self.createButton(spec_33)
+                                hps = eHpe
+                                atks = eAtke
+                                cHp = hps
+                                cAtk = atks
+                                self.editButton({index = 0, label = cHp})
+                                self.editButton({index = 1, label = cAtk})
+                                buy1 = buy1 + 1
+                            else
+                                Player.green.print("NO LMD", {0,1,0})
+                            end
+                        end
+                    else
+                        if holo == "Yellow" then
+                            if object.getName() == "Y_LMD" then
+                                if yLmdR >= skill2 then
+                                    yLmd.setVar("lmdR", yLmdR - skill2)
+                                    yLmdS = yLmd.getVar("lmdR")
+                                    yLmd.editButton({index = 0, label = yLmdS})
+                                    self.editButton({index = 8, scale = {0,0,0}})
+                                    self.createButton(spec_33)
+                                    hps = eHpe
+                                    atks = eAtke
+                                    cHp = hps
+                                    cAtk = atks
+                                    self.editButton({index = 0, label = cHp})
+                                    self.editButton({index = 1, label = cAtk})
+                                    buy1 = buy1 + 1
+                                else
+                                    Player.yellow.print("NO LMD", {1,1,0})
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    else
+        broadcastToAll("Buy first skill #1", player)
+    end
+end
+function spec3_3(a, a, a)
+    toggle3 = not toggle3
+    if toggle3 then
+        self.editButton({index = 19, tooltip = "Active Skill", color = {1,0,0,0.7}})
+    else
+        self.editButton({index = 19, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
+    end
+end
+function name1()
+end
+function dP1()
+end
+function role1()
+end
+function place1()
+end
+function fact1()
+end
+function bran1()
+end
+function dR1(obj,holo,alt_click)
+	if alt_click == false then
+		depRec = depRec - 1
+		self.editButton({index = 17, label = "Rec: "..depRec})
+	else
+		depRec = depRec - 1
+		self.editButton({index = 17, label = "Rec: "..depRec})
+	end
+	if depRec == 0 then
+		depRecovery = depRecovery + 2
+		depRec = depRecovery
+	end
+end
