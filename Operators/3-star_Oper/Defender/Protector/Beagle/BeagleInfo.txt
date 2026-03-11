@@ -9,38 +9,38 @@ zoneHire = getObjectFromGUID("adffc1")
 zonePosHire = zoneHire.getPosition({0,5,0})
 zoneRot = {0,90,180}
 
-me = "Spot"
-depPoint = 15
+me = "Beagle"
+depPoint = 16
 depRecovery = 8
 depRecS = 0
 depRec = depRecovery
 --Stats without Elite
-hps = 14
+hps = 15
 cHp = hps
 atks = 2
 cAtk = atks
-defs = 3
+defs = 4
 cDef = defs
 apms = 2
 cApm = apms
-blocks = 2
+blocks = 3
 cBlock = blocks
 --Stats Elite 1
-eHp = 18
+eHp = 20
 eAtk = 3
-eDef = 4
+eDef = 5
 eApm = 2
 eBlock = 3
 --Stats Elite 2
-eHpe = 18
+eHpe = 20
 eAtke = 3
-eDefe = 4
+eDefe = 5
 eApme = 2
 eBlocke = 3
 --Cost any
-skill1 = 1000
+skill1 = 0
 skill2 = 0
-sellOp = 200
+sellOp = 100
 --Other
 spec11 = 2
 spec12 = 8
@@ -66,9 +66,9 @@ spec_1 = {click_function = "spec1",function_owner = self,label = "",position = {
 --Skill 1 active \\ deactive Button
 spec_11 = {click_function = "spec1_1",function_owner = self,label = "",position = {-0.78,0.3,-0.077},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
 --Skill 2 Button
-spec_2 = {click_function = "spec2",function_owner = self,label = skill1.."LMD",position = {-0.12,0.3,0.365},rotation = {0,0,0},scale = {1,1,1},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
+spec_2 = {click_function = "spec2",function_owner = self,label = skill1.."LMD",position = {-0.12,0.3,0.365},rotation = {0,0,0},scale = {0,0,0},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
 --Skill 2 active \\ deactive Button
-spec_22 = {click_function = "spec2_2",function_owner = self,label = "",position = {-0.78,0.3,0.365},rotation = {0,0,0},scale = {1,1,1},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
+spec_22 = {click_function = "spec2_2",function_owner = self,label = "",position = {-0.78,0.3,0.365},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
 --Skill 3 Button
 spec_3 = {click_function = "spec3",function_owner = self,label = skill2.."LMD",position = {-0.12,0.3,0.819},rotation = {0,0,0},scale = {0,0,0},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
 --Skill 3 active \\ deactive Button
@@ -84,15 +84,13 @@ dP = {click_function = "dP1",function_owner = self,label = "DP: "..depPoint,posi
 --Deploy Recovery
 dR = {click_function = "dR1",function_owner = self,label = "Rec: "..depRecS,position = {0.9,0.5,-0.4},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 75,font_size = 45,color = {0.3,0.3,0.3,1},font_color = {1,1,1},tooltip = "Deploy Recovery"}
 --Role #1
-roleO = {click_function = "role_1",function_owner = self,label = "Defense",position = {-0.68,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 170,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "Withstand attacks or hold off enemies"}
---Role #2
-role1 = {click_function = "role_2",function_owner = self,label = "Healing",position = {-0.68,0.3,-0.55},rotation = {0,0,0},scale = {1,1,1},width = 170,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "Restores HP friends unit"}
+roleO = {click_function = "role1",function_owner = self,label = "Defense",position = {-0.68,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 170,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "Withstand attacks or hold off enemies"}
 --Position place
 plac = {click_function = "place1",function_owner = self,label = "Melee",position = {0.74,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 165,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "This operator placed on position Melee"}
 --faction
-fact = {click_function = "fact1",function_owner = self,label = "",position = {-0.67,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Faction - Op Reserve A6"}
+fact = {click_function = "fact1",function_owner = self,label = "",position = {-0.67,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Faction - Op A1"}
 --Branch
-bran = {click_function = "bran1",function_owner = self,label = "",position = {0.75,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Class - Defender\nBranch - Guardian"}
+bran = {click_function = "bran1",function_owner = self,label = "",position = {0.75,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Class - Defender\nBranch - Protector"}
 self.createButton(hp)
 self.createButton(atk)
 self.createButton(def)
@@ -111,7 +109,6 @@ self.createButton(fact)
 self.createButton(bran)
 self.createButton(settRest)
 self.createButton(dR)
-self.createButton(role1)
 
 end
 
@@ -518,9 +515,9 @@ end
 function spec2_2(a, a, a)
     toggle2 = not toggle2
     if toggle2 then
-        self.editButton({index = 19, tooltip = "Active Skill", color = {1,0,0,0.7}})
+        self.editButton({index = 18, tooltip = "Active Skill", color = {1,0,0,0.7}})
     else
-        self.editButton({index = 19, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
+        self.editButton({index = 18, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
     end
 end
 function spec3(obj,holo,alt_click)
@@ -621,18 +618,16 @@ end
 function spec3_3(a, a, a)
     toggle3 = not toggle3
     if toggle3 then
-        self.editButton({index = 20, tooltip = "Active Skill", color = {1,0,0,0.7}})
+        self.editButton({index = 19, tooltip = "Active Skill", color = {1,0,0,0.7}})
     else
-        self.editButton({index = 20, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
+        self.editButton({index = 19, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
     end
 end
 function name1()
 end
 function dP1()
 end
-function role_1()
-end
-function role_2()
+function role1()
 end
 function place1()
 end
