@@ -141,7 +141,22 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "Hide attack range",
     }
-
+	
+--skill buttons
+    skill1 = {
+        click_function = "sk1",
+        function_owner = self,
+        label = "S",
+        position = {1,0.05,0},
+        rotation = {0,0,0},
+        width = 200,
+        height = 200,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "Activate skill"
+    }
+	
 --range attack
     BL1 = {
         click_function = "l1",
@@ -152,7 +167,7 @@ function onLoad()
         width = 800,
         height = 800,
         font_size = 120,
-        color = {1,0.7,0.2},
+        color = {0,0.6,1},
         font_color = {0,0,0},
         tooltip = "",
     }
@@ -182,6 +197,32 @@ function onLoad()
         font_color = {0,0,0},
         tooltip = "",
     }
+    BL4 = {
+        click_function = "l4",
+        function_owner = self,
+        label = "",
+        position = {-6.6,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BL5 = {
+        click_function = "l5",
+        function_owner = self,
+        label = "",
+        position = {-8.25,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
     BU1 = {
         click_function = "u1",
         function_owner = self,
@@ -191,7 +232,7 @@ function onLoad()
         width = 800,
         height = 800,
         font_size = 120,
-        color = {1,0.7,0.2},
+        color = {0,0.6,1},
         font_color = {0,0,0},
         tooltip = "",
     }
@@ -200,6 +241,58 @@ function onLoad()
         function_owner = self,
         label = "",
         position = {-1.65,0.05,-1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {0,0.6,1},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BUL12 = {
+        click_function = "ul12",
+        function_owner = self,
+        label = "",
+        position = {-3.3,0.05,-1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BUL13 = {
+        click_function = "ul13",
+        function_owner = self,
+        label = "",
+        position = {-4.95,0.05,-1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BUL14 = {
+        click_function = "ul14",
+        function_owner = self,
+        label = "",
+        position = {-6.6,0.05,-1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BUL15 = {
+        click_function = "ul15",
+        function_owner = self,
+        label = "",
+        position = {-8.25,0.05,-1.65},
         rotation = {0,0,0},
         width = 800,
         height = 800,
@@ -217,7 +310,7 @@ function onLoad()
         width = 800,
         height = 800,
         font_size = 120,
-        color = {1,0.7,0.2},
+        color = {0,0.6,1},
         font_color = {0,0,0},
         tooltip = "",
     }
@@ -226,6 +319,58 @@ function onLoad()
         function_owner = self,
         label = "",
         position = {-1.65,0.05,1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {0,0.6,1},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BDL12 = {
+        click_function = "dl12",
+        function_owner = self,
+        label = "",
+        position = {-3.3,0.05,1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BDL13 = {
+        click_function = "dl13",
+        function_owner = self,
+        label = "",
+        position = {-4.95,0.05,1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BDL14 = {
+        click_function = "dl14",
+        function_owner = self,
+        label = "",
+        position = {-6.6,0.05,1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BDL15 = {
+        click_function = "dl15",
+        function_owner = self,
+        label = "",
+        position = {-8.25,0.05,1.65},
         rotation = {0,0,0},
         width = 800,
         height = 800,
@@ -248,10 +393,13 @@ self.createButton(BC0altE)
 self.createButton(BC0)
 self.createButton(BL1)
 self.createButton(BL2)
+self.createButton(BL3)
 self.createButton(BU1)
 self.createButton(BUL11)
+self.createButton(BUL12)
 self.createButton(BD1)
 self.createButton(BDL11)
+self.createButton(BDL12)
 end
 
 function c0alte()
@@ -272,8 +420,12 @@ self.createButton(BL2)
 self.createButton(BL3)
 self.createButton(BU1)
 self.createButton(BUL11)
+self.createButton(BUL12)
+self.createButton(BUL13)
 self.createButton(BD1)
 self.createButton(BDL11)
+self.createButton(BDL12)
+self.createButton(BDL13)
 end
 
 function c0alte1()
@@ -282,6 +434,7 @@ self.createButton(BC0e1)
 self.createButton(elite)
 self.createButton(elite2)
 self.createButton(cross)
+self.createButton(skill1)
 end
 
 --FUNCTION ELITE 2 !!!
@@ -294,8 +447,12 @@ self.createButton(BL2)
 self.createButton(BL3)
 self.createButton(BU1)
 self.createButton(BUL11)
+self.createButton(BUL12)
+self.createButton(BUL13)
 self.createButton(BD1)
 self.createButton(BDL11)
+self.createButton(BDL12)
+self.createButton(BDL13)
 end
 
 function c0alte2()
@@ -304,6 +461,7 @@ self.createButton(BC0e2)
 self.createButton(elite)
 self.createButton(elite1)
 self.createButton(cross)
+self.createButton(skill1)
 end
 
 --FUNCTION CHANGE ELITE !!!
@@ -321,6 +479,7 @@ self.createButton(BC0e1)
 self.createButton(cross)
 self.createButton(elite)
 self.createButton(elite2)
+self.createButton(skill1)
 end
 
 function el2()
@@ -329,8 +488,32 @@ self.createButton(BC0e2)
 self.createButton(cross)
 self.createButton(elite)
 self.createButton(elite1)
+self.createButton(skill1)
 end
 
+--FUNCTION SKILL#1
+function sk1()
+self.clearButtons()
+self.createButton(BC0altE1)
+self.createButton(BC0)
+self.createButton(BL1)
+self.createButton(BL2)
+self.createButton(BL3)
+self.createButton(BL4)
+self.createButton(BL5)
+self.createButton(BU1)
+self.createButton(BUL11)
+self.createButton(BUL12)
+self.createButton(BUL13)
+self.createButton(BUL14)
+self.createButton(BUL15)
+self.createButton(BD1)
+self.createButton(BDL11)
+self.createButton(BDL12)
+self.createButton(BDL13)
+self.createButton(BDL14)
+self.createButton(BDL15)
+end
 --func button plate range
 function l1()
 end
@@ -338,11 +521,31 @@ function l2()
 end
 function l3()
 end
+function l4()
+end
+function l5()
+end
 function u1()
 end
 function ul11()
 end
+function ul12()
+end
+function ul13()
+end
+function ul14()
+end
+function ul15()
+end
 function d1()
 end
 function dl11()
+end
+function dl12()
+end
+function dl13()
+end
+function dl14()
+end
+function dl15()
 end

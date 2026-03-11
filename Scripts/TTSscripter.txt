@@ -399,7 +399,7 @@ allB = {
     BL4 = {
         click_function = "l4",
         function_owner = self,
-        label = "L_4",
+        label = "",
         position = {-6.6,0.05,0},
         rotation = {0,0,0},
         width = 800,
@@ -407,12 +407,12 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "L_4",
-    },
+        tooltip = "",
+    }
     BL5 = {
         click_function = "l5",
         function_owner = self,
-        label = "L_5",
+        label = "",
         position = {-8.25,0.05,0},
         rotation = {0,0,0},
         width = 800,
@@ -420,8 +420,8 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "L_5",
-    },
+        tooltip = "",
+    }
     BL6 = {
         click_function = "l6",
         function_owner = self,
@@ -1131,7 +1131,7 @@ allB = {
     BUL14 = {
         click_function = "ul14",
         function_owner = self,
-        label = "UL_14",
+        label = "",
         position = {-6.6,0.05,-1.65},
         rotation = {0,0,0},
         width = 800,
@@ -1139,12 +1139,12 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "UL_14",
-    },
+        tooltip = "",
+    }
     BUL15 = {
         click_function = "ul15",
         function_owner = self,
-        label = "UL_15",
+        label = "",
         position = {-8.25,0.05,-1.65},
         rotation = {0,0,0},
         width = 800,
@@ -1152,8 +1152,8 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "UL_15",
-    },
+        tooltip = "",
+    }
     BUL16 = {
         click_function = "ul16",
         function_owner = self,
@@ -2409,7 +2409,7 @@ allB = {
     BDL14 = {
         click_function = "dl14",
         function_owner = self,
-        label = "DL_14",
+        label = "",
         position = {-6.6,0.05,1.65},
         rotation = {0,0,0},
         width = 800,
@@ -2417,12 +2417,12 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "DL_14",
+        tooltip = "",
     }
     BDL15 = {
         click_function = "dl15",
         function_owner = self,
-        label = "DL_15",
+        label = "",
         position = {-8.25,0.05,1.65},
         rotation = {0,0,0},
         width = 800,
@@ -2430,7 +2430,7 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "DL_15",
+        tooltip = "",
     }
     BDL16 = {
         click_function = "dl16",
