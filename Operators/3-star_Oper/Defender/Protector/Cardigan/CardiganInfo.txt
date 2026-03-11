@@ -9,30 +9,30 @@ zoneHire = getObjectFromGUID("adffc1")
 zonePosHire = zoneHire.getPosition({0,5,0})
 zoneRot = {0,90,180}
 
-me = "Beagle"
+me = "Cardigan"
 depPoint = 16
 depRecovery = 8
 depRecS = 0
 depRec = depRecovery
 --Stats without Elite
-hps = 15
+hps = 16
 cHp = hps
 atks = 2
 cAtk = atks
-defs = 4
+defs = 3
 cDef = defs
 apms = 2
 cApm = apms
 blocks = 3
 cBlock = blocks
 --Stats Elite 1
-eHp = 20
+eHp = 21
 eAtk = 3
 eDef = 5
 eApm = 2
 eBlock = 3
 --Stats Elite 2
-eHpe = 20
+eHpe = 21
 eAtke = 3
 eDefe = 5
 eApme = 2
@@ -88,7 +88,7 @@ roleO = {click_function = "role1",function_owner = self,label = "Defense",positi
 --Position place
 plac = {click_function = "place1",function_owner = self,label = "Melee",position = {0.74,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 165,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "This operator placed on position Melee"}
 --faction
-fact = {click_function = "fact1",function_owner = self,label = "",position = {-0.67,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Faction - Op A1"}
+fact = {click_function = "fact1",function_owner = self,label = "",position = {-0.67,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Faction - Op A4"}
 --Branch
 bran = {click_function = "bran1",function_owner = self,label = "",position = {0.75,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Class - Defender\nBranch - Protector"}
 self.createButton(hp)
