@@ -40,7 +40,7 @@ eBlocke = 1
 --Cost any
 skill1 = 1500
 skill2 = 6000
-sellOp = 200
+sellOp = 350
 --Other
 spec11 = 2
 spec12 = 8
