@@ -1,0 +1,443 @@
+function onLoad()
+--cross and elite button
+    cross = {
+        click_function = "cro",
+        function_owner = self,
+        label = "<",
+        position = {-1,0.05,0},
+        rotation = {0,0,0},
+        scale = {1,1,3},
+        width = 0,
+        height = -0,
+        font_size = 500,
+        color = {1,0.7,0.2},
+        font_color = {1,0.7,0.2},
+        tooltip = "this cross"
+    }
+
+    elite = {
+        click_function = "el",
+        function_owner = self,
+        label = "E",
+        position = {-0.65,0.05,-1},
+        rotation = {0,0,0},
+        width = 200,
+        height = 200,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "without elite"
+    }
+
+    elite1 = {
+        click_function = "el1",
+        function_owner = self,
+        label = "E1",
+        position = {0,0.05,-1},
+        rotation = {0,0,0},
+        width = 200,
+        height = 200,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "elite 1"
+    }
+
+    elite2 = {
+        click_function = "el2",
+        function_owner = self,
+        label = "E2",
+        position = {0.65,0.05,-1},
+        rotation = {0,0,0},
+        width = 200,
+        height = 200,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "elite 2"
+    }
+
+--conf elite change button for function
+    BC0e = {
+        click_function = "c0e",
+        function_owner = self,
+        label = "",
+        position = {0,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "Show attack range",
+    }
+
+    BC0e1 = {
+        click_function = "c0e1",
+        function_owner = self,
+        label = "",
+        position = {0,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "Show attack range",
+    }
+
+    BC0e2 = {
+        click_function = "c0e2",
+        function_owner = self,
+        label = "",
+        position = {0,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "Show attack range",
+    }
+
+    BC0altE = {
+        click_function = "c0alte",
+        function_owner = self,
+        label = "",
+        position = {0,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "Hide attack range",
+    }
+
+    BC0altE1 = {
+        click_function = "c0alte1",
+        function_owner = self,
+        label = "",
+        position = {0,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "Hide attack range",
+    }
+
+    BC0altE2 = {
+        click_function = "c0alte2",
+        function_owner = self,
+        label = "",
+        position = {0,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "Hide attack range",
+    }
+	
+--skill buttons
+    skill1 = {
+        click_function = "sk1",
+        function_owner = self,
+        label = "S",
+        position = {1,0.05,0},
+        rotation = {0,0,0},
+        width = 200,
+        height = 200,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "Activate skill"
+    }
+    
+--range attack
+    BL1 = {
+        click_function = "l1",
+        function_owner = self,
+        label = "",
+        position = {-1.65,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BL2 = {
+        click_function = "l2",
+        function_owner = self,
+        label = "",
+        position = {-3.3,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BR1 = {
+        click_function = "r1",
+        function_owner = self,
+        label = "",
+        position = {1.65,0.05,0},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BU1 = {
+        click_function = "u1",
+        function_owner = self,
+        label = "",
+        position = {0,0.05,-1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BUL11 = {
+        click_function = "ul11",
+        function_owner = self,
+        label = "",
+        position = {-1.65,0.05,-1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BUL12 = {
+        click_function = "ul12",
+        function_owner = self,
+        label = "",
+        position = {-3.3,0.05,-1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BUR11 = {
+        click_function = "ur11",
+        function_owner = self,
+        label = "",
+        position = {1.65,0.05,-1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BD1 = {
+        click_function = "d1",
+        function_owner = self,
+        label = "",
+        position = {0,0.05,1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BDL11 = {
+        click_function = "dl11",
+        function_owner = self,
+        label = "",
+        position = {-1.65,0.05,1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BDL12 = {
+        click_function = "dl12",
+        function_owner = self,
+        label = "",
+        position = {-3.3,0.05,1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+    BDR11 = {
+        click_function = "dr11",
+        function_owner = self,
+        label = "",
+        position = {1.65,0.05,1.65},
+        rotation = {0,0,0},
+        width = 800,
+        height = 800,
+        font_size = 120,
+        color = {1,0.7,0.2},
+        font_color = {0,0,0},
+        tooltip = "",
+    }
+
+self.createButton(BC0e)
+self.createButton(elite1)
+self.createButton(elite2)
+self.createButton(cross)
+end
+
+--FUNCTION WITHOUT ELITE !!!
+function c0e()
+self.clearButtons()
+self.createButton(BC0altE)
+self.createButton(BC0)
+self.createButton(BL1)
+self.createButton(BL2)
+self.createButton(BR1)
+self.createButton(BU1)
+self.createButton(BUL11)
+self.createButton(BUL12)
+self.createButton(BUR11)
+self.createButton(BD1)
+self.createButton(BDL11)
+self.createButton(BDL12)
+self.createButton(BDR11)
+end
+
+function c0alte()
+self.clearButtons()
+self.createButton(BC0e)
+self.createButton(elite1)
+self.createButton(elite2)
+self.createButton(cross)
+end
+
+--FUNCTION ELITE 1 !!!
+function c0e1()
+self.clearButtons()
+self.createButton(BC0altE1)
+self.createButton(BC0)
+self.createButton(BL1)
+self.createButton(BL2)
+self.createButton(BR1)
+self.createButton(BU1)
+self.createButton(BUL11)
+self.createButton(BUL12)
+self.createButton(BUR11)
+self.createButton(BD1)
+self.createButton(BDL11)
+self.createButton(BDL12)
+self.createButton(BDR11)
+end
+
+function c0alte1()
+self.clearButtons()
+self.createButton(BC0e1)
+self.createButton(elite)
+self.createButton(elite2)
+self.createButton(cross)
+end
+
+--FUNCTION ELITE 2 !!!
+function c0e2()
+self.clearButtons()
+self.createButton(BC0altE2)
+self.createButton(BC0)
+self.createButton(BL1)
+self.createButton(BL2)
+self.createButton(BR1)
+self.createButton(BU1)
+self.createButton(BUL11)
+self.createButton(BUL12)
+self.createButton(BUR11)
+self.createButton(BD1)
+self.createButton(BDL11)
+self.createButton(BDL12)
+self.createButton(BDR11)
+end
+
+function c0alte2()
+self.clearButtons()
+self.createButton(BC0e2)
+self.createButton(elite)
+self.createButton(elite1)
+self.createButton(cross)
+end
+
+--FUNCTION CHANGE ELITE !!!
+function el()
+self.clearButtons()
+self.createButton(BC0e)
+self.createButton(cross)
+self.createButton(elite1)
+self.createButton(elite2)
+end
+
+function el1()
+self.clearButtons()
+self.createButton(BC0e1)
+self.createButton(cross)
+self.createButton(elite)
+self.createButton(elite2)
+end
+
+function el2()
+self.clearButtons()
+self.createButton(BC0e2)
+self.createButton(cross)
+self.createButton(elite)
+self.createButton(elite1)
+end
+
+--FUNCTION SKILL#1
+function sk1()
+self.clearButtons()
+self.createButton(BC0altE1)
+self.createButton(BC0)
+end
+--func button plate range
+function l1()
+end
+function l2()
+end
+function r1()
+end
+function u1()
+end
+function ul11()
+end
+function ul12()
+end
+function ur11()
+end
+function d1()
+end
+function dl11()
+end
+function dl12()
+end
+function dr11()
+end
+--func button skill
