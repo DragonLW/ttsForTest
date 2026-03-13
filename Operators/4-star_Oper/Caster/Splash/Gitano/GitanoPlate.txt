@@ -444,7 +444,7 @@ self.createButton(BL2)
 self.createButton(BU1)
 self.createButton(BUL11)
 self.createButton(BUL12)
-self.createButton(BU1)
+self.createButton(BD1)
 self.createButton(BDL11)
 self.createButton(BDL12)
 end
@@ -465,13 +465,12 @@ self.createButton(BC0altE2)
 self.createButton(BC0)
 self.createButton(BL1)
 self.createButton(BL2)
-self.createButton(BL3)
+self.createButton(BU1)
 self.createButton(BUL11)
 self.createButton(BUL12)
-self.createButton(BUL13)
+self.createButton(BD1)
 self.createButton(BDL11)
 self.createButton(BDL12)
-self.createButton(BDL13)
 end
 
 function c0alte2()
@@ -532,13 +531,15 @@ function l1()
 end
 function l2()
 end
-function l3()
+function u1()
 end
 function ul11()
 end
 function ul12()
 end
 function ul13()
+end
+function d1()
 end
 function dl11()
 end
@@ -553,5 +554,19 @@ function l2s()
 end
 function l3s()
 end
-function l4s()
+function u1s()
+end
+function ul11s()
+end
+function ul12s()
+end
+function ul13s()
+end
+function d1s()
+end
+function dl11s()
+end
+function dl12s()
+end
+function dl13s()
 end

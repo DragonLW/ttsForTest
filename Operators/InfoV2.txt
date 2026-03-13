@@ -9,7 +9,7 @@ zoneHire = getObjectFromGUID("adffc1")
 zonePosHire = zoneHire.getPosition({0,5,0})
 zoneRot = {0,90,180}
 
-me = "Gitano"
+me = "Name"
 depPoint = 29
 depRecovery = 8
 depRecS = 0
@@ -50,17 +50,17 @@ toggle2 = false
 toggle3 = false
 buy1 = 0
 --descriptions
-rolOne = "AoE"
-rolOneDesc = "Deals damage toward multiple targets"
-rolTwo = ""
-rolTwoDesc = ""
-tile = "Ranged"
-subTile = ""
-faction = "Sami"
-class = "Caster"
-branch = "Splash"
-tal = "When attacking, roll a 1d12. If the result is 2 or less, the target is Bind for 2 turns. Indigo will not target Bound enemies"
-tra = "Deals AOE Arts damage"
+rolOne = "Tag #1"
+rolOneDesc = "Description Tag #1"
+rolTwo = "Tag #2"
+rolTwoDesc = "Description Tag #2"
+tile = "Deploy Position(Ranged\Melee)"
+subTile = "Deploy SubPosition(If there is)"
+faction = "Faction"
+class = "Class"
+branch = "Branch"
+tal = "Talant"
+tra = "Trait"
 
 function onLoad()
 --HP Button Counter
