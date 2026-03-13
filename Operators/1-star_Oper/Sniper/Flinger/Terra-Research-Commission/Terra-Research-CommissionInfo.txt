@@ -59,7 +59,7 @@ subTile = "no"
 faction = "Rhodes Island"
 class = "Sniper"
 branch = "Flinger"
-tal = "Attacks detonate after a delay, with one of the following random effects: Deals 450% Physical damage / Puts the target to Sleep for 1 turns / Stuns the target for 1 turns / Nothing happens at all! Talent deactivates after triggering Damage effect 3 times\nRoll 1d8 where 1 and 2 are the first effect; 3 and 4 are the second effect; 5 and 6 are the third effect; 7 and 8 are the fourth effect\nPress Spawn token Felyne Lottery Bomb\nThis Bomb can only be played on your own battlefield"
+tal = "Attacks detonate after a delay, with one of the following random effects:\n1.Deals 450% Physical damage\n2.Puts the target to Sleep for 1 turns\n3.Stuns the target for 1 turns\n4.Nothing happens at all!\nTalent deactivates after triggering Damage effect 3 times\n\nRoll 1d8 where 1 and 2 are the first effect; 3 and 4 are the second effect; 5 and 6 are the third effect; 7 and 8 are the fourth effect\n\nPress Spawn token Felyne Lottery Bomb\n\nThis Bomb can only be played on your own battlefield"
 tra = "Attacks deal Physical damage twice to ground enemies in a small radius (second time is an aftershock dealing half ATK in damage), of allies and ignores the Deployment Limit, but has a long Redeployment Time"
 
 function onLoad()
@@ -96,7 +96,7 @@ dP = {click_function = "dP1",function_owner = self,label = "DP: "..depPoint,posi
 --Deploy Recovery
 dR = {click_function = "dR1",function_owner = self,label = "Rec: "..depRecS,position = {0.9,0.5,-0.4},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 75,font_size = 45,color = {0.3,0.3,0.3,1},font_color = {1,1,1},tooltip = "Deploy Recovery"}
 --Role #1
-roleO = {click_function = "role1",function_owner = self,label = rolOne,position = {-0.68,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 170,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = rolOneDesc}
+roleO = {click_function = "role1",function_owner = self,label = rolOne,position = {-0.68,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 170,height = 60,font_size = 25,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = rolOneDesc}
 --Role #2
 role2 = {click_function = "role_2",function_owner = self,label = rolTwo,position = {-0.68,0.3,-0.55},rotation = {0,0,0},scale = {0,0,0},width = 170,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = rolTwoDesc}
 --Position place
@@ -676,12 +676,38 @@ function dR1(obj,holo,alt_click)
 		depRec = depRecovery
 	end
 end
-function tala1()
+function tala1(obj,holo,alt_click)
+tile = self.getGUID()
+tiled = getObjectFromGUID(tile)
+pos = tiled.positionToWorld({-2,5,0})
 local skill = spawnObjectJSON({
 	json = [[{
-		
+		"GUID": "ffcdd4",
+		"Name": "Custom_Tile",
+		"Transform":{
+			"posX": 1,
+			"rotX": 1,
+			"scaleX": 0.5,
+			"scaleY": 0.5,
+			"scaleZ": 0.5
+		},
+		"Nickname": "Felyne Lottery Bomb",
+		"Description": "Attacks detonate after a delay, with one of the following random effects\n1.Deals 450% Physical damage\n2.Puts the target to Sleep for 1 turns\n3.Stuns the target for 1 turns\n4.Nothing happens at all!\nTalent deactivates after triggering Damage effect 3 times\n\nRoll 1d8 where 1 and 2 are the first effect; 3 and 4 are the second effect; 5 and 6 are the third effect; 7 and 8 are the fourth effect\n\nThis Bomb can only be played on your own battlefield",
+		"CustomImage": {
+			"ImageURL": "https://github.com/DragonLW/ttsForTest/blob/main/Operators/1-star_Oper/Sniper/Flinger/Terra-Research-Commission/Felyne%20Lottery%20Bomb_token.png?raw=true",
+			"ImageSecondaryURL": "https://github.com/DragonLW/ttsForTest/blob/main/Operators/1-star_Oper/Sniper/Flinger/Terra-Research-Commission/Felyne%20Lottery%20Bomb_token.png?raw=true",
+			"ImageScalar": 1.0,
+			"WidthScale": 0.0,
+			"CustomTile": {
+				"Type": 0,
+				"Thickness": 0.1,
+				"Stackable": false,
+				"Stretch": true
+			}
+		}
 	}]]
 })
+skill.setPosition(pos)
 end
 function tra1()
 end
