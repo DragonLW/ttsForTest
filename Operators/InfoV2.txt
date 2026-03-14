@@ -98,7 +98,7 @@ dR = {click_function = "dR1",function_owner = self,label = "Rec: "..depRecS,posi
 --Role #1
 roleO = {click_function = "role1",function_owner = self,label = rolOne,position = {-0.68,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 170,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = rolOneDesc}
 --Role #2
-role2 = {click_function = "role_2",function_owner = self,label = rolTwo,position = {-0.68,0.3,-0.55},rotation = {0,0,0},scale = {0,0,0},width = 170,height = 60,font_size = 25,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = rolTwoDesc}
+role2 = {click_function = "role_2",function_owner = self,label = rolTwo,position = {-0.68,0.3,-0.55},rotation = {0,0,0},scale = {0,0,0},width = 170,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = rolTwoDesc}
 --Position place
 plac = {click_function = "place1",function_owner = self,label = tile,position = {0.74,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 165,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "This operator placed on position " ..tile}
 --Subposition place
