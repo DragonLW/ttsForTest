@@ -49,6 +49,18 @@ toggle1 = false
 toggle2 = false
 toggle3 = false
 buy1 = 0
+--descriptions
+rolOne = "Starter"
+rolOneDesc = "The most basic operative"
+rolTwo = "none"
+rolTwoDesc = "none"
+tile = "Melee"
+subTile = "none"
+faction = "Op A4"
+class = "Defender"
+branch = "Defender"
+tal = "Max HP and DEF +12%"
+tra = "Blocks 3 enemies"
 
 function onLoad()
 --HP Button Counter
@@ -66,11 +78,11 @@ spec_1 = {click_function = "spec1",function_owner = self,label = "",position = {
 --Skill 1 active \\ deactive Button
 spec_11 = {click_function = "spec1_1",function_owner = self,label = "",position = {-0.78,0.3,-0.077},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
 --Skill 2 Button
-spec_2 = {click_function = "spec2",function_owner = self,label = skill1.."LMD",position = {-0.12,0.3,0.365},rotation = {0,0,0},scale = {0,0,0},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
+spec_2 = {click_function = "spec2",function_owner = self,label = skill1.."LMD",position = {-0.12,0.3,0.365},rotation = {0,0,0},scale = {0,0,0},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Upgrade to Elite 1"}
 --Skill 2 active \\ deactive Button
 spec_22 = {click_function = "spec2_2",function_owner = self,label = "",position = {-0.78,0.3,0.365},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
 --Skill 3 Button
-spec_3 = {click_function = "spec3",function_owner = self,label = skill2.."LMD",position = {-0.12,0.3,0.819},rotation = {0,0,0},scale = {0,0,0},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Buy Skill"}
+spec_3 = {click_function = "spec3",function_owner = self,label = skill2.."LMD",position = {-0.12,0.3,0.819},rotation = {0,0,0},scale = {0,0,0},width = 920,height = 240,font_size = 165,color = {0,0,0,1},font_color = {0,0.6,1},tooltip = "Upgrade to Elite 2"}
 --Skill 3 active \\ deactive Button
 spec_33 = {click_function = "spec3_3",function_owner = self,label = "",position = {-0.78,0.3,0.819},rotation = {0,0,0},scale = {0,0,0},width = 230,height = 230,font_size = 165,color = {0,1,0,0.7},font_color = {0,0.6,1},tooltip = "Deactive Skill"}
 --Sell Button
@@ -84,13 +96,21 @@ dP = {click_function = "dP1",function_owner = self,label = "DP: "..depPoint,posi
 --Deploy Recovery
 dR = {click_function = "dR1",function_owner = self,label = "Rec: "..depRecS,position = {0.9,0.5,-0.4},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 75,font_size = 45,color = {0.3,0.3,0.3,1},font_color = {1,1,1},tooltip = "Deploy Recovery"}
 --Role #1
-roleO = {click_function = "role1",function_owner = self,label = "Starter",position = {-0.68,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 170,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "The most basic operative"}
+roleO = {click_function = "role1",function_owner = self,label = rolOne,position = {-0.68,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 170,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = rolOneDesc}
+--Role #2
+role2 = {click_function = "role_2",function_owner = self,label = rolTwo,position = {-0.68,0.3,-0.55},rotation = {0,0,0},scale = {0,0,0},width = 170,height = 60,font_size = 25,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = rolTwoDesc}
 --Position place
-plac = {click_function = "place1",function_owner = self,label = "Melee",position = {0.74,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 165,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "This operator placed on position Melee"}
+plac = {click_function = "place1",function_owner = self,label = tile,position = {0.74,0.3,-0.67},rotation = {0,0,0},scale = {1,1,1},width = 165,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "This operator placed on position " ..tile}
+--Subposition place
+plac2 = {click_function = "place2",function_owner = self,label = subTile,position = {0.74,0.3,-0.55},rotation = {0,0,0},scale = {0,0,0},width = 170,height = 60,font_size = 40,color = {0,0.6,1,1},font_color = {1,1,1},tooltip = "This operator placed on position " ..subTile}
 --faction
-fact = {click_function = "fact1",function_owner = self,label = "",position = {-0.67,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Faction - Op A4"}
+fact = {click_function = "fact1",function_owner = self,label = "",position = {-0.67,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Faction - " ..faction}
 --Branch
-bran = {click_function = "bran1",function_owner = self,label = "",position = {0.75,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Class - Defender\nBranch - Protector"}
+bran = {click_function = "bran1",function_owner = self,label = "",position = {0.75,0.3,-0.96},rotation = {0,0,0},scale = {1,1,1},width = 150,height = 150,font_size = 40,color = {0,0.6,1,0},font_color = {1,1,1},tooltip = "Class - " ..class.. "\nBranch - " ..branch}
+--Talant
+talant = {click_function = "tala1",function_owner = self,label = "Talant",position = {-0.95,0.3,-1.02},rotation = {0,0,0},scale = {1,1,1},width = 100,height = 60,font_size = 35,color = {0.3,0.3,0.3,1},font_color = {1,1,1},tooltip = "Talant\n\n" ..tal}
+--Trait
+trait = {click_function = "tra1",function_owner = self,label = "Trait",position = {-0.95,0.3,-0.89},rotation = {0,0,0},scale = {1,1,1},width = 100,height = 60,font_size = 35,color = {0.3,0.3,0.3,1},font_color = {1,1,1},tooltip = "Trait\n\n" ..tra}
 self.createButton(hp)
 self.createButton(atk)
 self.createButton(def)
@@ -105,10 +125,14 @@ self.createButton(name)
 self.createButton(dP)
 self.createButton(roleO)
 self.createButton(plac)
+self.createButton(plac2)
 self.createButton(fact)
 self.createButton(bran)
 self.createButton(settRest)
 self.createButton(dR)
+self.createButton(role2)
+self.createButton(talant)
+self.createButton(trait)
 
 end
 
@@ -515,9 +539,9 @@ end
 function spec2_2(a, a, a)
     toggle2 = not toggle2
     if toggle2 then
-        self.editButton({index = 18, tooltip = "Active Skill", color = {1,0,0,0.7}})
+        self.editButton({index = 22, tooltip = "Active Skill", color = {1,0,0,0.7}})
     else
-        self.editButton({index = 18, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
+        self.editButton({index = 22, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
     end
 end
 function spec3(obj,holo,alt_click)
@@ -618,9 +642,9 @@ end
 function spec3_3(a, a, a)
     toggle3 = not toggle3
     if toggle3 then
-        self.editButton({index = 19, tooltip = "Active Skill", color = {1,0,0,0.7}})
+        self.editButton({index = 23, tooltip = "Active Skill", color = {1,0,0,0.7}})
     else
-        self.editButton({index = 19, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
+        self.editButton({index = 23, tooltip = "Deactive Skill", color = {0,1,0,0.7}})
     end
 end
 function name1()
@@ -629,7 +653,11 @@ function dP1()
 end
 function role1()
 end
+function role_2()
+end
 function place1()
+end
+function place2()
 end
 function fact1()
 end
@@ -638,13 +666,17 @@ end
 function dR1(obj,holo,alt_click)
 	if alt_click == false then
 		depRec = depRec - 1
-		self.editButton({index = 17, label = "Rec: "..depRec})
+		self.editButton({index = 18, label = "Rec: "..depRec})
 	else
 		depRec = depRec - 1
-		self.editButton({index = 17, label = "Rec: "..depRec})
+		self.editButton({index = 18, label = "Rec: "..depRec})
 	end
 	if depRec == 0 then
 		depRecovery = depRecovery + 2
 		depRec = depRecovery
 	end
+end
+function tala1()
+end
+function tra1()
 end
