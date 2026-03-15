@@ -1,3 +1,25 @@
+for _, object in ipairs(Global.getObjects()) do
+    if object.getName() == "R_LMD" then
+        rLmda = object.getGUID()
+        rLmd = getObjectFromGUID(rLmda)
+    end
+    if object.getName() == "B_LMD" then
+        bLmda = object.getGUID()
+        bLmd = getObjectFromGUID(bLmda)
+    end
+    if object.getName() == "Y_LMD" then
+        yLmda = object.getGUID()
+        yLmd = getObjectFromGUID(yLmda)
+    end
+    if object.getName() == "G_LMD" then
+        gLmda = object.getGUID()
+        gLmd = getObjectFromGUID(gLmda)
+    end
+end
+
+me = "Soldier"
+sellEn = 50
+
 hps = 17
 hp = hps
 atks = 2
@@ -17,12 +39,14 @@ bdef = {click_function = "def1", function_owner = self, label = def, position = 
 bapm = {click_function = "apm1", function_owner = self, label = apm, position = {0.2,0.3,1}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "APM enemy\n\nLeft-Click +1\nRight-Click -1"}
 bms = {click_function = "ms1", function_owner = self, label = ms, position = {0.6,0.3,1}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "Move Speed enemy\n\nLeft-Click +1\nRight-Click -1"}
 bres = {click_function = "res1", function_owner = self, label = res, position = {1,0.3,1}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "RES enemy\n\nLeft-Click +1\nRight-Click -1"}
+sel = {click_function = "sell", function_owner = self, label = "S", position = {-1,0.3,0.6}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.4,0,0}, font_color = {0.6,0,0}, tooltip = "Get for defeat " ..sellEn.. "LMD"}
 self.createButton(bhp)
 self.createButton(batk)
 self.createButton(bdef)
 self.createButton(bapm)
 self.createButton(bms)
 self.createButton(bres)
+self.createButton(sel)
 
 function hp1(obj,holo,alt_click)
     if alt_click == false then
@@ -158,6 +182,50 @@ function res1(obj,holo,alt_click)
         else
             if res == ress then
                 self.editButton({index = 5, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+
+function sell(obj, holo, alt_click)
+rLmdR = rLmd.getVar("lmdR")
+bLmdR = bLmd.getVar("lmdR")
+gLmdR = gLmd.getVar("lmdR")
+yLmdR = yLmd.getVar("lmdR")
+    for i, object in ipairs(Global.getObjects()) do
+        if holo == "Red" then
+            if object.getName() == "R_LMD" then
+                rLmd.setVar("lmdR", rLmdR + sellEn)
+                rLmdS = rLmd.getVar("lmdR")
+                rLmd.editButton({index = 0, label = rLmdS})
+                self.destroyObject()
+            end
+        else
+            if holo == "Blue" then
+                if object.getName() == "B_LMD" then
+                    bLmd.setVar("lmdR", bLmdR + sellEn)
+                    bLmdS = bLmd.getVar("lmdR")
+                    bLmd.editButton({index = 0, label = bLmdS})
+                    self.destroyObject()
+                end
+            else
+                if holo == "Green" then
+                    if object.getName() == "G_LMD" then
+                        gLmd.setVar("lmdR", gLmdR + sellEn)
+                        gLmdS = gLmd.getVar("lmdR")
+                        gLmd.editButton({index = 0, label = gLmdS})
+                        self.destroyObject()
+                    end
+                else
+                    if holo == "Yellow" then
+                        if object.getName() == "Y_LMD" then
+                            yLmd.setVar("lmdR", yLmdR + sellEn)
+                            yLmdS = yLmd.getVar("lmdR")
+                            yLmd.editButton({index = 0, label = yLmdS})
+                            self.destroyObject()
+                        end
+                    end
+                end
             end
         end
     end
