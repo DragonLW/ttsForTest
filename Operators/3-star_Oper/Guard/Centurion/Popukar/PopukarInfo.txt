@@ -1,11 +1,36 @@
-yLmd = getObjectFromGUID("7a270f")
-rLmd = getObjectFromGUID("51f201")
-bLmd = getObjectFromGUID("8f2fbb")
-gLmd = getObjectFromGUID("ab4ca9")
+for _, object in ipairs(Global.getObjects()) do
+    if object.getName() == "R_LMD" then
+        rLmda = object.getGUID()
+        rLmd = getObjectFromGUID(rLmda)
+    end
+    if object.getName() == "B_LMD" then
+        bLmda = object.getGUID()
+        bLmd = getObjectFromGUID(bLmda)
+    end
+    if object.getName() == "Y_LMD" then
+        yLmda = object.getGUID()
+        yLmd = getObjectFromGUID(yLmda)
+    end
+    if object.getName() == "G_LMD" then
+        gLmda = object.getGUID()
+        gLmd = getObjectFromGUID(gLmda)
+    end
+end
 
-zoneBack = getObjectFromGUID("917ae1")
+for _, zone in ipairs(Global.getObjects()) do
+    if zone.getName() == "zoneBack" then
+        zine = zone.getGUID()
+        zoneBack = getObjectFromGUID(zine)
+    end
+end
+for _, zane in ipairs(Global.getObjects()) do
+    if zane.getName() == "zoneHire" then
+        zene = zane.getGUID()
+        zoneHire = getObjectFromGUID(zene)
+    end
+end
+
 zonePosBack = zoneBack.getPosition({0,5,0})
-zoneHire = getObjectFromGUID("adffc1")
 zonePosHire = zoneHire.getPosition({0,5,0})
 zoneRot = {0,90,180}
 
@@ -52,7 +77,7 @@ buy1 = 0
 --descriptions
 rolOne = "AoE"
 rolOneDesc = "Deals damage toward multiple targets"
-rolTwo = "Surviva"
+rolTwo = "Survival"
 rolTwoDesc = "Can last longer on the field than other Operators"
 tile = "Melee"
 subTile = "none"

@@ -1,0 +1,164 @@
+hps = 17
+hp = hps
+atks = 2
+atk = atks
+defs = 1
+def = defs
+apms = 1
+apm = apms
+mss = 3
+ms = mss
+ress = 0
+res = ress
+
+bhp = {click_function = "hp1", function_owner = self, label = hp, position = {-1,0.3,1}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "HP enemy\n\nLeft-Click +1\nRight-Click -1"}
+batk = {click_function = "atk1", function_owner = self, label = atk, position = {-0.6,0.3,1}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "ATK enemy\n\nLeft-Click +1\nRight-Click -1"}
+bdef = {click_function = "def1", function_owner = self, label = def, position = {-0.2,0.3,1}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "DEF enemy\n\nLeft-Click +1\nRight-Click -1"}
+bapm = {click_function = "apm1", function_owner = self, label = apm, position = {0.2,0.3,1}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "APM enemy\n\nLeft-Click +1\nRight-Click -1"}
+bms = {click_function = "ms1", function_owner = self, label = ms, position = {0.6,0.3,1}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "Move Speed enemy\n\nLeft-Click +1\nRight-Click -1"}
+bres = {click_function = "res1", function_owner = self, label = res, position = {1,0.3,1}, rotation = {0,0,0}, scale = {1,1,1}, width = 230, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "RES enemy\n\nLeft-Click +1\nRight-Click -1"}
+self.createButton(bhp)
+self.createButton(batk)
+self.createButton(bdef)
+self.createButton(bapm)
+self.createButton(bms)
+self.createButton(bres)
+
+function hp1(obj,holo,alt_click)
+    if alt_click == false then
+        hp = hp + 1
+        self.editButton({index = 0, label = hp})
+    else
+        if alt_click == true then
+            hp = hp - 1
+            self.editButton({index = 0, label = hp})
+        end
+    end
+
+    if hp > hps then
+        self.editButton({index = 0, font_color = {0,1,0}})
+    else
+        if hp < hps then
+            self.editButton({index = 0, font_color = {1,0,0}})
+        else
+            if hp == hps then
+                self.editButton({index = 0, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+function atk1(obj,holo,alt_click)
+    if alt_click == false then
+        atk = atk + 1
+        self.editButton({index = 1, label = atk})
+    else
+        if alt_click == true then
+            atk = atk - 1
+            self.editButton({index = 1, label = atk})
+        end
+    end
+
+    if atk > atks then
+        self.editButton({index = 1, font_color = {0,1,0}})
+    else
+        if atk < atks then
+            self.editButton({index = 1, font_color = {1,0,0}})
+        else
+            if atk == atks then
+                self.editButton({index = 1, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+function def1(obj,holo,alt_click)
+    if alt_click == false then
+        def = def + 1
+        self.editButton({index = 2, label = def})
+    else
+        if alt_click == true then
+            def = def - 1
+            self.editButton({index = 2, label = def})
+        end
+    end
+
+    if def > defs then
+        self.editButton({index = 2, font_color = {0,1,0}})
+    else
+        if def < defs then
+            self.editButton({index = 2, font_color = {1,0,0}})
+        else
+            if def == defs then
+                self.editButton({index = 2, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+function apm1(obj,holo,alt_click)
+    if alt_click == false then
+        apm = apm + 1
+        self.editButton({index = 3, label = apm})
+    else
+        if alt_click == true then
+            apm = apm - 1
+            self.editButton({index = 3, label = apm})
+        end
+    end
+
+    if apm > apms then
+        self.editButton({index = 3, font_color = {0,1,0}})
+    else
+        if apm < apms then
+            self.editButton({index = 3, font_color = {1,0,0}})
+        else
+            if apm == apms then
+                self.editButton({index = 3, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+function ms1(obj,holo,alt_click)
+    if alt_click == false then
+        ms = ms + 1
+        self.editButton({index = 4, label = ms})
+    else
+        if alt_click == true then
+            ms = ms - 1
+            self.editButton({index = 4, label = ms})
+        end
+    end
+
+    if ms > mss then
+        self.editButton({index = 4, font_color = {0,1,0}})
+    else
+        if ms < mss then
+            self.editButton({index = 4, font_color = {1,0,0}})
+        else
+            if ms == mss then
+                self.editButton({index = 4, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+function res1(obj,holo,alt_click)
+    if alt_click == false then
+        res = res + 1
+        self.editButton({index = 5, label = res})
+    else
+        if alt_click == true then
+            res = res - 1
+            self.editButton({index = 5, label = res})
+        end
+    end
+
+    if res > ress then
+        self.editButton({index = 5, font_color = {0,1,0}})
+    else
+        if res < ress then
+            self.editButton({index = 5, font_color = {1,0,0}})
+        else
+            if res == ress then
+                self.editButton({index = 5, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end

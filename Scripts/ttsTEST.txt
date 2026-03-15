@@ -1,0 +1,575 @@
+for _, object in ipairs(Global.getObjects()) do
+    if object.getName() == "R_LMD" then
+        rLmda = object.getGUID()
+        rLmd = getObjectFromGUID(rLmda)
+    end
+    if object.getName() == "B_LMD" then
+        bLmda = object.getGUID()
+        bLmd = getObjectFromGUID(bLmda)
+    end
+    if object.getName() == "Y_LMD" then
+        yLmda = object.getGUID()
+        yLmd = getObjectFromGUID(yLmda)
+    end
+    if object.getName() == "G_LMD" then
+        gLmda = object.getGUID()
+        gLmd = getObjectFromGUID(gLmda)
+    end
+end
+
+me = "Friston-3"
+sellOp = 100
+
+for _, zone in ipairs(Global.getObjects()) do
+    if zone.getName() == "zoneBack" then
+        zine = zone.getGUID()
+        zoneBack = getObjectFromGUID(zine)
+    end
+end
+for _, zane in ipairs(Global.getObjects()) do
+    if zane.getName() == "zoneHire" then
+        zene = zane.getGUID()
+        zoneHire = getObjectFromGUID(zene)
+    end
+end
+
+card = self.getGUID()
+cardDO = getObjectFromGUID(card)
+zonePosBack = zoneBack.getPosition({0,5,0})
+zonePosHire = zoneHire.getPosition({0,5,0})
+zoneRot = {0,90,180}
+--Zone found Fig Place
+figRe = {}
+figR = {}
+figBe = {}
+figB = {}
+figGe = {}
+figG = {}
+figYe = {}
+figY = {}
+for _, fig in ipairs(Global.getObjects()) do
+    for i = 1, 12 do
+        if fig.getName() == "figR" ..i then
+            figRe[i] = fig.getGUID()
+            figR[i] = fig
+        end
+        if fig.getName() == "figB" ..i then
+            figBe[i] = fig.getGUID()
+            figB[i] = fig
+        end
+        if fig.getName() == "figG" ..i then
+            figGe[i] = fig.getGUID()
+            figG[i] = fig
+        end
+        if fig.getName() == "figY" ..i then
+            figYe[i] = fig.getGUID()
+            figY[i] = fig
+        end
+    end
+end
+--Zone Fig Place
+--Red Place
+figR1Pos = figR[1].getPosition({0,5,0})
+figR2Pos = figR[2].getPosition({0,5,0})
+figR3Pos = figR[3].getPosition({0,5,0})
+figR4Pos = figR[4].getPosition({0,5,0})
+figR5Pos = figR[5].getPosition({0,5,0})
+figR6Pos = figR[6].getPosition({0,5,0})
+figR7Pos = figR[7].getPosition({0,5,0})
+figR8Pos = figR[8].getPosition({0,5,0})
+figR9Pos = figR[9].getPosition({0,5,0})
+figR10Pos = figR[10].getPosition({0,5,0})
+figR11Pos = figR[11].getPosition({0,5,0})
+figR12Pos = figR[12].getPosition({0,5,0})
+--Blue Place
+figB1Pos = figB[1].getPosition({0,5,0})
+figB2Pos = figB[2].getPosition({0,5,0})
+figB3Pos = figB[3].getPosition({0,5,0})
+figB4Pos = figB[4].getPosition({0,5,0})
+figB5Pos = figB[5].getPosition({0,5,0})
+figB6Pos = figB[6].getPosition({0,5,0})
+figB7Pos = figB[7].getPosition({0,5,0})
+figB8Pos = figB[8].getPosition({0,5,0})
+figB9Pos = figB[9].getPosition({0,5,0})
+figB10Pos = figB[10].getPosition({0,5,0})
+figB11Pos = figB[11].getPosition({0,5,0})
+figB12Pos = figB[12].getPosition({0,5,0})
+--Green Place
+figG1Pos = figG[1].getPosition({0,5,0})
+figG2Pos = figG[2].getPosition({0,5,0})
+figG3Pos = figG[3].getPosition({0,5,0})
+figG4Pos = figG[4].getPosition({0,5,0})
+figG5Pos = figG[5].getPosition({0,5,0})
+figG6Pos = figG[6].getPosition({0,5,0})
+figG7Pos = figG[7].getPosition({0,5,0})
+figG8Pos = figG[8].getPosition({0,5,0})
+figG9Pos = figG[9].getPosition({0,5,0})
+figG10Pos = figG[10].getPosition({0,5,0})
+figG11Pos = figG[11].getPosition({0,5,0})
+figG12Pos = figG[12].getPosition({0,5,0})
+--Yellow Place
+figY1Pos = figY[1].getPosition({0,5,0})
+figY2Pos = figY[2].getPosition({0,5,0})
+figY3Pos = figY[3].getPosition({0,5,0})
+figY4Pos = figY[4].getPosition({0,5,0})
+figY5Pos = figY[5].getPosition({0,5,0})
+figY6Pos = figY[6].getPosition({0,5,0})
+figY7Pos = figY[7].getPosition({0,5,0})
+figY8Pos = figY[8].getPosition({0,5,0})
+figY9Pos = figY[9].getPosition({0,5,0})
+figY10Pos = figY[10].getPosition({0,5,0})
+figY11Pos = figY[11].getPosition({0,5,0})
+figY12Pos = figY[12].getPosition({0,5,0})
+
+function onLoad()
+    
+    recOp = {click_function = "rec", function_owner = self, label = "Rec", position = {0.5,0.3,0.5}, rotation = {0,0,0}, scale = {1,1,1}, width = 400, height = 400, font_size = 200, color = {0,0.5,0}, font_color = {0,0,0}, tooltip = "Hire Operator"}
+    sellOper = {click_function = "sell", function_owner = self, label = "Sell", position = {-0.5,0.3,0.5}, rotation = {0,0,0}, scale = {1,1,1}, width = 400, height = 400, font_size = 200, color = {0.5,0,0}, font_color = {0,0,0}, tooltip = "Sell Operator "..sellOp.."LMD"}
+    self.createButton(recOp)
+    self.createButton(sellOper)
+
+function rec(obj,holo,alt_click)
+
+
+pos = cardDO.positionToWorld({-2, 7, 0})
+posI = cardDO.positionToWorld({-2,6,0})
+
+local fig = spawnObjectJSON({
+    json = [[{
+      "GUID": "70fa05",
+      "Name": "Figurine_Custom",
+      "Transform":{
+        "posY": 5,
+        "rotX": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Friston-3 Oper",
+      "Description": "Rarity: 1-Star\nClass: Defende\nBranch: Protector\nFaction: Rhodes Island\nRole: Defense\nPosition: Melee",
+      "CustomImage": {
+        "ImageURL": "https://github.com/DragonLW/ttsForTest/blob/main/Operators/1-star_Oper/Defender/Protector/Friston-3/Friston-3_base.png?raw=true",
+        "ImageSecondaryURL": "",
+        "ImageScalar": 1.5
+      },
+      "CustomFigurine": {
+        "UseMinimalCollider": true,
+        "MirroredBack": true
+          },
+        }
+      }
+    }]]
+
+})
+local info = spawnObjectJSON({
+    json = [[{
+        "GUID": "1fc95c",
+        "Name": "CardCustom",
+        "Transform":{
+            "PosY": 5,
+            "RotX": 0,
+            "ScaleX": 2,
+            "ScaleY": 1,
+            "ScaleZ": 2
+        },
+        "Nickname": "Friston-3 Info Card",
+        "Description": "Rarity: 1-Star\nClass: Defende\nBranch: Protector\nFaction: Rhodes Island\nRole: Defense\nPosition: Melee",
+        "CardID": 2900,
+        "SidewaysCard": false,
+        "CustomDeck":{
+            "29":{
+                "FaceURL": "https://github.com/DragonLW/ttsForTest/blob/64a63e74df587a408616ecfbd600fc00b4ec82a9/Operators/1-star_Oper/Defender/Protector/Friston-3/Friston_Info.png?raw=true",
+                "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/17609314392887683943/D0BC9A313E5A927F031D4FB65848D53F3D57EF72/",
+                "NumWidth": 1,
+                "NumHeight": 1,
+                "BackIsHidden": true,
+                "UniqueBack": false,
+                "Type": 0
+            }
+        }
+    }]]
+})
+info.setPosition(posI)
+local urlPlate = "https://steamusercontent-a.akamaihd.net/ugc/14679965877333115812/4DFED2513265BE09A2BE742F7317EDCB42660163/"
+    WebRequest.get(urlPlate, function(request)
+        if request.is_error then
+            log(request.error)
+        else
+            for _, object in ipairs(Global.getObjects()) do
+                if object.getName() == me.." Oper" then
+                    object.setLuaScript(request.text)
+                end
+            end
+        end
+    end)
+local urlInfo = "https://steamusercontent-a.akamaihd.net/ugc/10419934659910238505/17BCD7192AB6AB087E8615359B4A201B6FD041C0/"
+    WebRequest.get(urlInfo, function(request)
+        if request.is_error then
+            log(request.error)
+        else
+            for _, object in ipairs(Global.getObjects()) do
+                if object.getName() == me.." Info Card" then
+                    object.setLuaScript(request.text)
+                    info.deal(1,holo)
+                end
+            end
+        end
+    end)
+
+    if holo == "Red" then
+        for _, object in ipairs(figR[1].getObjects()) do
+            if string.find(object.getName(), "Oper") then
+                for _, object in ipairs(figR[2].getObjects()) do
+                    if string.find(object.getName(), "Oper") then
+                        for _, object in ipairs(figR[3].getObjects()) do
+                            if string.find(object.getName(), "Oper") then
+                                for _, object in ipairs(figR[4].getObjects()) do
+                                    if string.find(object.getName(), "Oper") then
+                                        for _, object in ipairs(figR[5].getObjects()) do
+                                            if string.find(object.getName(), "Oper") then
+                                                for _, object in ipairs(figR[6].getObjects()) do
+                                                    if string.find(object.getName(), "Oper") then
+                                                        for _, object in ipairs(figR[7].getObjects()) do
+                                                            if string.find(object.getName(), "Oper") then
+                                                                for _, object in ipairs(figR[8].getObjects()) do
+                                                                    if string.find(object.getName(), "Oper") then
+                                                                        for _, object in ipairs(figR[9].getObjects()) do
+                                                                            if string.find(object.getName(), "Oper") then
+                                                                                for _, object in ipairs(figR[10].getObjects()) do
+                                                                                    if string.find(object.getName(), "Oper") then
+                                                                                        for _, object in ipairs(figR[11].getObjects()) do
+                                                                                            if string.find(object.getName(), "Oper") then
+                                                                                                for _, object in ipairs(figR[12].getObjects()) do
+                                                                                                    if string.find(object.getName(), "Oper") then
+                                                                                                       print("Full")
+                                                                                                    else
+                                                                                                        fig.setPosition(figR12Pos)
+                                                                                                    end
+                                                                                                end
+                                                                                            else
+                                                                                                fig.setPosition(figR11Pos)
+                                                                                            end
+                                                                                        end
+                                                                                    else
+                                                                                        fig.setPosition(figR10Pos)
+                                                                                    end
+                                                                                end
+                                                                            else
+                                                                                fig.setPosition(figR9Pos)
+                                                                            end
+                                                                        end
+                                                                    else
+                                                                        fig.setPosition(figR8Pos)
+                                                                    end
+                                                                end
+                                                            else
+                                                                fig.setPosition(figR7Pos)
+                                                            end
+                                                        end
+                                                    else
+                                                        fig.setPosition(figR6Pos)
+                                                    end
+                                                end
+                                            else
+                                                fig.setPosition(figR5Pos)
+                                            end
+                                        end
+                                    else
+                                        fig.setPosition(figR4Pos)
+                                    end
+                                end
+                            else
+                                fig.setPosition(figR3Pos)
+                            end
+                        end
+                    else
+                        fig.setPosition(figR2Pos)
+                    end
+                end
+            else
+                fig.setPosition(figR1Pos)
+            end
+        end
+    end
+
+    if holo == "Blue" then
+        for _, object in ipairs(figB[1].getObjects()) do
+            if string.find(object.getName(), "Oper") then
+                for _, object in ipairs(figB[2].getObjects()) do
+                    if string.find(object.getName(), "Oper") then
+                        for _, object in ipairs(figB[3].getObjects()) do
+                            if string.find(object.getName(), "Oper") then
+                                for _, object in ipairs(figB[4].getObjects()) do
+                                    if string.find(object.getName(), "Oper") then
+                                        for _, object in ipairs(figB[5].getObjects()) do
+                                            if string.find(object.getName(), "Oper") then
+                                                for _, object in ipairs(figB[6].getObjects()) do
+                                                    if string.find(object.getName(), "Oper") then
+                                                        for _, object in ipairs(figB[7].getObjects()) do
+                                                            if string.find(object.getName(), "Oper") then
+                                                                for _, object in ipairs(figB[8].getObjects()) do
+                                                                    if string.find(object.getName(), "Oper") then
+                                                                        for _, object in ipairs(figB[9].getObjects()) do
+                                                                            if string.find(object.getName(), "Oper") then
+                                                                                for _, object in ipairs(figB[10].getObjects()) do
+                                                                                    if string.find(object.getName(), "Oper") then
+                                                                                        for _, object in ipairs(figB[11].getObjects()) do
+                                                                                            if string.find(object.getName(), "Oper") then
+                                                                                                for _, object in ipairs(figB[12].getObjects()) do
+                                                                                                    if string.find(object.getName(), "Oper") then
+                                                                                                       print("Full")
+                                                                                                    else
+                                                                                                        fig.setPosition(figB12Pos)
+                                                                                                    end
+                                                                                                end
+                                                                                            else
+                                                                                                fig.setPosition(figB11Pos)
+                                                                                            end
+                                                                                        end
+                                                                                    else
+                                                                                        fig.setPosition(figB10Pos)
+                                                                                    end
+                                                                                end
+                                                                            else
+                                                                                fig.setPosition(figB9Pos)
+                                                                            end
+                                                                        end
+                                                                    else
+                                                                        fig.setPosition(figB8Pos)
+                                                                    end
+                                                                end
+                                                            else
+                                                                fig.setPosition(figB7Pos)
+                                                            end
+                                                        end
+                                                    else
+                                                        fig.setPosition(figB6Pos)
+                                                    end
+                                                end
+                                            else
+                                                fig.setPosition(figB5Pos)
+                                            end
+                                        end
+                                    else
+                                        fig.setPosition(figB4Pos)
+                                    end
+                                end
+                            else
+                                fig.setPosition(figB3Pos)
+                            end
+                        end
+                    else
+                        fig.setPosition(figB2Pos)
+                    end
+                end
+            else
+                fig.setPosition(figB1Pos)
+            end
+        end
+    end
+
+    if holo == "Green" then
+        for _, object in ipairs(figG[1].getObjects()) do
+            if string.find(object.getName(), "Oper") then
+                for _, object in ipairs(figG[2].getObjects()) do
+                    if string.find(object.getName(), "Oper") then
+                        for _, object in ipairs(figG[3].getObjects()) do
+                            if string.find(object.getName(), "Oper") then
+                                for _, object in ipairs(figG[4].getObjects()) do
+                                    if string.find(object.getName(), "Oper") then
+                                        for _, object in ipairs(figG[5].getObjects()) do
+                                            if string.find(object.getName(), "Oper") then
+                                                for _, object in ipairs(figG[6].getObjects()) do
+                                                    if string.find(object.getName(), "Oper") then
+                                                        for _, object in ipairs(figG[7].getObjects()) do
+                                                            if string.find(object.getName(), "Oper") then
+                                                                for _, object in ipairs(figG[8].getObjects()) do
+                                                                    if string.find(object.getName(), "Oper") then
+                                                                        for _, object in ipairs(figG[9].getObjects()) do
+                                                                            if string.find(object.getName(), "Oper") then
+                                                                                for _, object in ipairs(figG[10].getObjects()) do
+                                                                                    if string.find(object.getName(), "Oper") then
+                                                                                        for _, object in ipairs(figG[11].getObjects()) do
+                                                                                            if string.find(object.getName(), "Oper") then
+                                                                                                for _, object in ipairs(figG[12].getObjects()) do
+                                                                                                    if string.find(object.getName(), "Oper") then
+                                                                                                       print("Full")
+                                                                                                    else
+                                                                                                        fig.setPosition(figG12Pos)
+                                                                                                    end
+                                                                                                end
+                                                                                            else
+                                                                                                fig.setPosition(figG11Pos)
+                                                                                            end
+                                                                                        end
+                                                                                    else
+                                                                                        fig.setPosition(figG10Pos)
+                                                                                    end
+                                                                                end
+                                                                            else
+                                                                                fig.setPosition(figG9Pos)
+                                                                            end
+                                                                        end
+                                                                    else
+                                                                        fig.setPosition(figG8Pos)
+                                                                    end
+                                                                end
+                                                            else
+                                                                fig.setPosition(figG7Pos)
+                                                            end
+                                                        end
+                                                    else
+                                                        fig.setPosition(figG6Pos)
+                                                    end
+                                                end
+                                            else
+                                                fig.setPosition(figG5Pos)
+                                            end
+                                        end
+                                    else
+                                        fig.setPosition(figG4Pos)
+                                    end
+                                end
+                            else
+                                fig.setPosition(figG3Pos)
+                            end
+                        end
+                    else
+                        fig.setPosition(figG2Pos)
+                    end
+                end
+            else
+                fig.setPosition(figG1Pos)
+            end
+        end
+    end
+
+    if holo == "Yellow" then
+        for _, object in ipairs(figY[1].getObjects()) do
+            if string.find(object.getName(), "Oper") then
+                for _, object in ipairs(figY[2].getObjects()) do
+                    if string.find(object.getName(), "Oper") then
+                        for _, object in ipairs(figY[3].getObjects()) do
+                            if string.find(object.getName(), "Oper") then
+                                for _, object in ipairs(figY[4].getObjects()) do
+                                    if string.find(object.getName(), "Oper") then
+                                        for _, object in ipairs(figY[5].getObjects()) do
+                                            if string.find(object.getName(), "Oper") then
+                                                for _, object in ipairs(figY[6].getObjects()) do
+                                                    if string.find(object.getName(), "Oper") then
+                                                        for _, object in ipairs(figY[7].getObjects()) do
+                                                            if string.find(object.getName(), "Oper") then
+                                                                for _, object in ipairs(figY[8].getObjects()) do
+                                                                    if string.find(object.getName(), "Oper") then
+                                                                        for _, object in ipairs(figY[9].getObjects()) do
+                                                                            if string.find(object.getName(), "Oper") then
+                                                                                for _, object in ipairs(figY[10].getObjects()) do
+                                                                                    if string.find(object.getName(), "Oper") then
+                                                                                        for _, object in ipairs(figY[11].getObjects()) do
+                                                                                            if string.find(object.getName(), "Oper") then
+                                                                                                for _, object in ipairs(figY[12].getObjects()) do
+                                                                                                    if string.find(object.getName(), "Oper") then
+                                                                                                       print("Full")
+                                                                                                    else
+                                                                                                        fig.setPosition(figY12Pos)
+                                                                                                    end
+                                                                                                end
+                                                                                            else
+                                                                                                fig.setPosition(figY11Pos)
+                                                                                            end
+                                                                                        end
+                                                                                    else
+                                                                                        fig.setPosition(figY10Pos)
+                                                                                    end
+                                                                                end
+                                                                            else
+                                                                                fig.setPosition(figY9Pos)
+                                                                            end
+                                                                        end
+                                                                    else
+                                                                        fig.setPosition(figY8Pos)
+                                                                    end
+                                                                end
+                                                            else
+                                                                fig.setPosition(figY7Pos)
+                                                            end
+                                                        end
+                                                    else
+                                                        fig.setPosition(figY6Pos)
+                                                    end
+                                                end
+                                            else
+                                                fig.setPosition(figY5Pos)
+                                            end
+                                        end
+                                    else
+                                        fig.setPosition(figY4Pos)
+                                    end
+                                end
+                            else
+                                fig.setPosition(figY3Pos)
+                            end
+                        end
+                    else
+                        fig.setPosition(figY2Pos)
+                    end
+                end
+            else
+                fig.setPosition(figY1Pos)
+            end
+        end
+    end
+
+cardDO.setRotation(zoneRot)
+cardDO.setPosition(zonePosHire)
+end
+
+end
+
+function sell(obj, holo, alt_click)
+rLmdR = rLmd.getVar("lmdR")
+bLmdR = bLmd.getVar("lmdR")
+gLmdR = gLmd.getVar("lmdR")
+yLmdR = yLmd.getVar("lmdR")
+    for i, object in ipairs(Global.getObjects()) do
+        if holo == "Red" then
+            if object.getName() == "R_LMD" then
+                rLmd.setVar("lmdR", rLmdR + sellOp)
+                rLmdS = rLmd.getVar("lmdR")
+                rLmd.editButton({index = 0, label = rLmdS})
+                cardDO.setRotation(zoneRot)
+                cardDO.setPosition(zonePosBack)
+            end
+        else
+            if holo == "Blue" then
+                if object.getName() == "B_LMD" then
+                    bLmd.setVar("lmdR", bLmdR + sellOp)
+                    bLmdS = bLmd.getVar("lmdR")
+                    bLmd.editButton({index = 0, label = bLmdS})
+                    cardDO.setRotation(zoneRot)
+                    cardDO.setPosition(zonePosBack)
+                end
+            else
+                if holo == "Green" then
+                    if object.getName() == "G_LMD" then
+                        gLmd.setVar("lmdR", gLmdR + sellOp)
+                        gLmdS = gLmd.getVar("lmdR")
+                        gLmd.editButton({index = 0, label = gLmdS})
+                        cardDO.setRotation(zoneRot)
+                        cardDO.setPosition(zonePosBack)
+                    end
+                else
+                    if holo == "Yellow" then
+                        if object.getName() == "Y_LMD" then
+                            yLmd.setVar("lmdR", yLmdR + sellOp)
+                            yLmdS = yLmd.getVar("lmdR")
+                            yLmd.editButton({index = 0, label = yLmdS})
+                            cardDO.setRotation(zoneRot)
+                            cardDO.setPosition(zonePosBack)
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
