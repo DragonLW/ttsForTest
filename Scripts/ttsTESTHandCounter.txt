@@ -1,0 +1,76 @@
+local playerColor = "Red"
+local counterOper = 0
+local counterTotal = 0
+TABLE_GUID = "6aa1cb"
+
+for _, object in ipairs(Global.getObjects()) do
+    if object.getName() == "R_LMD" then
+        rLmda = object.getGUID()
+        rLmd = getObjectFromGUID(rLmda)
+    end
+    if object.getName() == "B_LMD" then
+        bLmda = object.getGUID()
+        bLmd = getObjectFromGUID(bLmda)
+    end
+    if object.getName() == "Y_LMD" then
+        yLmda = object.getGUID()
+        yLmd = getObjectFromGUID(yLmda)
+    end
+    if object.getName() == "G_LMD" then
+        gLmda = object.getGUID()
+        gLmd = getObjectFromGUID(gLmda)
+    end
+end
+
+for _, zone in ipairs(Global.getObjects()) do
+    if zone.getName() == "Red Zone" then
+        zine = zone.getGUID()
+        zoneOper = getObjectFromGUID(zine)
+    end
+end
+
+function onLoad()
+
+countTot = {click_function = "cTot", function_owner = self, label = "Total: " ..counterTotal, position = {0,-0.47,0.75}, rotation = {0,180,0}, scale = {1,1,1}, width = 200, height = 5, font_size = 45, color = {0.3,0,0}, font_color = {0.7,0,0}, tooltip = "Counter Red Total card in hand\nOperators in hand: " ..counterOper}
+
+self.createButton(countTot)
+
+end
+
+function updateCounter()
+local objInZone = zoneOper.getObjects()
+for _, obj in ipairs(objInZone) do
+    if obj.getGUID() ~= TABLE_GUID then
+        if obj.getGUID() ~= rLmd then
+        end
+    end
+end
+self.editButton({index = 0, label = "Total: " ..counterTotal, tooltip = "Counter Red Total card in hand\nOperators in hand: " ..counterOper})
+end
+function onObjectEnterZone(enterZoneOper, obj)
+    if enterZoneOper == zoneOper then
+        if string.find(obj.getName(), "Info") then
+            counterOper = counterOper + 1
+            counterTotal = counterTotal + 1
+        else
+            counterTotal = counterTotal + 1
+        end
+        updateCounter()
+    end
+end
+function onObjectLeaveZone(leaveZoneOper, obj)
+    if leaveZoneOper == zoneOper then
+        if string.find(obj.getName(), "Info") then
+            counterOper = counterOper - 1
+            counterTotal = counterTotal - 1
+        else
+            counterTotal = counterTotal - 1
+        end
+        updateCounter()
+    end
+end
+
+function cOp()
+end
+function cTot()
+end
