@@ -1,0 +1,593 @@
+for _, object in ipairs(Global.getObjects()) do
+    if object.getName() == "R_LMD" then
+        rLmda = object.getGUID()
+        rLmd = getObjectFromGUID(rLmda)
+    end
+    if object.getName() == "B_LMD" then
+        bLmda = object.getGUID()
+        bLmd = getObjectFromGUID(bLmda)
+    end
+    if object.getName() == "Y_LMD" then
+        yLmda = object.getGUID()
+        yLmd = getObjectFromGUID(yLmda)
+    end
+    if object.getName() == "G_LMD" then
+        gLmda = object.getGUID()
+        gLmd = getObjectFromGUID(gLmda)
+    end
+end
+
+me = "Soldier"
+sellEn = 50
+
+--Stats
+hps = 17
+hp = hps
+atks = 2
+atk = atks
+defs = 1
+def = defs
+apms = 1
+apm = apms
+mss = 3
+ms = mss
+ress = 0
+res = ress
+--ToggleButtons
+statToggle = false
+effToggle = false
+rangToggle = false
+--Effect Toggle
+silTog = false
+stunTog = false
+sleepTog = false
+freTog = false
+levTog = false
+friTog = false
+fearTog = false
+parTog = false
+lureTog = false
+--Effects
+Sil = "Silence"
+Stun = "Stun"
+Sleep = "Sleep"
+Fre = "Freeze"
+Lev = "Levitate"
+Fri = "Frighten"
+Fear = "Fear"
+Par = "Paralysis"
+Lure = "Lure"
+status = ""
+
+--Range Zone
+
+
+--Stats Buttons Settings
+bhp = {click_function = "hp1", function_owner = self, label = "HP: " ..hp, position = {-0.5,-0.01,-1}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "HP enemy\nBase value: "..hps.."\n\nLeft-Click +1\nRight-Click -1"}
+batk = {click_function = "atk1", function_owner = self, label = "ATK: " ..atk, position = {-0.5,-0.01,-0.5}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "ATK enemy\nBase value: "..atks.."\n\nLeft-Click +1\nRight-Click -1"}
+bdef = {click_function = "def1", function_owner = self, label = "DEF: " ..def, position = {-0.5,-0.01,0}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "DEF enemy\nBase value: "..defs.."\n\nLeft-Click +1\nRight-Click -1"}
+bapm = {click_function = "apm1", function_owner = self, label = "APM: " ..apm, position = {-0.5,-0.01,0.5}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "APM enemy\nBase value: "..apms.."\n\nLeft-Click +1\nRight-Click -1"}
+bms = {click_function = "ms1", function_owner = self, label = "Move: " ..ms, position = {0,0.15,-1}, rotation = {0,0,0}, scale = {1,1,1}, width = 600, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "Move Speed enemy\nBase value: "..mss.."\n\nLeft-Click +1\nRight-Click -1"}
+bres = {click_function = "res1", function_owner = self, label = "RES: " ..res, position = {-0.5,-0.01,1}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = "RES enemy\nBase value: "..ress.."\n\nLeft-Click +1\nRight-Click -1"}
+--Effects Buttons Settings
+bsil = {click_function = "sil1", function_owner = self, label = Sil, position = {0.5,-0.01,-1}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 135, color = {0.8,0.2,0.2}, font_color = {0,0,0}, tooltip = ""}
+bstun = {click_function = "stun1", function_owner = self, label = Stun, position = {0.5,-0.01,-0.75}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 135, color = {0.8,0.2,0.2}, font_color = {0,0,0}, tooltip = ""}
+bsleep = {click_function = "sleep1", function_owner = self, label = Sleep, position = {0.5,-0.01,-0.5}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 135, color = {0.8,0.2,0.2}, font_color = {0,0,0}, tooltip = ""}
+bfre = {click_function = "fre1", function_owner = self, label = Fre, position = {0.5,-0.01,-0.25}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 135, color = {0.8,0.2,0.2}, font_color = {0,0,0}, tooltip = ""}
+blev = {click_function = "lev1", function_owner = self, label = Lev, position = {0.5,-0.01,0}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 135, color = {0.8,0.2,0.2}, font_color = {0,0,0}, tooltip = ""}
+bfri = {click_function = "fri1", function_owner = self, label = Fri, position = {0.5,-0.01,0.25}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 135, color = {0.8,0.2,0.2}, font_color = {0,0,0}, tooltip = ""}
+bfear = {click_function = "fear1", function_owner = self, label = Fear, position = {0.5,-0.01,0.5}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 135, color = {0.8,0.2,0.2}, font_color = {0,0,0}, tooltip = ""}
+bpar = {click_function = "par1", function_owner = self, label = Par, position = {0.5,-0.01,0.75}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 135, color = {0.8,0.2,0.2}, font_color = {0,0,0}, tooltip = ""}
+blure = {click_function = "lure1", function_owner = self, label = Lure, position = {0.5,-0.01,1}, rotation = {0,0,180}, scale = {0,0,0}, width = 600, height = 230, font_size = 135, color = {0.8,0.2,0.2}, font_color = {0,0,0}, tooltip = ""}
+--Config Buttons Settings
+sel = {click_function = "sell", function_owner = self, label = "Sell", position = {-1.5,-0.01,-1}, rotation = {0,0,180}, scale = {0,0,0}, width = 350, height = 230, font_size = 165, color = {0.4,0,0}, font_color = {0.6,0,0}, tooltip = "Get for defeat " ..sellEn.. "LMD"}
+stat = {click_function = "stat1", function_owner = self, label = "Stats", position = {0.4,-0.01,-0.3}, rotation = {0,0,180}, scale = {0.7,0.7,0.7}, width = 400, height = 400, font_size = 165, color = {0.4,0,0}, font_color = {0.8,0,0}, tooltip = "Stats\nOpen"}
+eff = {click_function = "eff1", function_owner = self, label = "Effets", position = {-0.4,-0.01,-0.3}, rotation = {0,0,180}, scale = {0.7,0.7,0.7}, width = 400, height = 400, font_size = 155, color = {0.4,0,0}, font_color = {0.8,0,0}, tooltip = "Effects"}
+rang = {click_function = "rang1", function_owner = self, label = "Range", position = {0,-0.01,0.3}, rotation = {0,0,180}, scale = {0.7,0.7,0.7}, width = 400, height = 400, font_size = 140, color = {0.4,0,0}, font_color = {0.8,0,0}, tooltip = "Range Attack"}
+efStat = {click_function = "efStat1", function_owner = self, label = status, position = {0,0.15,-0.5}, rotation = {0,0,0}, scale = {1,1,1}, width = 0, height = 0, font_size = 165, color = {0.2,0.2,0.2}, font_color = {0,0.6,1}, tooltip = ""}
+--Stats Buttons
+self.createButton(bhp)
+self.createButton(batk)
+self.createButton(bdef)
+self.createButton(bapm)
+self.createButton(bms)
+self.createButton(bres)
+--Config Buttons
+self.createButton(sel)
+self.createButton(stat)
+self.createButton(eff)
+self.createButton(rang)
+--Effects Buttons
+self.createButton(bsil)
+self.createButton(bstun)
+self.createButton(bsleep)
+self.createButton(bfre)
+self.createButton(blev)
+self.createButton(bfri)
+self.createButton(bfear)
+self.createButton(bpar)
+self.createButton(blure)
+self.createButton(efStat)
+
+function hp1(obj,holo,alt_click)
+    if alt_click == false then
+        hp = hp + 1
+        self.editButton({index = 0, label = "HP: " ..hp})
+    else
+        if alt_click == true then
+            hp = hp - 1
+            self.editButton({index = 0, label = "HP: " ..hp})
+        end
+    end
+
+    if hp > hps then
+        self.editButton({index = 0, font_color = {0,1,0}})
+    else
+        if hp < hps then
+            self.editButton({index = 0, font_color = {1,0,0}})
+        else
+            if hp == hps then
+                self.editButton({index = 0, font_color = {0,0.6,1}})
+            end
+        end
+    end
+    if hp <= 0 then
+        self.editButton({index = 6, scale = {1,1,1}})
+    else
+        self.editButton({index = 6, scale = {0,0,0}})
+    end
+end
+function atk1(obj,holo,alt_click)
+    if alt_click == false then
+        atk = atk + 1
+        self.editButton({index = 1, label = "ATK: " ..atk})
+    else
+        if alt_click == true then
+            atk = atk - 1
+            self.editButton({index = 1, label = "ATK: " ..atk})
+        end
+    end
+
+    if atk > atks then
+        self.editButton({index = 1, font_color = {0,1,0}})
+    else
+        if atk < atks then
+            self.editButton({index = 1, font_color = {1,0,0}})
+        else
+            if atk == atks then
+                self.editButton({index = 1, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+function def1(obj,holo,alt_click)
+    if alt_click == false then
+        def = def + 1
+        self.editButton({index = 2, label = "DEF: " ..def})
+    else
+        if alt_click == true then
+            def = def - 1
+            self.editButton({index = 2, label = "DEF: " ..def})
+        end
+    end
+
+    if def > defs then
+        self.editButton({index = 2, font_color = {0,1,0}})
+    else
+        if def < defs then
+            self.editButton({index = 2, font_color = {1,0,0}})
+        else
+            if def == defs then
+                self.editButton({index = 2, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+function apm1(obj,holo,alt_click)
+    if alt_click == false then
+        apm = apm + 1
+        self.editButton({index = 3, label = "APM: " ..apm})
+    else
+        if alt_click == true then
+            apm = apm - 1
+            self.editButton({index = 3, label = "APM: " ..apm})
+        end
+    end
+
+    if apm > apms then
+        self.editButton({index = 3, font_color = {0,1,0}})
+    else
+        if apm < apms then
+            self.editButton({index = 3, font_color = {1,0,0}})
+        else
+            if apm == apms then
+                self.editButton({index = 3, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+function ms1(obj,holo,alt_click)
+    if alt_click == false then
+        ms = ms + 1
+        self.editButton({index = 4, label = "Move: " ..ms})
+    else
+        if alt_click == true then
+            ms = ms - 1
+            self.editButton({index = 4, label = "Move: " ..ms})
+        end
+    end
+
+    if ms > mss then
+        self.editButton({index = 4, font_color = {0,1,0}})
+    else
+        if ms < mss then
+            self.editButton({index = 4, font_color = {1,0,0}})
+        else
+            if ms == mss then
+                self.editButton({index = 4, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+function res1(obj,holo,alt_click)
+    if alt_click == false then
+        res = res + 1
+        self.editButton({index = 5, label = "RES: " ..res})
+    else
+        if alt_click == true then
+            res = res - 1
+            self.editButton({index = 5, label = "RES: " ..res})
+        end
+    end
+
+    if res > ress then
+        self.editButton({index = 5, font_color = {0,1,0}})
+    else
+        if res < ress then
+            self.editButton({index = 5, font_color = {1,0,0}})
+        else
+            if res == ress then
+                self.editButton({index = 5, font_color = {0,0.6,1}})
+            end
+        end
+    end
+end
+
+function sell(obj, holo, alt_click)
+rLmdR = rLmd.getVar("lmdR")
+bLmdR = bLmd.getVar("lmdR")
+gLmdR = gLmd.getVar("lmdR")
+yLmdR = yLmd.getVar("lmdR")
+    for i, object in ipairs(Global.getObjects()) do
+        if holo == "Red" then
+            if object.getName() == "R_LMD" then
+                rLmd.setVar("lmdR", rLmdR + sellEn)
+                rLmdS = rLmd.getVar("lmdR")
+                rLmd.editButton({index = 0, label = rLmdS})
+                self.destroyObject()
+            end
+        else
+            if holo == "Blue" then
+                if object.getName() == "B_LMD" then
+                    bLmd.setVar("lmdR", bLmdR + sellEn)
+                    bLmdS = bLmd.getVar("lmdR")
+                    bLmd.editButton({index = 0, label = bLmdS})
+                    self.destroyObject()
+                end
+            else
+                if holo == "Green" then
+                    if object.getName() == "G_LMD" then
+                        gLmd.setVar("lmdR", gLmdR + sellEn)
+                        gLmdS = gLmd.getVar("lmdR")
+                        gLmd.editButton({index = 0, label = gLmdS})
+                        self.destroyObject()
+                    end
+                else
+                    if holo == "Yellow" then
+                        if object.getName() == "Y_LMD" then
+                            yLmd.setVar("lmdR", yLmdR + sellEn)
+                            yLmdS = yLmd.getVar("lmdR")
+                            yLmd.editButton({index = 0, label = yLmdS})
+                            self.destroyObject()
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
+function stat1()
+statToggle = not statToggle
+    if statToggle then
+        self.editButton({index = 0, scale = {1,1,1}})
+        self.editButton({index = 1, scale = {1,1,1}})
+        self.editButton({index = 2, scale = {1,1,1}})
+        self.editButton({index = 3, scale = {1,1,1}})
+        self.editButton({index = 5, scale = {1,1,1}})
+        self.editButton({index = 7, tooltip = "Stats\nClose"})
+        self.editButton({index = 8, scale = {0,0,0}})
+        self.editButton({index = 9, scale = {0,0,0}})
+    else
+        self.editButton({index = 0, scale = {0,0,0}})
+        self.editButton({index = 1, scale = {0,0,0}})
+        self.editButton({index = 2, scale = {0,0,0}})
+        self.editButton({index = 3, scale = {0,0,0}})
+        self.editButton({index = 5, scale = {0,0,0}})
+        self.editButton({index = 7, tooltip = "Stats\nOpen"})
+        self.editButton({index = 8, scale = {0.7,0.7,0.7}})
+        self.editButton({index = 9, scale = {0.7,0.7,0.7}})
+    end
+end
+function eff1()
+effToggle = not effToggle
+    if effToggle then
+        self.editButton({index = 10, scale = {0.5,0.5,0.5}})
+        self.editButton({index = 11, scale = {0.5,0.5,0.5}})
+        self.editButton({index = 12, scale = {0.5,0.5,0.5}})
+        self.editButton({index = 13, scale = {0.5,0.5,0.5}})
+        self.editButton({index = 14, scale = {0.5,0.5,0.5}})
+        self.editButton({index = 15, scale = {0.5,0.5,0.5}})
+        self.editButton({index = 16, scale = {0.5,0.5,0.5}})
+        self.editButton({index = 17, scale = {0.5,0.5,0.5}})
+        self.editButton({index = 18, scale = {0.5,0.5,0.5}})
+        self.editButton({index = 7, scale = {0,0,0}})
+        self.editButton({index = 8, tooltip = "Effects\nClose"})
+        self.editButton({index = 9, scale = {0,0,0}})
+    else
+        self.editButton({index = 10, scale = {0,0,0}})
+        self.editButton({index = 11, scale = {0,0,0}})
+        self.editButton({index = 12, scale = {0,0,0}})
+        self.editButton({index = 13, scale = {0,0,0}})
+        self.editButton({index = 14, scale = {0,0,0}})
+        self.editButton({index = 15, scale = {0,0,0}})
+        self.editButton({index = 16, scale = {0,0,0}})
+        self.editButton({index = 17, scale = {0,0,0}})
+        self.editButton({index = 18, scale = {0,0,0}})
+        self.editButton({index = 7, scale = {0.7,0.7,0.7}})
+        self.editButton({index = 8, tooltip = "Effects\nOpen"})
+        self.editButton({index = 9, scale = {0.7,0.7,0.7}})
+    end
+end
+function rang1()
+rangToggle = not rangToggle
+    if rangeToggle then
+    else
+    end
+end
+
+--Effects Function Buttons
+function sil1()
+silTog = not silTog
+    if silTog then
+        self.editButton({index = 19, label = Sil})
+        stunTog = false
+        sleepTog = false
+        freTog = false
+        levTog = false
+        friTog = false
+        fearTog = false
+        parTog = false
+        lureTog = false
+        self.editButton({index = 10, color = {0.2,0.8,0.2}})
+        self.editButton({index = 11, color = {0.8,0.2,0.2}})
+        self.editButton({index = 12, color = {0.8,0.2,0.2}})
+        self.editButton({index = 13, color = {0.8,0.2,0.2}})
+        self.editButton({index = 14, color = {0.8,0.2,0.2}})
+        self.editButton({index = 15, color = {0.8,0.2,0.2}})
+        self.editButton({index = 16, color = {0.8,0.2,0.2}})
+        self.editButton({index = 17, color = {0.8,0.2,0.2}})
+        self.editButton({index = 18, color = {0.8,0.2,0.2}})
+    else
+        self.editButton({index = 19, label = ""})
+        self.editButton({index = 10, color = {0.8,0.2,0.2}})
+    end
+end
+function stun1()
+stunTog = not stunTog
+    if stunTog then
+        self.editButton({index = 19, label = Stun})
+        silTog = false
+        sleepTog = false
+        freTog = false
+        levTog = false
+        friTog = false
+        fearTog = false
+        parTog = false
+        lureTog = false
+        self.editButton({index = 10, color = {0.8,0.2,0.2}})
+        self.editButton({index = 11, color = {0.2,0.8,0.2}})
+        self.editButton({index = 12, color = {0.8,0.2,0.2}})
+        self.editButton({index = 13, color = {0.8,0.2,0.2}})
+        self.editButton({index = 14, color = {0.8,0.2,0.2}})
+        self.editButton({index = 15, color = {0.8,0.2,0.2}})
+        self.editButton({index = 16, color = {0.8,0.2,0.2}})
+        self.editButton({index = 17, color = {0.8,0.2,0.2}})
+        self.editButton({index = 18, color = {0.8,0.2,0.2}})
+    else
+        self.editButton({index = 19, label = ""})
+        self.editButton({index = 11, color = {0.8,0.2,0.2}})
+    end
+end
+function sleep1()
+sleepTog = not sleepTog
+    if sleepTog then
+        self.editButton({index = 19, label = Sleep})
+        silTog = false
+        stunTog = false
+        freTog = false
+        levTog = false
+        friTog = false
+        fearTog = false
+        parTog = false
+        lureTog = false
+        self.editButton({index = 10, color = {0.8,0.2,0.2}})
+        self.editButton({index = 11, color = {0.8,0.2,0.2}})
+        self.editButton({index = 12, color = {0.2,0.8,0.2}})
+        self.editButton({index = 13, color = {0.8,0.2,0.2}})
+        self.editButton({index = 14, color = {0.8,0.2,0.2}})
+        self.editButton({index = 15, color = {0.8,0.2,0.2}})
+        self.editButton({index = 16, color = {0.8,0.2,0.2}})
+        self.editButton({index = 17, color = {0.8,0.2,0.2}})
+        self.editButton({index = 18, color = {0.8,0.2,0.2}})
+    else
+        self.editButton({index = 19, label = ""})
+        self.editButton({index = 12, color = {0.8,0.2,0.2}})
+    end
+end
+function fre1()
+freTog = not freTog
+    if freTog then
+        self.editButton({index = 19, label = Fre})
+        silTog = false
+        stunTog = false
+        sleepTog = false
+        levTog = false
+        friTog = false
+        fearTog = false
+        parTog = false
+        lureTog = false
+        self.editButton({index = 10, color = {0.8,0.2,0.2}})
+        self.editButton({index = 11, color = {0.8,0.2,0.2}})
+        self.editButton({index = 12, color = {0.8,0.2,0.2}})
+        self.editButton({index = 13, color = {0.2,0.8,0.2}})
+        self.editButton({index = 14, color = {0.8,0.2,0.2}})
+        self.editButton({index = 15, color = {0.8,0.2,0.2}})
+        self.editButton({index = 16, color = {0.8,0.2,0.2}})
+        self.editButton({index = 17, color = {0.8,0.2,0.2}})
+        self.editButton({index = 18, color = {0.8,0.2,0.2}})
+    else
+        self.editButton({index = 19, label = ""})
+        self.editButton({index = 13, color = {0.8,0.2,0.2}})
+    end
+end
+function lev1()
+levTog = not levTog
+    if levTog then
+        self.editButton({index = 19, label = Lev})
+        silTog = false
+        stunTog = false
+        sleepTog = false
+        freTog = false
+        friTog = false
+        fearTog = false
+        parTog = false
+        lureTog = false
+        self.editButton({index = 10, color = {0.8,0.2,0.2}})
+        self.editButton({index = 11, color = {0.8,0.2,0.2}})
+        self.editButton({index = 12, color = {0.8,0.2,0.2}})
+        self.editButton({index = 13, color = {0.8,0.2,0.2}})
+        self.editButton({index = 14, color = {0.2,0.8,0.2}})
+        self.editButton({index = 15, color = {0.8,0.2,0.2}})
+        self.editButton({index = 16, color = {0.8,0.2,0.2}})
+        self.editButton({index = 17, color = {0.8,0.2,0.2}})
+        self.editButton({index = 18, color = {0.8,0.2,0.2}})
+    else
+        self.editButton({index = 19, label = ""})
+        self.editButton({index = 14, color = {0.8,0.2,0.2}})
+    end
+end
+function fri1()
+friTog = not friTog
+    if friTog then
+        self.editButton({index = 19, label = Fri})
+        silTog = false
+        stunTog = false
+        sleepTog = false
+        freTog = false
+        levTog = false
+        fearTog = false
+        parTog = false
+        lureTog = false
+        self.editButton({index = 10, color = {0.8,0.2,0.2}})
+        self.editButton({index = 11, color = {0.8,0.2,0.2}})
+        self.editButton({index = 12, color = {0.8,0.2,0.2}})
+        self.editButton({index = 13, color = {0.8,0.2,0.2}})
+        self.editButton({index = 14, color = {0.8,0.2,0.2}})
+        self.editButton({index = 15, color = {0.2,0.8,0.2}})
+        self.editButton({index = 16, color = {0.8,0.2,0.2}})
+        self.editButton({index = 17, color = {0.8,0.2,0.2}})
+        self.editButton({index = 18, color = {0.8,0.2,0.2}})
+    else
+        self.editButton({index = 19, label = ""})
+        self.editButton({index = 15, color = {0.8,0.2,0.2}})
+    end
+end
+function fear1()
+fearTog = not fearTog
+    if fearTog then
+        self.editButton({index = 19, label = Fear})
+        silTog = false
+        stunTog = false
+        sleepTog = false
+        freTog = false
+        levTog = false
+        friTog = false
+        parTog = false
+        lureTog = false
+        self.editButton({index = 10, color = {0.8,0.2,0.2}})
+        self.editButton({index = 11, color = {0.8,0.2,0.2}})
+        self.editButton({index = 12, color = {0.8,0.2,0.2}})
+        self.editButton({index = 13, color = {0.8,0.2,0.2}})
+        self.editButton({index = 14, color = {0.8,0.2,0.2}})
+        self.editButton({index = 15, color = {0.8,0.2,0.2}})
+        self.editButton({index = 16, color = {0.2,0.8,0.2}})
+        self.editButton({index = 17, color = {0.8,0.2,0.2}})
+        self.editButton({index = 18, color = {0.8,0.2,0.2}})
+    else
+        self.editButton({index = 19, label = ""})
+        self.editButton({index = 16, color = {0.8,0.2,0.2}})
+    end
+end
+function par1()
+parTog = not parTog
+    if parTog then
+        self.editButton({index = 19, label = Par})
+        silTog = false
+        stunTog = false
+        sleepTog = false
+        freTog = false
+        levTog = false
+        friTog = false
+        fearTog = false
+        lureTog = false
+        self.editButton({index = 10, color = {0.8,0.2,0.2}})
+        self.editButton({index = 11, color = {0.8,0.2,0.2}})
+        self.editButton({index = 12, color = {0.8,0.2,0.2}})
+        self.editButton({index = 13, color = {0.8,0.2,0.2}})
+        self.editButton({index = 14, color = {0.8,0.2,0.2}})
+        self.editButton({index = 15, color = {0.8,0.2,0.2}})
+        self.editButton({index = 16, color = {0.8,0.2,0.2}})
+        self.editButton({index = 17, color = {0.2,0.8,0.2}})
+        self.editButton({index = 18, color = {0.8,0.2,0.2}})
+    else
+        self.editButton({index = 19, label = ""})
+        self.editButton({index = 17, color = {0.8,0.2,0.2}})
+    end
+end
+function lure1()
+lureTog = not lureTog
+    if lureTog then
+        self.editButton({index = 19, label = Lure})
+        silTog = false
+        stunTog = false
+        sleepTog = false
+        freTog = false
+        levTog = false
+        friTog = false
+        fearTog = false
+        parTog = false
+        self.editButton({index = 10, color = {0.8,0.2,0.2}})
+        self.editButton({index = 11, color = {0.8,0.2,0.2}})
+        self.editButton({index = 12, color = {0.8,0.2,0.2}})
+        self.editButton({index = 13, color = {0.8,0.2,0.2}})
+        self.editButton({index = 14, color = {0.8,0.2,0.2}})
+        self.editButton({index = 15, color = {0.8,0.2,0.2}})
+        self.editButton({index = 16, color = {0.8,0.2,0.2}})
+        self.editButton({index = 17, color = {0.8,0.2,0.2}})
+        self.editButton({index = 18, color = {0.2,0.8,0.2}})
+    else
+        self.editButton({index = 19, label = ""})
+        self.editButton({index = 18, color = {0.8,0.2,0.2}})
+    end
+end

@@ -94,7 +94,7 @@ allB = {
     BU2 = {
         click_function = "u2",
         function_owner = self,
-        label = "U_2",
+        label = "",
         position = {0,0.05,-3.3},
         rotation = {0,0,0},
         width = 800,
@@ -102,8 +102,8 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "U_2",
-    },
+        tooltip = "",
+    }
     BU3 = {
         click_function = "u3",
         function_owner = self,
@@ -187,7 +187,7 @@ allB = {
     BD2 = {
         click_function = "d2",
         function_owner = self,
-        label = "D_2",
+        label = "",
         position = {0,0.05,3.3},
         rotation = {0,0,0},
         width = 800,
@@ -195,8 +195,8 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "D_2",
-    },
+        tooltip = "",
+    }
     BD3 = {
         click_function = "d3",
         function_owner = self,
@@ -540,11 +540,11 @@ allB = {
         color = {1,0.7,0.2},
         font_color = {0,0,0},
         tooltip = "UR_17",
-    },
+    }
     BUR21 = {
         click_function = "ur21",
         function_owner = self,
-        label = "UR_21",
+        label = "",
         position = {1.65,0.05,-3.3},
         rotation = {0,0,0},
         width = 800,
@@ -552,12 +552,12 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "UR_21",
-    },
+        tooltip = "",
+    }
     BUR22 = {
         click_function = "ur22",
         function_owner = self,
-        label = "UR_22",
+        label = "",
         position = {3.3,0.05,-3.3},
         rotation = {0,0,0},
         width = 800,
@@ -565,8 +565,8 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "UR_22",
-    },
+        tooltip = "",
+    }
     BUR23 = {
         click_function = "ur23",
         function_owner = self,
@@ -1179,11 +1179,11 @@ allB = {
         color = {1,0.7,0.2},
         font_color = {0,0,0},
         tooltip = "UL_17",
-    },
+    }
     BUL21 = {
         click_function = "ul21",
         function_owner = self,
-        label = "UL_21",
+        label = "",
         position = {-1.65,0.05,-3.3},
         rotation = {0,0,0},
         width = 800,
@@ -1191,12 +1191,12 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "UL_21",
-    },
+        tooltip = "",
+    }
     BUL22 = {
         click_function = "ul22",
         function_owner = self,
-        label = "UL_22",
+        label = "",
         position = {-3.3,0.05,-3.3},
         rotation = {0,0,0},
         width = 800,
@@ -1204,8 +1204,8 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "UL_22",
-    },
+        tooltip = "",
+    }
     BUL23 = {
         click_function = "ul23",
         function_owner = self,
@@ -1744,7 +1744,7 @@ allB = {
     BDR12 = {
         click_function = "dr12",
         function_owner = self,
-        label = "DR_12",
+        label = "",
         position = {3.3,0.05,1.65},
         rotation = {0,0,0},
         width = 800,
@@ -1752,7 +1752,7 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "DR_12",
+        tooltip = "",
     }
     BDR13 = {
         click_function = "dr13",
@@ -1822,7 +1822,7 @@ allB = {
     BDR21 = {
         click_function = "dr21",
         function_owner = self,
-        label = "DR_21",
+        label = "",
         position = {1.65,0.05,3.3},
         rotation = {0,0,0},
         width = 800,
@@ -1830,12 +1830,12 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "DR_21",
+        tooltip = "",
     }
     BDR22 = {
         click_function = "dr22",
         function_owner = self,
-        label = "DR_22",
+        label = "",
         position = {3.3,0.05,3.3},
         rotation = {0,0,0},
         width = 800,
@@ -1843,7 +1843,7 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "DR_22",
+        tooltip = "",
     }
     BDR23 = {
         click_function = "dr23",
@@ -2461,7 +2461,7 @@ allB = {
     BDL21 = {
         click_function = "dl21",
         function_owner = self,
-        label = "DL_21",
+        label = "",
         position = {-1.65,0.05,3.3},
         rotation = {0,0,0},
         width = 800,
@@ -2469,12 +2469,12 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "DL_21",
+        tooltip = "",
     }
     BDL22 = {
         click_function = "dl22",
         function_owner = self,
-        label = "DL_22",
+        label = "",
         position = {-3.3,0.05,3.3},
         rotation = {0,0,0},
         width = 800,
@@ -2482,7 +2482,7 @@ allB = {
         font_size = 120,
         color = {1,0.7,0.2},
         font_color = {0,0,0},
-        tooltip = "DL_22",
+        tooltip = "",
     }
     BDL23 = {
         click_function = "dl23",
